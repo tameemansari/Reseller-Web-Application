@@ -1,0 +1,51 @@
+﻿<script id="addSubscriptions-template" type="text/html">
+    <!-- ko stopBinding: true -->
+    <div id="SubscriptionsList"></div>
+    <!-- /ko -->
+
+    <div class="add-plan-header">
+        <label>@Resources.AddPlan</label><br />
+        <select id="availableSubscriptions" data-bind="value:selectedOffer, options: offers, optionsText: 'Title'"></select>
+        <a data-bind="click: onAddOfferClicked" class="link left-padded medium-text">@Resources.AddLink</a>
+    </div>
+    
+    <div>
+        <label class="emphasized-text">@Resources.FirstPaymentTotal</label>
+        <div class="first-payment-total-container">
+            <label data-bind="text: firstPaymentTotalDisplay"></label>
+        </div>
+    </div>
+</script>
+
+<script id="subscriptionEntry-template" type="text/html">
+    <table cellspacing="10">
+        <tr>
+            <td class="fit-to-content">
+                <img class="offer-logo" data-bind="attr: { src: row.offer.Logo }" />
+            </td>
+            <td class="left-padded">
+                <label class="offer-title" data-bind="text: row.offer.Title"></label><br />
+                <label class="offer-license" data-bind="text: row.offer.License"></label><br />
+                <ul class="offer-notes">
+                    <!-- ko foreach: row.offer.Notes -->
+                    <li data-bind="text: $data"></li>
+                    <!-- /ko -->
+                </ul>
+            </td>
+            <td class="right-padded fit-to-content">
+                @Resources.Quantity<input type="number" class="order-quantity" data-bind="textInput: row.quantity" />
+            </td>
+            <td class="fit-to-content right-aligned">
+                <a class="link remove-link" data-bind="click: function () { $parents[3].remove(row); $('#SubscriptionsList').height($('#SubscriptionsList table').height());}">@Resources.RemoveFromCart</a><br />
+                <label class="monthly-fee">@Resources.MonthlyFee</label><br />
+                <label class="offer-price">$</label><label class="offer-price" data-bind="text: row.offer.Price"></label>
+            </td>
+        </tr>
+    </table>
+</script>
+
+<script id="emptyOffersErrorMessage-template" type="text/html">
+    <div class="empty-offers-error-message">
+        <label>@Resources.EmptyOffersErrorMessage</label>
+    </div>
+</script>

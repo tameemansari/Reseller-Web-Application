@@ -1,0 +1,182 @@
+﻿<div id="RegistrationConfirmationContainer">
+    <div class="row">
+        <label class="section">@Resources.Confirmation</label><br />
+        <label>@Resources.ConfirmationMessage</label>
+    </div>
+
+    <div class="row">
+        <label class="section">@Resources.SetupInformation</label>
+    </div>
+    
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.MicrosoftId</label>
+        </div>
+
+        <div class="left-float">
+            <label data-bind="text: viewModel.MicrosoftId"></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.AdminUserAccount</label>
+        </div>
+
+        <div class="left-float">
+            <label data-bind="text: viewModel.AdminUserAccount"></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.UserName</label>
+        </div>
+
+        <div class="left-float">
+            <label data-bind="text: viewModel.UserName"></label>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <label class="section">@Resources.Subscriptions</label>
+    </div>
+
+    <div class="row">
+        <table class="confirmation-table" cellspacing="5" cellpadding="5">
+            <tbody>
+                <tr>
+                    <td>
+                        @Resources.Subscription
+                    </td>
+                    <td>
+                        @Resources.Quantity
+                    </td>
+                    <td class="right-aligned">
+                        @Resources.MonthlyPrice
+                    </td>
+                </tr>
+                <!-- ko foreach: viewModel.Subscriptions -->
+                <tr class="medium-text">
+                    <td>
+                        <label data-bind="text: $data.FriendlyName"></label>
+                    </td>
+                    <td>
+                        <label data-bind="text: $data.Quantity"></label>
+                    </td>
+                    <td class="right-aligned">
+                        <label data-bind="text: $data.PriceDisplay"></label>
+                    </td>
+                </tr>
+                <!-- /ko -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="border-divider"></td>
+                </tr>
+                <tr class="confirmation-total">
+                    <td>
+                        @Resources.Total
+                    </td>
+                    <td></td>
+                    <td class="right-aligned">
+                        <label data-bind="text: viewModel.TotalPrice"></label>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.AdvisorId</label>
+        </div>
+
+        <div class="left-float">
+            <label data-bind="text: viewModel.AdvisorId"></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <label class="section">@Resources.CompanyInformation</label>
+    </div>
+    
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.CompanyName</label>
+        </div>
+
+        <div class="left-float">
+            <label data-bind="text: viewModel.CompanyName"></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.Address</label>
+        </div>
+
+        <div class="left-float">
+            <!-- ko foreach: viewModel.Address -->
+            <label data-bind="text: $data"></label><br />
+            <!-- /ko -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.WebsiteOptional</label>
+        </div>
+
+        <div class="left-float">
+            <label data-bind="text: viewModel.Website"></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <label class="section">@Resources.ContactInformation</label>
+    </div>
+
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.ContactInformation</label>
+        </div>
+
+        <div class="left-float">
+            <!-- ko foreach: viewModel.ContactInformation -->
+            <label data-bind="text: $data"></label><br />
+            <!-- /ko -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="titleCell">
+            <label>@Resources.Language</label>
+        </div>
+
+        <div class="left-float">
+            <label data-bind="text: viewModel.Language"></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <label class="section">@Resources.CreditCardInformation</label>
+    </div>
+
+    <div class="row">
+        <div class="titleCell">
+            <label data-bind="text: viewModel.CreditCardType"></label>
+        </div>
+
+        <div class="left-float">
+            <!-- ko foreach: viewModel.CreditCardInformation -->
+            <label data-bind="text: $data"></label><br />
+            <!-- /ko -->
+        </div>
+    </div>
+
+    <div class="row">
+        <a class="button confirmation-done-button" data-bind="click: onDoneClicked">@Resources.Done</a>
+    </div>
+</div>

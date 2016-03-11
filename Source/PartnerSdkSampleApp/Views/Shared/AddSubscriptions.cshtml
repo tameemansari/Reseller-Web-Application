@@ -1,0 +1,12 @@
+﻿<div id="AddSubscriptionsPageContainer">
+    <label class="product-title">@Resources.ProductTitle</label><br>
+    <label class="add-subscriptions-label">@Resources.AddSubscriptions</label>
+
+    <form id="Form">
+        <!-- ko stopBinding: true -->
+        <div id="AddSubscriptionsViewContainer"></div>
+        <!-- /ko -->
+        <a id="SubmitButton" class="submitButton" data-bind="click: onSubmitClicked">@Resources.Submit</a>
+        <a id="SubmitButton" class="submitButton" data-bind="click: onCancelClicked">@Resources.Cancel</a>
+    </form>
+</div>

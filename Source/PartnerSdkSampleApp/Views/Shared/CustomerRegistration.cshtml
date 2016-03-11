@@ -1,0 +1,116 @@
+﻿<div id="CustomerRegistrationContainer">
+    <label class="product-title">@Resources.ProductTitle</label><br>
+    <label class="feature-title">@Resources.Subscriptions</label>
+    
+    <form id="Form">
+        <!-- ko stopBinding: true -->
+        <div id="AddSubscriptionsViewContainer"></div>
+        <div id="CustomerProfileContainer"></div>
+        <!-- /ko -->
+        <label id="ConsentContainer"><input id="Consent" name="Consent" type="checkbox">@Resources.AcceptTerms</label><br>
+        <a id="SubmitButton" class="submitButton" data-bind="click: onFormSubmit">@Resources.Submit</a>
+    </form>
+    <script>
+        $.validator.addMethod("regx", function (value, element, regexpr) {
+            return regexpr.test(value);
+        }, "@Resources.DomainPrefixValidationMessage");
+
+        $("#Form").validate({
+            errorPlacement: function(error, element) {
+                if (element.attr("name") == "Consent") {
+                    error.insertAfter("#ConsentContainer");
+                } else if (element.attr("name") == "CardCvn") {
+                    error.insertAfter("#cnvImage");
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+            rules: {
+                CompanyName: {
+                    required: true
+                },
+                AddressLine1: {
+                    required: true
+                },
+                City: {
+                    required: true
+                },
+                State: {
+                    required: true
+                },
+                ZipCode: {
+                    required: true
+                },
+                Website: {
+                    required: false,
+                    url: true
+                },
+                Email: {
+                    required: true,
+                    email: true
+                },
+                Password: {
+                    required: true
+                },
+                ReenterPassword: {
+                    required: true,
+                    equalTo: "#Password"
+                },
+                FirstName: {
+                    required: true
+                },
+                LastName: {
+                    required: true
+                },
+                Phone: {
+                    digits: true,
+                    required: true,
+                    minlength: 7
+                },
+                Extension: {
+                    digits: true,
+                    minlength: 1
+                },
+                CardHolderName: {
+                    required: true
+                },
+                CardNumber: {
+                    required: true,
+                    digits: true,
+                    minlength: 16,
+                    maxlength: 16
+                },
+                CardCvn: {
+                    digits: true,
+                    required: true,
+                    minlength: 3,
+                    maxlength: 3
+                },
+                DomainPrefix: {
+                    required: true,
+                    regx: /^[a-z0-9]+$/i
+                },
+                Consent: {
+                    required: true
+                }
+            },
+            messages: {
+                Extension: {
+                    digits: "@Resources.ExtensionValidationMessage"
+                },
+                Phone: {
+                    digits: "@Resources.PhoneValidationMessage"
+                },
+                CardCvn: {
+                    digits: "@Resources.CvnValidationMessage"
+                },
+                consent: {
+                    required: "@Resources.AcceptTermsValidationMessage"
+                }
+            },
+            submitHandler: function (form) {
+
+            }
+        });
+    </script>
+</div>

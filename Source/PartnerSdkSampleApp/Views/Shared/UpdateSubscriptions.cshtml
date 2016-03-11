@@ -1,0 +1,83 @@
+﻿<div id="UpdateSubscriptionsContainer">
+    <label class="product-title">@Resources.ProductTitle</label><br>
+    <div class="feature-title row">@Resources.UpdateSubscriptions</div>
+
+    <form id="Form">
+        <table>
+            <tbody>
+                <!-- ko foreach: viewModel() -->
+                <tr class="dashedTop">
+                    <td class="left-column">
+                        <div class="offer-title row">
+                            <label data-bind="html: offer.Title"></label>
+                        </div>
+                        <div class="row">
+                            @Resources.SubscriptionIDLabel <label data-bind="text: Id"></label>
+                        </div>
+                        <div class="row month-per-user">
+                            @Resources.CurrencySymbol <label data-bind="text: offer.Price"></label> @Resources.MonthPerUser
+                        </div>
+                        <div class="row">
+                            <img src="~/Content/Images/Plugins/office-products.png" width="150" />
+                        </div>
+                        <div class="row">
+                            <ul class="offer-features">
+                                <!-- ko foreach: $data.offer.Features -->
+                                <li data-bind="text: $data"></li>
+                                <!-- /ko -->
+                            </ul>
+                        </div>
+                    </td>
+                    <td class="right-column">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label>@Resources.UserLicenses</label>
+                                    <input name="Quantity" type="text" data-bind="textinput: Quantity" />
+                                </td>
+                                <td class="right-aligned">
+                                    <div class="row">
+                                        <label class="medium-text">@Resources.MonthlyFee</label><br />
+
+                                        <div class="offer-price">
+                                            $ <label data-bind="text: offer.Price"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="row">
+                                        @Resources.SubscripitonAlias
+                                    </div>
+                                    <div class="row">
+                                        <input name="FriendlyName" type="text" data-bind="textinput: FriendlyName" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="row">
+                                        @Resources.Status
+                                    </div>
+
+                                    <label><input type="radio" value="active" data-bind="attr: { name: Name }, checked: Status" />@Resources.ActiveStatus</label><br />
+                                    <label><input type="radio" value="suspended" data-bind="attr: { name: Name }, checked: Status" />@Resources.SuspendedStatus</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- /ko -->
+            </tbody>
+            <tfoot>
+                <tr class="dashedTop">
+                    <td colspan="2"></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <a id="SubmitButton" class="submitButton" data-bind="click: onSubmitClicked">@Resources.Submit</a>
+        <a id="SubmitButton" class="submitButton" data-bind="click: onCancelClicked">@Resources.Cancel</a>
+    </form>
+</div>
