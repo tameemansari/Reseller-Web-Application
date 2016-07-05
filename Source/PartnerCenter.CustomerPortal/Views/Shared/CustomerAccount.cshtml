@@ -1,0 +1,49 @@
+﻿<div id="CustomerAccountContainer" class="FullSize">
+    <!-- ko if: viewModel.ShowProgress() -->
+    <div class="Progress FullSize center">
+        <img class="verticalCenteredProgress" src="~/Content/Images/Plugins/ripple.gif" />
+    </div>
+    <!-- /ko -->
+    <!-- ko if: viewModel.IsSet() -->
+    <div class="Padded">
+        <div class="row"></div>
+        <div class="row">
+            <label class="section">@Resources.ContactInformation</label>
+        </div>
+        <div class="row section-divider"></div>
+        <div class="row">
+            <div class="titleCell medium-text">
+                <label>@Resources.CustomerPrimaryContactCaption</label>
+            </div>
+
+            <div class="left-float medium-text">
+                <!-- ko foreach: viewModel.ContactInformation -->
+                <label class="medium-text" data-bind="text: $data"></label><br />
+                <!-- /ko -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="titleCell medium-text">
+                <label>@Resources.CustomerOrganizationNameCaption</label>
+            </div>
+
+            <div class="left-float medium-text ">
+                <label data-bind="text: viewModel.CompanyName"></label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="titleCell medium-text ">
+                <label>@Resources.Address</label>
+            </div>
+
+            <div class="left-float medium-text ">
+                <!-- ko foreach: viewModel.Address -->
+                <label class="medium-text" data-bind="text: $data"></label><br />
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>

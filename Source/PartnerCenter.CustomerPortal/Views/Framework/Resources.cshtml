@@ -1,0 +1,202 @@
+﻿<script>
+    /// <reference path="~/Scripts/_references.js" />
+
+    /*
+        Stores all the client side resources such as strings, image URLs and constants. The portal will consume this and store it in memory. Add your strings here.
+    */
+    var portalResources = {
+        Strings: {
+            /*
+                Framework strings
+            */
+            Loading: "@Resources.Loading",
+            FailedToLoadPortal: "@Resources.FailedToLoadPortal",
+            PortalConfigurationNotFound: "@Resources.PortalConfigurationNotFound",
+            InvalidPortalConfiguration: "@Resources.InvalidPortalConfiguration",
+            NavigateBackTo: "@Resources.NavigateBackTo",
+            Ellipsis: "@Resources.Ellipsis",
+            MoreActionsTooltip: "@Resources.MoreActionsTooltip",
+            Yes: "@Resources.Yes",
+            No: "@Resources.No",
+            OK: "@Resources.OK",
+            Cancel: "@Resources.Cancel",
+            Retry: "@Resources.RetryCapital",
+            Next: "@Resources.Next",
+            Back: "@Resources.Back",
+            Add: "@Resources.AddCapital",
+            Delete: "@Resources.Delete",
+            Save: "@Resources.Save",
+            Undo: "@Resources.Undo",
+            NotificationsSummary: "@Resources.NotificationsSummary",
+            TemplateLoadFailureMessage: "@Resources.TemplateLoadFailureMessage",
+            TemplateLoadRetryMessage: "@Resources.TemplateLoadRetryMessage",
+            EmptyListMessage: "@Resources.EmptyListMessage",
+            AccessDeniedMessage: "@Resources.AccessDeniedMessage",
+
+            /*
+                Plugin strings
+            */
+
+            Plugins: {
+                BadInputGenericMessage: "@Resources.BadInputGenericMessage",
+                InvalidInput: "@Resources.InvalidInput",
+
+                AdminConsole: {
+                    DashboardStatusOk: "@Resources.DashboardStatusOk",
+                    DashboardStatusNotOk: "@Resources.DashboardStatusNotOk",
+                    DashboardItemConfigured: "@Resources.DashboardItemConfigured",
+                    DashboardItemNeedsConfiguration: "@Resources.DashboardItemNeedsConfiguration",
+                    DashboardLoadingError: "@Resources.DashboardLoadingError"
+                },
+                AdminOfferConfiguration: {
+                    AddOfferCaption: "@Resources.AddOfferCaption",
+                    DeleteOffersCaption: "@Resources.DeleteOffersCaption",
+                    MicrosoftOfferListColumnCaption: "@Resources.MicrosoftOfferListColumnCaption",
+                    CustomizationOfferListColumnCaption: "@Resources.CustomizationOfferListColumnCaption",
+                    EmptyOfferListMessage: "@Resources.EmptyOfferListMessage",
+                    DeletingOfferMessage: "@Resources.DeletingOfferMessage",
+                    OfferAutomaticallyRenewable: "@Resources.OfferAutomaticallyRenewable",
+                    OfferManuallyRenewable: "@Resources.OfferManuallyRenewable",
+                    OfferAvailableForPurchase: "@Resources.OfferAvailableForPurchase",
+                    OfferUnavailableForPurchase: "@Resources.OfferUnavailableForPurchase",
+                    To: "@Html.Raw(@Resources.To)",
+                    Seats: "@Html.Raw(@Resources.Seats)",
+                    OfferDeletionConfirmation: "@Resources.OfferDeletionConfirmation",
+                    OfferDeletionFailure: "@Resources.OfferDeletionFailure",
+                    OffersFetchFailure: "@Resources.OffersFetchFailure",
+                    OffersFetchProgress: "@Resources.OffersFetchProgress",
+                    DeleteOffersPromptMessage: "@Resources.DeleteOffersPromptMessage"
+                },
+                AddOrUpdateOffer: {
+                    PickOfferCaption: "@Resources.PickOfferCaption",
+                    PickOfferTooltip: "@Resources.PickOfferTooltip",
+                    SaveOfferCaption: "@Resources.SaveOfferCaption",
+                    MicrosoftOfferRetrievalErrorMessage: "@Resources.MicrosoftOfferRetrievalErrorMessage",
+                    SavingOfferMessage: "@Resources.SavingOfferMessage",
+                    UpdatingOfferMessage: "@Resources.UpdatingOfferMessage",
+                    OfferSaveSuccessMessage: "@Resources.OfferSaveSuccessMessage",
+                    OfferSaveErrorMessage: "@Resources.OfferSaveErrorMessage",
+                    SelectOfferErrorMessage: "@Resources.SelectOfferErrorMessage",
+                    Description: "@Resources.Description",
+                    Category: "@Resources.Category",
+                    Offer: "@Resources.Offer",
+                    EmptyMicrosoftOfferListMessage: "@Resources.EmptyMicrosoftOfferListMessage"
+                },
+                PortalBranding: {
+                    BrandingRetrievalErrorMessage: "@Resources.BrandingRetrievalErrorMessage",
+                    BrandingRetrievalProgressMessage: "@Resources.BrandingRetrievalProgressMessage",
+                    BrandingUpdateProgressMessage: "@Resources.BrandingUpdateProgressMessage",
+                    BrandingUpdateSuccessMessage: "@Resources.BrandingUpdateSuccessMessage",
+                    ReloadPortalButtonCaption: "@Resources.ReloadPortalButtonCaption",
+                    ReloadPortalButtonTooltip: "@Resources.ReloadPortalButtonTooltip",
+                    BrandingUpdateErrorMessage: "@Resources.BrandingUpdateErrorMessage",
+                    UndoBrandingChangesTooltip: "@Resources.UndoBrandingChangesTooltip",
+                    ImagesTooLarge: "@Resources.ImagesTooLarge",
+                    InvalidFileType: "@Resources.InvalidFileType",
+                    InvalidOrganizationLogoUri: "@Resources.InvalidOrganizationLogoUri",
+                    InvalidHeaderImageUri: "@Resources.InvalidHeaderImageUri",
+                    InvalidPrivacyAgreementUri: "@Resources.InvalidPrivacyAgreementUri",
+                    InvalidContactUsPhone: "@Resources.InvalidContactUsPhone",
+                    InvalidContactSalesPhone: "@Resources.InvalidContactSalesPhone"
+                },
+                PaymentConfiguration: {
+                    SandboxAccountTypeCaption: "@Resources.SandboxAccountTypeCaption",
+                    LiveAccountTypeCaption: "@Resources.LiveAccountTypeCaption",
+                    FetchPaymentConfigurationErrorMessage: "@Resources.FetchPaymentConfigurationErrorMessage",
+                    FetchPaymentConfigurationProgressMessage: "@Resources.FetchPaymentConfigurationProgressMessage",
+                    UpdatePaymentProgressMessage: "@Resources.UpdatePaymentProgressMessage",
+                    UpdatePaymentSuccessMessage: "@Resources.UpdatePaymentSuccessMessage",
+                    UpdatePaymentErrorMessage: "@Resources.UpdatePaymentErrorMessage",
+                    UndoUnsavedChanges: "@Resources.UndoUnsavedChanges"
+                },
+                HomePage: {
+                    CouldNotRetrievePartnerOffers: "@Resources.CouldNotRetrievePartnerOffers"
+                },
+                CustomerRegistrationPage: {
+                    CustomerOrderRegistrationMessage: "@Resources.CustomerOrderRegistrationMessage",
+                    CustomerRegistrationSuccessMessage: "@Resources.CustomerRegistrationSuccessMessage",
+                    CustomerRegistrationFailureMessage: "@Resources.CustomerRegistrationFailureMessage",
+                    OrderRegistrationFailureMessage: "@Resources.OrderRegistrationFailureMessage",
+                    CustomerRegistrationMessage: "@Resources.CustomerRegistrationMessage",
+                    InvalidInputErrorPrefix: "@Resources.InvalidInputErrorPrefix",
+                    DownstreamErrorPrefix: "@Resources.DownstreamErrorPrefix",
+                    DomainNotAvailable: "@Resources.DomainNotAvailable",
+                    InvalidAddress: "@Resources.InvalidAddress"
+                },
+                UpdateSubscriptionPage: {
+                    UpdatingSubscriptionMessage: "@Resources.UpdatingSubscriptionMessage",
+                    ProratedPaymentTotalText: "@Resources.ProratedPaymentTotal",
+                    OrderUpdateFailureMessage: "@Resources.OrderUpdateFailureMessage",
+                    InvalidInputErrorPrefix: "@Resources.InvalidInputErrorPrefix",
+                    DownstreamErrorPrefix: "@Resources.DownstreamErrorPrefix",
+                    RenewSubscriptionTitleText: "@Resources.RenewSubscriptionTitleCaption",
+                    CouldNotRetrieveOffer: "@Resources.CouldNotRetrieveOffer",
+                    AddMoreSeatsTitleText: "@Resources.UpdateSubscriptions",
+                    PaymentTotalText: "@Resources.TotalAmountCaption"
+                },
+                AddSubscriptionPage: {
+                    AddingSubscriptionMessage: "@Resources.AddingSubscriptionMessage",
+                    OrderAddFailureMessage: "@Resources.OrderAddFailureMessage",
+                    InvalidInputErrorPrefix: "@Resources.InvalidInputErrorPrefix",
+                    CannotAddExistingSubscriptionError: "@Resources.CannotAddExistingSubscriptionError",
+                    DownstreamErrorPrefix: "@Resources.DownstreamErrorPrefix"
+                },
+                SubscriptionsSummaryPage: {
+                    CouldNotRetrieveSubscriptionsSummary: "@Resources.CouldNotRetrieveSubscriptionsSummary"
+                },
+                CustomerAccountPage: {
+                    CouldNotRetrieveCustomerAccount: "@Resources.CouldNotRetrieveCustomerAccount"
+                },
+                AddSubscriptionsView: {
+                    SelectOfferErrorMessage: "@Resources.SelectOfferErrorMessage",
+                    EmptyListCaption: "@Resources.EmptyListCaption"
+                },
+                CreditCardView: {
+                    CreditCardNotSupportedCaption: "@Resources.CreditCardNotSupportedCaption",
+                    CreditCardAmexCaption: "@Resources.CreditCardAmexCaption",
+                    CreditCardVisaCaption: "@Resources.CreditCardVisaCaption",
+                    CreditCardMasterCaption: "@Resources.CreditCardMasterCaption",
+                    CreditCardDiscoverCaption: "@Resources.CreditCardDiscoverCaption",
+                    PaymentGatewayErrorPrefix: "@Resources.PaymentGatewayErrorPrefix",
+                    CardRefusedError: "@Resources.CardRefusedError",
+                    CardExpiredError: "@Resources.CardExpiredError",
+                    UseAlternateCardMessage: " @Resources.UseAlternateCardMessage",
+                    CardCVNFailedError: "@Resources.CardCVNFailedError"
+                }
+            }
+        },
+
+        Images: {
+            /*
+                Framework images
+            */
+
+            ForwardArrow: "/Content/Images/WebPortal/forward.png",
+            BackwardArrow: "/Content/Images/WebPortal/back.png",
+            Tick: "/Content/Images/WebPortal/tick.png",
+            Cross: "/Content/Images/WebPortal/cross.png",
+            Refresh: "/Content/Images/WebPortal/refresh.png",
+            SuccessNotification: "/Content/Images/WebPortal/notification-success.png",
+            InfoNotification: "/Content/Images/WebPortal/notification-info.png",
+            WarningNotification: "/Content/Images/WebPortal/notification-warning.png",
+            ErrorNotification: "/Content/Images/WebPortal/notification-error.png",
+            ProgressNotification: "/Content/Images/WebPortal/notification-progress.gif",
+            Ellipsis: "/Content/Images/WebPortal/ellipsis.png",
+            SortDescending: "/Content/Images/WebPortal/sorted-desc.png",
+            SortAscending: "/Content/Images/WebPortal/sorted-asc.png",
+
+            /*
+                Plugin images
+            */
+
+            Plugins: {
+                Expenses: {
+                    ListViewTabActive: "/Content/Images/Plugins/Expenses/list-view-on.png",
+                    ListViewTabInactive: "/Content/Images/Plugins/Expenses/list-view.png",
+                    ChartViewTabActive: "/Content/Images/Plugins/Expenses/chart-view-on.png",
+                    ChartViewTabInactive: "/Content/Images/Plugins/Expenses/chart-view.png"
+                }
+            }
+        }
+    }
+</script>
