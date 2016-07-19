@@ -51,7 +51,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             get
             {
                 // TODO: later on, we may want to implement RBAC but as of now, all users signed in from the portal's tenant are considered admins
-                return this.TenantId == ApplicationConfiguration.ActiveDirectoryDomain;
+                return this.TenantId == ApplicationConfiguration.ActiveDirectoryTenantId;
             }
         }
 

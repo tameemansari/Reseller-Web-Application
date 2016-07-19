@@ -85,7 +85,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
                                 }
                             }
 
-                            if (userTenantId != ApplicationConfiguration.ActiveDirectoryDomain)
+                            if (userTenantId != ApplicationConfiguration.ActiveDirectoryTenantId)
                             {
                                 string partnerCenterCustomerId = string.Empty;
 
