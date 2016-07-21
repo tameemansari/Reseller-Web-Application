@@ -78,6 +78,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                 configMap.Add("clientId", paymentConfig.ClientId);
                 configMap.Add("clientSecret", paymentConfig.ClientSecret);
                 configMap.Add("mode", paymentConfig.AccountType);
+                configMap.Add("connectionTimeout", "120000");
 
                 string accessToken = new OAuthTokenCredential(configMap).GetAccessToken();
                 var apiContext = new APIContext(accessToken);
@@ -270,6 +271,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
             configMap.Add("clientId", paymentConfig.ClientId);
             configMap.Add("clientSecret", paymentConfig.ClientSecret);
             configMap.Add("mode", paymentConfig.AccountType);
+            configMap.Add("connectionTimeout", "120000");
 
             string accessToken = new OAuthTokenCredential(configMap).GetAccessToken();
             var apiContext = new APIContext(accessToken);
