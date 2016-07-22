@@ -20,7 +20,7 @@
         "partnerCenterApplicationSecret": {
             "value": ""
         },
-        "partnerCenterApplicationDomain": {
+        "partnerCenterAadTenantId": {
             "value": ""
         },
         "webPortalClientId": {

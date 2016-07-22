@@ -124,7 +124,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             var credentials = await PartnerCredentials.Instance.GenerateByApplicationCredentialsAsync(
                 ConfigurationManager.AppSettings["partnercenter.applicationId"],
                 ConfigurationManager.AppSettings["partnercenter.applicationSecret"],
-                ConfigurationManager.AppSettings["partnercenter.domain"],
+                ConfigurationManager.AppSettings["partnercenter.AadTenantId"],
                 ConfigurationManager.AppSettings["aadEndpoint"],
                 ConfigurationManager.AppSettings["aadGraphEndpoint"]);
 

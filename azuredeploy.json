@@ -14,7 +14,7 @@
       "type": "string",
       "minLength": 1
     },
-    "webPortalDomain": {
+    "webPortalAadTenantId": {
       "type": "string",
       "minLength": 1
     },
@@ -26,7 +26,7 @@
       "type": "string",
       "minLength": 1
     },
-    "partnerCenterApplicationDomain": {
+    "partnerCenterAadTenantId": {
       "type": "string",
       "minLength": 1
     },
@@ -167,11 +167,11 @@
               "aadGraphEndpoint": "[parameters('graphEndpoint')]",
               "webPortal.clientId": "[parameters('webPortalClientId')]",
               "webPortal.clientSecret": "[parameters('webPortalClientSecret')]",
-              "webPortal.domain": "[parameters('webPortalDomain')]",
+              "webPortal.AadTenantId": "[parameters('webPortalAadTenantId')]",
               "partnerCenter.apiEndPoint": "[parameters('partnercenterApiEndpoint')]",
               "partnerCenter.applicationId": "[parameters('partnerCenterApplicationId')]",
               "partnerCenter.applicationSecret": "[parameters('partnerCenterApplicationSecret')]",
-              "partnerCenter.domain": "[parameters('partnerCenterApplicationDomain')]",
+              "partnerCenter.AadTenantId": "[parameters('partnerCenterAadTenantId')]",
               "webPortal.azureStorageConnectionString": "[Concat('DefaultEndpointsProtocol=https;AccountName=',variables('CustomerPortalStorageAccountName'),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('CustomerPortalStorageAccountName')), providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).keys[0].value)]",
               "webPortal.azureStorageConnectionEndpointSuffix": "[parameters('azureStorageConnectionEndpointSuffix')]",
               "webPortal.cacheConnectionString": ""

@@ -40,9 +40,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration
         private const string WebPortalADClientSecretKey = "webPortal.clientSecret";
 
         /// <summary>
-        /// The web portal AD client secret configuration key.
+        /// The web portal AD tenant ID.
         /// </summary>
-        private const string WebPortalADDomainKey = "webPortal.domain"; 
+        private const string WebPortalAadTenantID = "webPortal.AadTenantId";
 
         /// <summary>
         /// The web portal configuration file path configuration key.
@@ -160,13 +160,13 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration
         }
 
         /// <summary>
-        /// Gets the Azure Active Directory domain of the web portal.
+        /// Gets the Azure Active Directory ID of the web portal.
         /// </summary>
-        public static string ActiveDirectoryDomain
+        public static string ActiveDirectoryTenantId
         {
             get
             {
-                return ConfigurationManager.AppSettings[ApplicationConfiguration.WebPortalADDomainKey];
+                return ConfigurationManager.AppSettings[ApplicationConfiguration.WebPortalAadTenantID];
             }
         }
 
