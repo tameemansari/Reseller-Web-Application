@@ -20,7 +20,7 @@
   "webPortalClientSecret": {
     "value": ""
   },
-  "webPortalDomain": {
+  "webPortalAadTenantId": {
     "value": ""
   },
   "siteName": {
