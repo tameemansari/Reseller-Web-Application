@@ -131,7 +131,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             
             try
             {
-                brandingConfiguration.ContactUs.Phone.AssertPhoneNumber("Phone");
+                brandingConfiguration.ContactUs.Phone.AssertNotEmpty("ContactUs.Phone");
             }
             catch (ArgumentException)
             {
@@ -173,7 +173,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 {                    
                     try
                     {
-                        brandingConfiguration.ContactSales.Phone.AssertPhoneNumber("Phone");
+                        brandingConfiguration.ContactSales.Phone.AssertNotEmpty("ContactSales.Phone");
                     }
                     catch (ArgumentException)
                     {
