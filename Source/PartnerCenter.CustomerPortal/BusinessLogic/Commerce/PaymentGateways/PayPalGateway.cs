@@ -144,7 +144,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                     presentation = new Presentation
                     {
                         brand_name = brandConfig.OrganizationName,                        
-                        logo_image = brandConfig.HeaderImage.ToString(),
+                        logo_image = brandConfig.HeaderImage?.ToString(),
                         locale_code = countryIso2Code
                     },
                     input_fields = new InputFields()
