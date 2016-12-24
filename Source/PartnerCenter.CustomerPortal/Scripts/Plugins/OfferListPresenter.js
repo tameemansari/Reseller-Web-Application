@@ -137,6 +137,7 @@ Microsoft.WebPortal.OfferListPresenter.prototype._deleteSelectedOffers = functio
     /// Deletes the selected offers in the list.
     /// </summary>
 
+    Globalize.culture(this.webPortal.Resources.Strings.CurrentLocale);
     var selectedRows = this.viewModel.offerList.selectedRows();
 
     if (!selectedRows || selectedRows.length <= 0) {
@@ -166,9 +167,9 @@ Microsoft.WebPortal.OfferListPresenter.prototype._deleteSelectedOffers = functio
 
             // aggregate the partner and microsoft offers
             for (var i in partnerOffers) {
-
                 var offerToPush = {
                     PartnerOffer: partnerOffers[i],
+                    FormattedPrice: Globalize.format(partnerOffers[i].Price, "c"),
                     MicrosoftOffer: function () {
                         for (var j in self.microsoftOffers) {
                             if (partnerOffers[i].MicrosoftOfferId == self.microsoftOffers[j].Offer.Id) {
@@ -227,7 +228,7 @@ Microsoft.WebPortal.OfferListPresenter.prototype._retrievePartnerOffers = functi
     /// </summary>
 
     var self = this;
-
+    Globalize.culture(this.webPortal.Resources.Strings.CurrentLocale);
     var getPartnerOffers = function (offerSaveNotification) {
         self.webPortal.ContentPanel.showProgress();
 
@@ -255,6 +256,7 @@ Microsoft.WebPortal.OfferListPresenter.prototype._retrievePartnerOffers = functi
 
                 var offerToPush = {
                     PartnerOffer: partnerOffers[i],
+                    FormattedPrice: Globalize.format(partnerOffers[i].Price, "c"),
                     MicrosoftOffer: function () {
                         for (var j in microsoftOffers) {
                             if (partnerOffers[i].MicrosoftOfferId == microsoftOffers[j].Offer.Id) {

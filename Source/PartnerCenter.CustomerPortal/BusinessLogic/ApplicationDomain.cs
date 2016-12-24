@@ -99,12 +99,12 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 ApplicationDomain.Instance.AzureStorageService = new AzureStorageService(ApplicationConfiguration.AzureStorageConnectionString, ApplicationConfiguration.AzureStorageConnectionEndpointSuffix);
                 ApplicationDomain.Instance.CachingService = new CachingService(ApplicationDomain.Instance, ApplicationConfiguration.CacheConnectionString);
                 ApplicationDomain.Instance.PartnerCenterClient = await ApplicationDomain.AcquirePartnerCenterAccessAsync();
+                ApplicationDomain.Instance.PortalLocalization = new PortalLocalization(ApplicationDomain.Instance);
                 ApplicationDomain.Instance.CustomersRepository = new PartnerCenterCustomersRepository(ApplicationDomain.Instance);
                 ApplicationDomain.Instance.OffersRepository = new PartnerOffersRepository(ApplicationDomain.Instance);
                 ApplicationDomain.Instance.MicrosoftOfferLogoIndexer = new MicrosoftOfferLogoIndexer(ApplicationDomain.Instance);
                 ApplicationDomain.Instance.PortalBranding = new PortalBranding(ApplicationDomain.Instance);
-                ApplicationDomain.Instance.PaymentConfigurationRepository = new PaymentConfigurationRepository(ApplicationDomain.Instance);
-                ApplicationDomain.Instance.PortalLocalization = new PortalLocalization(ApplicationDomain.Instance);
+                ApplicationDomain.Instance.PaymentConfigurationRepository = new PaymentConfigurationRepository(ApplicationDomain.Instance);                
                 ApplicationDomain.Instance.CustomerSubscriptionsRepository = new CustomerSubscriptionsRepository(ApplicationDomain.Instance);
                 ApplicationDomain.Instance.CustomerPurchasesRepository = new CustomerPurchasesRepository(ApplicationDomain.Instance);
                 

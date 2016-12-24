@@ -5,8 +5,9 @@
 // -----------------------------------------------------------------------
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
-{
-    using System.ComponentModel.DataAnnotations;
+{    
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;    
 
     /// <summary>
     /// The customer view model.
@@ -21,19 +22,22 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
         /// <summary>
         /// Gets or sets the customer's country.
         /// </summary>
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "CustomerProfileCompanyCountryRequired")]
+        [Display(Name = "CustomerProfileCompanyCountryCaption", ResourceType = typeof(Resources))]
         public string Country { get; set; }
 
         /// <summary>
         /// Gets or sets the customer's company name.
         /// </summary>
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "CustomerOrganizationRequired")]
+        [Display(Name = "CustomerOrganizationNameCaption", ResourceType = typeof(Resources))]
         public string CompanyName { get; set; }
 
         /// <summary>
         /// Gets or sets the customer's first address line.
         /// </summary>
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "CustomerProfileAddressLine1Required")]
+        [Display(Name = "CustomerProfileAddressLine1Caption", ResourceType = typeof(Resources))]
         public string AddressLine1 { get; set; }
 
         /// <summary>
@@ -44,13 +48,13 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
         /// <summary>
         /// Gets or sets the customer's city.
         /// </summary>
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "CustomerProfileCityRequired")]
+        [Display(Name = "CustomerProfileCityCaption", ResourceType = typeof(Resources))]
         public string City { get; set; }
 
         /// <summary>
         /// Gets or sets the customer's state.
-        /// </summary>
-        [Required]
+        /// </summary>        
         public string State { get; set; }
 
         /// <summary>
@@ -62,13 +66,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
         /// <summary>
         /// Gets or sets the customer's language. 
         /// </summary>
-        public string Language { get; set; }        
+        public string Language { get; set; }
 
         /// <summary>
         /// Gets or sets the customer's email.
         /// </summary>
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "CustomerProfileEmailAddressIdRequired")]
+        [Display(Name = "CustomerProfileEmailAddressIdCaption", ResourceType = typeof(Resources))]
+        [EmailAddress(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "CustomerProfileEmailAddressIdRequired")]
         public string Email { get; set; }
 
         /// <summary>
@@ -79,27 +84,30 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
         /// <summary>
         /// Gets or sets the customer's first name.
         /// </summary>
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "CustomerProfileFirstNameRequired")]
+        [Display(Name = "CustomerProfileFirstNameCaption", ResourceType = typeof(Resources))]
         public string FirstName { get; set; }
 
         /// <summary>
         /// Gets or sets the customer's last name.
         /// </summary>
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "CustomerProfileLastNameRequired")]
+        [Display(Name = "CustomerProfileLastNameCaption", ResourceType = typeof(Resources))]
         public string LastName { get; set; }
 
         /// <summary>
         /// Gets or sets the customer's phone number.
         /// </summary>
-        [Required]
-        [RegularExpression(@"^[01]?[- .]?(\([2-9]\d{2}\)|[2-9]\d{2})[- .]?\d{3}[- .]?\d{4}$")]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "PhoneHeaderRequired")]
+        [Display(Name = "PhoneHeaderCaption", ResourceType = typeof(Resources))]
         public string Phone { get; set; }
 
         /// <summary>
         /// Gets or sets the customer's domain prefix.
         /// </summary>
-        [Required]
-        [RegularExpression("^[a-zA-Z0-9]*$")]
+        [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "CustomerProfileDomainPrefixRequired")]
+        [Display(Name = "CustomerProfileDomainPrefixCaption", ResourceType = typeof(Resources))]
+        [RegularExpression("^[a-zA-Z0-9]*$", ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "DomainPrefixValidationMessage")]
         public string DomainPrefix { get; set; }
 
         /// <summary>
@@ -111,5 +119,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
         /// Gets or sets the user name.
         /// </summary>
         public string UserName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the customers licenses in this summary.
+        /// </summary>
+        public IEnumerable<CustomerLicensesModel> Licenses { get; set; }
     }
 }

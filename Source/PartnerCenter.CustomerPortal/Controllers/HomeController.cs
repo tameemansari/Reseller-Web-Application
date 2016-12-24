@@ -70,7 +70,12 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 ViewBag.Configuratrion = JsonConvert.SerializeObject(
                     clientConfiguration,
                     new JsonSerializerSettings() { StringEscapeHandling = StringEscapeHandling.Default });
-                
+
+                if (Resources.Culture.TwoLetterISOLanguageName.ToLowerInvariant() != "en")
+                {
+                    ViewBag.ValidatorMessagesSrc = string.Format("https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/localization/messages_{0}.js", Resources.Culture.TwoLetterISOLanguageName);
+                }
+
                 return this.View();
             }
             catch (Exception exception)

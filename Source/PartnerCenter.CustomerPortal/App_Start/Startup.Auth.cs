@@ -35,14 +35,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
         /// </summary>
         /// <param name="app">The application to configure.</param>
         public void ConfigureAuth(IAppBuilder app)
-        {
-            app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);
+        {            
+            app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);            
 
             app.UseCookieAuthentication(new CookieAuthenticationOptions { });
 
             app.UseOpenIdConnectAuthentication(
                 new OpenIdConnectAuthenticationOptions
-                {
+                {                    
                     ClientId = ApplicationConfiguration.ActiveDirectoryClientID,
                     Authority = ApplicationConfiguration.ActiveDirectoryEndPoint + "common",
                     TokenValidationParameters = new System.IdentityModel.Tokens.TokenValidationParameters
@@ -53,6 +53,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
                     },
                     Notifications = new OpenIdConnectAuthenticationNotifications()
                     {
+                        RedirectToIdentityProvider = (context) =>
+                        {                            
+                            context.ProtocolMessage.Parameters.Add("lc", Resources.Culture.LCID.ToString());
+                            return Task.FromResult(0);
+                        },
                         AuthorizationCodeReceived = async (context) =>
                         {
                             string userTenantId = context.AuthenticationTicket.Identity.FindFirst("http://schemas.microsoft.com/identity/claims/tenantid").Value;
@@ -114,6 +119,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
                                 {
                                     // add the customer ID to the claims
                                     context.AuthenticationTicket.Identity.AddClaim(new System.Security.Claims.Claim("PartnerCenterCustomerID", partnerCenterCustomerId));
+
+                                    // fire off call to retrieve this customer's subscriptions and populate the CustomerSubscriptions Repository. 
                                 }
                             }
                             else

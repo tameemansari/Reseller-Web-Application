@@ -43,15 +43,15 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
                 throw new ConfigurationErrorsException("WebPortalConfigurationPath setting not found in web.config");
             }
 
+            // intialize our application domain
+            ApplicationDomain.InitializeAsync().Wait();
+
             // create the web portal configuration manager
             IWebPortalConfigurationFactory webPortalConfigFactory = new WebPortalConfigurationFactory();
             ApplicationConfiguration.WebPortalConfigurationManager = webPortalConfigFactory.Create(portalConfigurationPath);
 
             // setup the application assets bundles
             ApplicationConfiguration.WebPortalConfigurationManager.UpdateBundles(Bundler.Instance).Wait();
-
-            // intialize our application domain
-            ApplicationDomain.InitializeAsync().Wait();
         }
 
         /// <summary>

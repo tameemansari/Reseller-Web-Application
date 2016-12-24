@@ -131,6 +131,16 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration.Manager
             foreach (Plugin plugin in this.Configuration.Plugins.Plugins)
             {
                 plugins += plugin.Features.AggregateAssets();
+
+                // the WebPortalConfiguration.json plugin/DisplayName attribute value is used as the key in the resource file. 
+                string localizedPluginDisplayName = Resources.ResourceManager.GetString(plugin.DisplayName, Resources.Culture); 
+                if (string.IsNullOrWhiteSpace(localizedPluginDisplayName))
+                {
+                    // if resource is not available then just reuse the DisplayName in the json configuration. 
+                    localizedPluginDisplayName = plugin.DisplayName;
+                }                
+                
+                plugin.DisplayName = localizedPluginDisplayName;
             }
 
             return nonStartup + services + views + plugins;

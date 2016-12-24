@@ -8,15 +8,27 @@ The application gives partners the following features:
 <ol>
 <li>Configure the Microsoft offers they would like to sell to their customers. Partners can set the price and append extra details.</li>
 <li>Configure the portal branding to reflect their company branding. This includes setting the company name, header icons, etc...</li>
-<li> payment. Partners can configure their PayPal pro account which will receive payments from customers.</li>
+<li>Payment. Partners can configure their PayPal pro account which will receive payments from customers.</li>
 </ol>
 
-Customers can then use the portal to view the offers available, purchase the quantities they need and pay using a credit card.
-Customers can log back in and view their subscriptions, purchase extra seats or renew about to expire subscriptions.
+The store front application currently supports the following languages (French, Spanish, German and Japanese) along with English which serves as the fallback language. 
+The store front uses the partner's default locale to configure the Locale (Currencies, Date formats, Localized offers in the repository) using the Partner Profile from partner center. 
+
+Customers can <ol>
+<li>Use the portal to view the offers available, purchase the quantities they need and make a payment from the storefront.</li>
+<li>Log back in and view their subscriptions, purchase extra seats or renew about to expire subscriptions.</li>
+<li>View all the subscriptions (whether they have purchased via the Store front or have been managed for them from Partner Center) in the My Account page after they login. </li>
+</ol>
 </p>
 
-<h2>Running the portal</h2>
-Clone the portal and perform the following steps:
+<h2>Deployment</h2>
+The portal can be deployed from within Partner Center at: <a href="https://partnercenter.microsoft.com/en-us/pcv/webstore/preparedeployment">https://partnercenter.microsoft.com/en-us/pcv/webstore/preparedeployment</a>.
+There is also a deployment project included in the solution through which, deployment can be started with the specified inputs.
+
+<h2>Build & Deploy on your own</h2>
+If you are interested to fork and custom build/deploy the store front. We recommend reading [this blog post](https://blogs.msdn.microsoft.com/iwilliams/2016/12/17/reseller-storefront/) by [Isaiah Williams](https://github.com/isaiahwilliams)
+
+Clone the source code and perform the following steps:
 <ol>
 <li>
 Go to Partner Center, Account Settings, App Management and onboard a new Web App. Copy the application ID, application secret
@@ -63,6 +75,3 @@ Optionally, specify a REDIS cache connection string to improve performance.<br/>
 </li>
 </ol>
 
-<h2>Deployment</h2>
-The portal can be deployed from within Partner Center at: <a href="https://partnercenter.microsoft.com/en-us/pcv/webstore/preparedeployment">https://partnercenter.microsoft.com/en-us/pcv/webstore/preparedeployment</a>.
-There is also a deployment project included in the solution through which, deployment can be started with the specified inputs.

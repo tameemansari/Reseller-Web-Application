@@ -9,7 +9,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
     using System.Globalization;
     using System.Linq;
     using System.Threading.Tasks;
-    using Configuration;
 
     /// <summary>
     /// Encapsulates locale information for the portal based on the partner's region.
@@ -53,14 +52,29 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             var partnerLegalBusinessProfile = await this.ApplicationDomain.PartnerCenterClient.Profiles.LegalBusinessProfile.GetAsync();
             this.CountryIso2Code = partnerLegalBusinessProfile.Address.Country;
 
-            // figure out the currency
-            var partnerRegion = new RegionInfo(this.CountryIso2Code);
+            RegionInfo partnerRegion = null;
+            
+            try
+            {   
+                // Get the default locale using the Country Validation rules infrastructure.  
+                var partnerCountryValidationRules = await ApplicationDomain.Instance.PartnerCenterClient.CountryValidationRules.ByCountry(this.CountryIso2Code).GetAsync();
+
+                this.Locale = partnerCountryValidationRules.DefaultCulture;
+                partnerRegion = new RegionInfo(new CultureInfo(this.Locale, false).LCID);
+            }
+            catch
+            {
+                // we will default region to en-US so that currency is USD. 
+                this.Locale = "en-US";
+                partnerRegion = new RegionInfo(new CultureInfo(this.Locale, false).LCID);                
+            }
+            
+            // figure out the currency             
             this.CurrencyCode = partnerRegion.ISOCurrencySymbol;
             this.CurrencySymbol = partnerRegion.CurrencySymbol;
 
-            // get the locale, we default to the first locale used in a country for now
-            var partnerCountryValidationRules = await ApplicationDomain.Instance.PartnerCenterClient.CountryValidationRules.ByCountry(this.CountryIso2Code).GetAsync();
-            this.Locale = partnerCountryValidationRules.SupportedCulturesList.FirstOrDefault();
+            // set culture to partner locale.
+            Resources.Culture = new CultureInfo(this.Locale);
         }
     }
 }

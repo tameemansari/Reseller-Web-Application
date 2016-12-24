@@ -13,6 +13,7 @@ Microsoft.WebPortal.Views.AddSubscriptionsView = function (webPortal, elementSel
     this.base.constructor.call(this, webPortal, elementSelector, isShown, null, animation);
     this.template = "addSubscriptions-template";    
     var self = this;
+    Globalize.culture(self.webPortal.Resources.Strings.CurrentLocale);
 
     this.offersToAdd = [];
 
@@ -30,36 +31,40 @@ Microsoft.WebPortal.Views.AddSubscriptionsView = function (webPortal, elementSel
 
     if (defaultOffer) {
         var quantity = ko.observable(1);
-        price = (defaultOffer.Price.toFixed(2) * quantity()).toFixed(2);
-        var offerTotalPrice = ko.observable(price);            
+        var totalPrice = (defaultOffer.Price * quantity());
+        var formattedPrice = Globalize.format(defaultOffer.Price, "c");        
+        var offerTotalPrice = ko.observable(Globalize.format(totalPrice, "c"));
 
         this.subscriptionsList.append([{
             offer: defaultOffer,
             quantity: quantity,
+            formattedPrice: formattedPrice,
             offerTotalPrice: offerTotalPrice
         }]);
 
         quantity.subscribe(function (newValue) {            
             if (isNaN(parseInt(newValue))) {
                 quantity(0);
-            } else {
+            } else {                
                 quantity(parseInt(newValue));
             }
 
-            price = (defaultOffer.Price.toFixed(2) * quantity()).toFixed(2);
-            offerTotalPrice(price);
+            totalPrice = (defaultOffer.Price * quantity());
+            offerTotalPrice(Globalize.format(totalPrice, "c"));
         }, this);
     }
 
     this.AddOfferItemToView = function (offerItem) {
         // add this portalOffer to subcriptionList. 
         var quantity = ko.observable(1);
-        var price = (offerItem.viewModel.partnerOffer().Price.toFixed(2) * quantity()).toFixed(2);
-        var offerTotalPrice = ko.observable(price);            
+        var totalPrice = (offerItem.viewModel.partnerOffer().Price * quantity());
+        var formattedPrice = Globalize.format(offerItem.viewModel.partnerOffer().Price, "c");
+        var offerTotalPrice = ko.observable(Globalize.format(totalPrice, "c"));
 
         this.subscriptionsList.append([{
             offer: offerItem.viewModel.partnerOffer(),
             quantity: quantity,
+            formattedPrice: formattedPrice,
             offerTotalPrice: offerTotalPrice
         }]);
 
@@ -70,8 +75,8 @@ Microsoft.WebPortal.Views.AddSubscriptionsView = function (webPortal, elementSel
                 quantity(parseInt(newValue));
             }
 
-            price = (offerItem.viewModel.partnerOffer().Price.toFixed(2) * quantity()).toFixed(2);
-            offerTotalPrice(price);
+            totalPrice = (offerItem.viewModel.partnerOffer().Price * quantity());
+            offerTotalPrice(Globalize.format(totalPrice, "c"));
         }, this);
 
         $(elementSelector + " #SubscriptionsList").height($(elementSelector + " #SubscriptionsList table").height());
@@ -79,15 +84,16 @@ Microsoft.WebPortal.Views.AddSubscriptionsView = function (webPortal, elementSel
         webPortal.EventSystem.broadcast(Microsoft.WebPortal.Event.OnWindowResized);
     }
 
-    this.firstPaymentTotalDisplay = ko.computed(function () {
-        // return self.firstPaymentTotal();
+    this.firstPaymentTotalDisplay = ko.computed(function () {        
         var total = 0;
+        Globalize.culture(self.webPortal.Resources.Strings.CurrentLocale);
 
-        for (var i in self.subscriptionsList.rows()) {
+        for (var i in self.subscriptionsList.rows()) {            
             total += self.subscriptionsList.rows()[i].quantity() * self.subscriptionsList.rows()[i].offer.Price.toFixed(2);
         }
 
-        return total.toFixed(2);
+        // globalize the total using currency format.         
+        return Globalize.format(total, "c");          
     });    
 
     this.onSelectChanged = function (offers) {        

@@ -51,10 +51,10 @@
                         <input type="number" class="order-quantity" data-bind="enable: viewModel.isUpdateSubscription, textInput: viewModel.Quantity" data-rule-required="true" data-rule-digits="true" data-rule-min="1" data-rule-max="1000" />
                     </td>
                     <td class="right-aligned">
-                        <label class="offer-price">@ViewBag.CurrencySymbol</label><label class="offer-price" data-bind="text: viewModel.pricePerSeat"></label>
+                        <label class="offer-price" data-bind="text: viewModel.pricePerSeat"></label>
                     </td>
                     <td class="right-aligned">
-                        <label class="offer-price">@ViewBag.CurrencySymbol</label><label class="offer-price" data-bind="text: viewModel.TotalCharge"></label>
+                        <label class="offer-price" data-bind="text: viewModel.TotalCharge"></label>
                     </td>
                 </tr>
                 <tr>
@@ -62,7 +62,7 @@
                         <label class="emphasized-text">@Resources.TotalAmountCaption</label>
                     </td>
                     <td class="right-aligned">
-                        <label class="offer-price">@ViewBag.CurrencySymbol</label><label class="offer-price" data-bind="text: viewModel.TotalCharge"></label>
+                        <label class="offer-price" data-bind="text: viewModel.TotalCharge"></label>
                     </td>
                 </tr>
             </table>

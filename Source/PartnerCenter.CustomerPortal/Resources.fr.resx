@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,19 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Back" xml:space="preserve">
-    <value>Back</value>
+    <value>Précédent</value>
   </data>
   <data name="BuyNow" xml:space="preserve">
-    <value>Buy now</value>
+    <value>Acheter maintenant</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Annuler</value>
   </data>
   <data name="ClearAll" xml:space="preserve">
-    <value>Clear all</value>
+    <value>Effacer tout</value>
   </data>
   <data name="ContactUs" xml:space="preserve">
-    <value>Contact us</value>
+    <value>Contactez-nous</value>
   </data>
   <data name="CopyRight" xml:space="preserve">
     <value>Copyright 2016</value>
@@ -139,160 +139,160 @@
     <value>...</value>
   </data>
   <data name="EmptyListMessage" xml:space="preserve">
-    <value>No entities found</value>
+    <value>Aucune entité trouvée</value>
   </data>
   <data name="FailedToLoadPortal" xml:space="preserve">
-    <value>Could not get portal content</value>
+    <value>Pouvaient pas obtenir le contenu du portail</value>
   </data>
   <data name="First" xml:space="preserve">
-    <value>First</value>
+    <value>Première</value>
   </data>
   <data name="InvalidPortalConfiguration" xml:space="preserve">
-    <value>Portal configuration seems to be invalid</value>
+    <value>Configuration portail semble être invalide</value>
   </data>
   <data name="Last" xml:space="preserve">
-    <value>Last</value>
+    <value>Dernière</value>
   </data>
   <data name="Loading" xml:space="preserve">
-    <value>Loading</value>
+    <value>Chargement</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>Ouverture de session</value>
   </data>
   <data name="MoreActionsTooltip" xml:space="preserve">
-    <value>More actions...</value>
+    <value>Plus d’actions...</value>
   </data>
   <data name="NavigateBackTo" xml:space="preserve">
-    <value>Go back to: </value>
+    <value>Revenir à : </value>
   </data>
   <data name="Next" xml:space="preserve">
-    <value>Next</value>
+    <value>Prochaine</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No</value>
+    <value>N°</value>
   </data>
   <data name="NotificationSectionTooltip" xml:space="preserve">
-    <value>Active notifications</value>
+    <value>Notifications de l’actives</value>
   </data>
   <data name="NotificationsSummary" xml:space="preserve">
-    <value> new notifications</value>
+    <value> nouvelles notifications</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>OK</value>
+    <value>Bien</value>
   </data>
   <data name="PasswordLabel" xml:space="preserve">
-    <value>Password</value>
+    <value>Mot de passe</value>
   </data>
   <data name="PortalConfigurationNotFound" xml:space="preserve">
-    <value>Portal configuation could not be found</value>
+    <value>Configuration : portail est introuvable</value>
   </data>
   <data name="RememberMe" xml:space="preserve">
-    <value>Remember Me</value>
+    <value>Se souvenir de moi</value>
   </data>
   <data name="RetryCapital" xml:space="preserve">
-    <value>Retry</value>
+    <value>Nouvelle tentative</value>
   </data>
   <data name="Signout" xml:space="preserve">
-    <value>Sign out</value>
+    <value>Se déconnecter</value>
   </data>
   <data name="TemplateLoadFailureMessage" xml:space="preserve">
-    <value>Could not get the feature content</value>
+    <value>Pas pu obtenir le contenu de la fonction</value>
   </data>
   <data name="TemplateLoadRetryMessage" xml:space="preserve">
-    <value>Getting feature content</value>
+    <value>Obtenir le contenu de la fonction</value>
   </data>
   <data name="UserNameLabel" xml:space="preserve">
-    <value>User name:</value>
+    <value>Nom d’utilisateur :</value>
   </data>
   <data name="ViewTilesTooltip" xml:space="preserve">
-    <value>View tiles</value>
+    <value>Vue de tuiles</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>Oui</value>
   </data>
   <data name="EmptyOffersErrorMessage" xml:space="preserve">
-    <value>You must select at least one offer to purchase.</value>
+    <value>Vous devez sélectionner au moins une offre d’achat.</value>
   </data>
   <data name="TotalAmountCaption" xml:space="preserve">
-    <value>Total Amount</value>
+    <value>Montant total</value>
   </data>
   <data name="RemoveFromCart" xml:space="preserve">
-    <value>Remove from cart</value>
+    <value>Retirer du panier</value>
   </data>
   <data name="Address" xml:space="preserve">
-    <value>Address</value>
+    <value>Adresse</value>
   </data>
   <data name="AdminUserAccount" xml:space="preserve">
-    <value>Admin user account</value>
+    <value>Compte d’utilisateur admin</value>
   </data>
   <data name="Confirmation" xml:space="preserve">
     <value>Confirmation</value>
   </data>
   <data name="ConfirmationMessage" xml:space="preserve">
-    <value>Thank you! Customer information has been setup. Please review this page and click submit to place your order.</value>
+    <value>Merci ! Renseignements sur les clients a été mis en place. S’il vous plaît lisez cette page et cliquez sur "Envoyer" pour passer votre commande.</value>
   </data>
   <data name="ContactInformation" xml:space="preserve">
-    <value>Customer information</value>
+    <value>Renseignements sur les clients</value>
   </data>
   <data name="Done" xml:space="preserve">
-    <value>Done</value>
+    <value>Fait</value>
   </data>
   <data name="MicrosoftId" xml:space="preserve">
     <value>Microsoft ID</value>
   </data>
   <data name="SetupInformation" xml:space="preserve">
-    <value>Details</value>
+    <value>Détails</value>
   </data>
   <data name="Subscription" xml:space="preserve">
-    <value>Subscription</value>
+    <value>Abonnement</value>
   </data>
   <data name="Subscriptions" xml:space="preserve">
-    <value>Subscriptions</value>
+    <value>Abonnements</value>
   </data>
   <data name="Total" xml:space="preserve">
     <value>Total</value>
   </data>
   <data name="AddSubscriptions" xml:space="preserve">
-    <value>Add subscriptions</value>
+    <value>Ajouter des abonnements</value>
   </data>
   <data name="Submit" xml:space="preserve">
-    <value>Submit</value>
+    <value>Envoyer</value>
   </data>
   <data name="AcceptTerms" xml:space="preserve">
-    <value>I accept the terms and conditions</value>
+    <value>J’accepte les termes et conditions</value>
   </data>
   <data name="AcceptTermsValidationMessage" xml:space="preserve">
-    <value>You must accept the terms and conditions</value>
+    <value>Vous devez accepter les termes et conditions</value>
   </data>
   <data name="DomainPrefixValidationMessage" xml:space="preserve">
-    <value>Please enter a valid domain prefix</value>
+    <value>S’il vous plaît entrez un préfixe de domaine valide</value>
   </data>
   <data name="PhoneValidationMessage" xml:space="preserve">
-    <value>Please enter a valid phone number</value>
+    <value>Veuillez entrer un numéro de téléphone valide</value>
   </data>
   <data name="SubscriptionIDLabel" xml:space="preserve">
-    <value>Subscription ID:</value>
+    <value>ID d’abonnement :</value>
   </data>
   <data name="CompanyBrandingConfigurationCaption" xml:space="preserve">
-    <value>Update your company information</value>
+    <value>Mettre à jour les informations de votre entreprise</value>
   </data>
   <data name="DashboardBuildingProgressMessage" xml:space="preserve">
-    <value>Building your dashboard</value>
+    <value>Construire votre tableau de bord</value>
   </data>
   <data name="OffersConfigurationCaption" xml:space="preserve">
-    <value>Choose which offers to sell</value>
+    <value>Choisissez qui vous propose de vendre</value>
   </data>
   <data name="PaymentConfigurationCaption" xml:space="preserve">
-    <value>Add a payment method</value>
+    <value>Ajoutez une méthode de paiement</value>
   </data>
   <data name="WelcomeCaptionPrefix" xml:space="preserve">
-    <value>Welcome</value>
+    <value>Bienvenue</value>
   </data>
   <data name="WelcomeCaptionSuffix" xml:space="preserve">
-    <value>to your Web Store Builder!</value>
+    <value>à votre constructeur de magasin Web !</value>
   </data>
   <data name="BillingTypeListRowCaption" xml:space="preserve">
-    <value>based billing</value>
+    <value>la base de facturation</value>
   </data>
   <data name="Comma" xml:space="preserve">
     <value>,</value>
@@ -301,870 +301,870 @@
     <value>-</value>
   </data>
   <data name="SummaryListRowCaption" xml:space="preserve">
-    <value>Summary:</value>
+    <value>Résumé :</value>
   </data>
   <data name="AddCaption" xml:space="preserve">
-    <value>Add</value>
+    <value>Ajouter</value>
   </data>
   <data name="Customization" xml:space="preserve">
-    <value>Customization</value>
+    <value>Personnalisation</value>
   </data>
   <data name="FeaturesCaption" xml:space="preserve">
-    <value>Features:</value>
+    <value>Caractéristiques :</value>
   </data>
   <data name="SelectMicrosoftOfferCaption" xml:space="preserve">
-    <value>Select a Microsoft offer:</value>
+    <value>Sélectionnez une offre de Microsoft :</value>
   </data>
   <data name="YourAnnualPriceCaption" xml:space="preserve">
-    <value>Annual price:</value>
+    <value>Prix annuel :</value>
   </data>
   <data name="YourOfferingSubtitleCaption" xml:space="preserve">
-    <value>Offer subtitle:</value>
+    <value>Sous-titre de l’offre :</value>
   </data>
   <data name="YourOfferingTitleCaption" xml:space="preserve">
-    <value>Offer name:</value>
+    <value>Nom de l’offre :</value>
   </data>
   <data name="AddOfferFeaturesTooltip" xml:space="preserve">
-    <value>Add offer features</value>
+    <value>Ajouter des fonctionnalités de l’offre</value>
   </data>
   <data name="AddOfferFeatureTooltip" xml:space="preserve">
-    <value>Add offer feature after this</value>
+    <value>Ajouter la fonction de l’offre après cela</value>
   </data>
   <data name="AddSummaryPointsTooltip" xml:space="preserve">
-    <value>Add offer summary points</value>
+    <value>Ajouter offre points sommaires</value>
   </data>
   <data name="AddSummaryPointTooltip" xml:space="preserve">
-    <value>Add offer summary after this</value>
+    <value>Ajouter Résumé de l’offre après cela</value>
   </data>
   <data name="BrandingSectionTooltip" xml:space="preserve">
-    <value>Click to configure your company's branding</value>
+    <value>Cliquez ici pour configurer l’image de marque de votre entreprise</value>
   </data>
   <data name="OfferFeaturePlaceHolder" xml:space="preserve">
-    <value>Describe a feature this offer gives</value>
+    <value>Décrire une fonction, que cette offre donne</value>
   </data>
   <data name="OffersSectionTooltip" xml:space="preserve">
-    <value>Click to configure your offers</value>
+    <value>Cliquez ici pour configurer vos offres</value>
   </data>
   <data name="OfferSummaryPlaceHolder" xml:space="preserve">
-    <value>Write an offer summary</value>
+    <value>Écrire un résumé de l’offre</value>
   </data>
   <data name="PaymentSectionTooltip" xml:space="preserve">
-    <value>Click to configure your payment options</value>
+    <value>Cliquez ici pour configurer vos options de paiement</value>
   </data>
   <data name="PriceHeader" xml:space="preserve">
-    <value>Price:</value>
+    <value>Prix :</value>
   </data>
   <data name="RemoveOfferFeatureTooltip" xml:space="preserve">
-    <value>Remove offer feature</value>
+    <value>Supprimer l’offre fonctionnalité</value>
   </data>
   <data name="RemoveSummaryPointTooltip" xml:space="preserve">
-    <value>Remove offer summary</value>
+    <value>Supprimer le résumé de l’offre</value>
   </data>
   <data name="DashboardItemConfigured" xml:space="preserve">
-    <value>Configured</value>
+    <value>Configurée</value>
   </data>
   <data name="DashboardItemNeedsConfiguration" xml:space="preserve">
-    <value>Needs configuration</value>
+    <value>Configuration de besoins</value>
   </data>
   <data name="DashboardLoadingError" xml:space="preserve">
-    <value>Could not retrieve the dashboard information</value>
+    <value>Pas pu récupérer les informations du tableau de bord</value>
   </data>
   <data name="DashboardStatusNotOk" xml:space="preserve">
-    <value>Personalize your site before you start selling</value>
+    <value>Personnalisez votre site avant de commencer à vendre</value>
   </data>
   <data name="DashboardStatusOk" xml:space="preserve">
-    <value>You are good to to go and start selling!</value>
+    <value>Vous êtes bon pour aller et commencer à vendre !</value>
   </data>
   <data name="AddOfferCaption" xml:space="preserve">
-    <value>Add a new offer</value>
+    <value>Ajouter une nouvelle offre</value>
   </data>
   <data name="Category" xml:space="preserve">
-    <value>Category</value>
+    <value>Catégorie</value>
   </data>
   <data name="CustomizationOfferListColumnCaption" xml:space="preserve">
-    <value>Customization</value>
+    <value>Personnalisation</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>Supprimer</value>
   </data>
   <data name="DeleteOffersCaption" xml:space="preserve">
-    <value>Delete Offer(s)</value>
+    <value>Supprimer l’offre (s)</value>
   </data>
   <data name="DeletingOfferMessage" xml:space="preserve">
-    <value>Deleting offers</value>
+    <value>Suppression des offres</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Description</value>
   </data>
   <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
-    <value>There are no Microsoft offers to choose from</value>
+    <value>Il n’y a aucune offre de Microsoft au choix</value>
   </data>
   <data name="EmptyOfferListMessage" xml:space="preserve">
-    <value>You do not have any offers configured. Click Add Offer above to start adding your offers.</value>
+    <value>Vous n’avez pas d’offres configurés. Cliquez sur Ajouter offre ci-dessus pour commencer à ajouter vos offres.</value>
   </data>
   <data name="MicrosoftOfferListColumnCaption" xml:space="preserve">
-    <value>Microsoft Offering</value>
+    <value>Microsoft offre</value>
   </data>
   <data name="MicrosoftOfferRetrievalErrorMessage" xml:space="preserve">
-    <value>Could not retrieve Microsoft offers</value>
+    <value>Pas pu récupérer les offres Microsoft</value>
   </data>
   <data name="Offer" xml:space="preserve">
-    <value>Offer</value>
+    <value>Offre</value>
   </data>
   <data name="OfferAutomaticallyRenewable" xml:space="preserve">
-    <value>Automatically renewable</value>
+    <value>Renouvelable automatiquement</value>
   </data>
   <data name="OfferAvailableForPurchase" xml:space="preserve">
-    <value>Available for purchase</value>
+    <value>Disponible à l’achat</value>
   </data>
   <data name="OfferDeletionConfirmation" xml:space="preserve">
-    <value>Offers have been deleted</value>
+    <value>Offres ont été supprimés</value>
   </data>
   <data name="OfferDeletionFailure" xml:space="preserve">
-    <value>Could not delete the offer(s)</value>
+    <value>Pas pu supprimer l’offre (s)</value>
   </data>
   <data name="OfferManuallyRenewable" xml:space="preserve">
-    <value>Manually renewable</value>
+    <value>Manuellement renouvelables</value>
   </data>
   <data name="OfferSaveErrorMessage" xml:space="preserve">
-    <value>Could not save the offer</value>
+    <value>Ne peut pas enregistrer l’offre</value>
   </data>
   <data name="OfferSaveSuccessMessage" xml:space="preserve">
-    <value>Offer successfully saved!</value>
+    <value>Offre été enregistré avec succès !</value>
   </data>
   <data name="OffersFetchFailure" xml:space="preserve">
-    <value>Could not retrieve the offers</value>
+    <value>Pas pu récupérer les offres</value>
   </data>
   <data name="OffersFetchProgress" xml:space="preserve">
-    <value>Retrieving offers</value>
+    <value>Récupération des offres</value>
   </data>
   <data name="OfferUnavailableForPurchase" xml:space="preserve">
-    <value>Unavailable for purchase</value>
+    <value>Non disponible à l’achat</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>Enregistrer</value>
   </data>
   <data name="SaveOfferCaption" xml:space="preserve">
-    <value>Save offer</value>
+    <value>Enregistrer l’offre</value>
   </data>
   <data name="SavingOfferMessage" xml:space="preserve">
-    <value>Saving offer</value>
+    <value>Enregistrement de l’offre</value>
   </data>
   <data name="Seats" xml:space="preserve">
-    <value> seats</value>
+    <value> sièges</value>
   </data>
   <data name="SelectOfferErrorMessage" xml:space="preserve">
-    <value>Please select an offer</value>
+    <value>Veuillez sélectionner une offre</value>
   </data>
   <data name="To" xml:space="preserve">
-    <value> to </value>
+    <value> À </value>
   </data>
   <data name="UpdatingOfferMessage" xml:space="preserve">
-    <value>Updating offer</value>
+    <value>Mise à jour de l’offre</value>
   </data>
   <data name="DefaultOrganizationName" xml:space="preserve">
-    <value>Your Organization Name</value>
+    <value>Nom de votre organisation</value>
   </data>
   <data name="Undo" xml:space="preserve">
-    <value>Undo</value>
+    <value>Annuler</value>
   </data>
   <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
-    <value>Could not retrieve partner branding</value>
+    <value>Pas pu récupérer partenaire branding</value>
   </data>
   <data name="BrandingRetrievalProgressMessage" xml:space="preserve">
-    <value>Retrieving partner branding</value>
+    <value>Partenaire de récupération branding</value>
   </data>
   <data name="BrandingSetupPromptMessage" xml:space="preserve">
-    <value>Configure your web store</value>
+    <value>Configurer votre boutique en ligne</value>
   </data>
   <data name="BrandingSetupSecondaryMessage" xml:space="preserve">
-    <value>Provide your Organization information that will be visible in the header and footer on all pages</value>
+    <value>Renseigner votre organisation qui seront visibles dans l’en-tête et le pied de page sur toutes les pages</value>
   </data>
   <data name="BrandingUpdateErrorMessage" xml:space="preserve">
-    <value>Could not save branding</value>
+    <value>Ne peut pas enregistrer image de marque</value>
   </data>
   <data name="BrandingUpdateProgressMessage" xml:space="preserve">
-    <value>Updating branding information</value>
+    <value>Mise à jour des informations de personnalisation</value>
   </data>
   <data name="BrandingUpdateSuccessMessage" xml:space="preserve">
-    <value>Branding saved. Click the reload button in the header bar to see your changes</value>
+    <value>Marque enregistrée. Cliquez sur le bouton recharger de la barre d’en-tête pour afficher vos modifications</value>
   </data>
   <data name="ContactSalesHeader" xml:space="preserve">
-    <value>Sales contact:</value>
+    <value>Contact vente :</value>
   </data>
   <data name="ContactUsFieldHeader" xml:space="preserve">
-    <value>Support contact:</value>
+    <value>Contact de la prise en charge :</value>
   </data>
   <data name="SupportEmailAddressHeader" xml:space="preserve">
-    <value>Support email</value>
+    <value>Email de soutien</value>
   </data>
   <data name="HeaderImageFieldHeader" xml:space="preserve">
-    <value>Header Image:</value>
+    <value>Image d’en-tête :</value>
   </data>
   <data name="HeaderImageSubText" xml:space="preserve">
-    <value>Shown at the top of the home page. (.jpg, .jpeg, .img, .gif). Upload a file or enter a valid image URL</value>
+    <value>Montré en haut de la page d’accueil. (.jpg, .jpeg, .img, .gif). Télécharger un fichier ou entrez une URL d’image valide</value>
   </data>
   <data name="HeaderImageUploadTooltip" xml:space="preserve">
-    <value>Select Header image file from your computer</value>
+    <value>Sélectionnez le fichier image d’en-tête dans votre ordinateur</value>
   </data>
   <data name="OrganizationLogoFieldHeader" xml:space="preserve">
-    <value>Logo:</value>
+    <value>Logo :</value>
   </data>
   <data name="OrganizationLogoSubText" xml:space="preserve">
-    <value>Shown in the header of every page, images of size 32 by 32 work best. Upload a file or enter a valid image URL</value>
+    <value>Indiqué dans l’en-tête de chaque page, des images de taille 32 par 32 fonctionnent le mieux. Télécharger un fichier ou entrez une URL d’image valide</value>
   </data>
   <data name="OrganizationLogoUploadTooltip" xml:space="preserve">
-    <value>Select Organization logo image file from your computer</value>
+    <value>Sélectionnez le fichier d’image du logo Organisation depuis votre ordinateur</value>
   </data>
   <data name="OrganizationNameFieldHeader" xml:space="preserve">
-    <value>Name:</value>
+    <value>Nom :</value>
   </data>
   <data name="OrganizationNameFieldSubText" xml:space="preserve">
-    <value>Your company’s legal name, shown on the header of every page</value>
+    <value>Dénomination sociale de votre entreprise, montrée sur l’en-tête de chaque page</value>
   </data>
   <data name="PhoneHeaderCaption" xml:space="preserve">
-    <value>Phone number</value>
+    <value>Numéro de téléphone</value>
   </data>
   <data name="ReloadPortalButtonCaption" xml:space="preserve">
-    <value>Reload portal</value>
+    <value>Portail de rechargement</value>
   </data>
   <data name="ReloadPortalButtonTooltip" xml:space="preserve">
-    <value>Reload the portal to see your changes</value>
+    <value>Recharger le portail pour voir vos modifications</value>
   </data>
   <data name="UndoBrandingChangesTooltip" xml:space="preserve">
-    <value>Undo local branding changes</value>
+    <value>Annuler des modifications de personnalisation locales</value>
   </data>
   <data name="FetchPaymentConfigurationErrorMessage" xml:space="preserve">
-    <value>Could not retrieve payment information</value>
+    <value>Pas pu récupérer les informations de paiement</value>
   </data>
   <data name="FetchPaymentConfigurationProgressMessage" xml:space="preserve">
-    <value>Retrieving payment information</value>
+    <value>Récupération des informations de paiement</value>
   </data>
   <data name="LiveAccountTypeCaption" xml:space="preserve">
-    <value>Paypal live account</value>
+    <value>Paypal compte live</value>
   </data>
   <data name="PaymentConfigurationHeader" xml:space="preserve">
-    <value>Provide your PayPal Pro account settings</value>
+    <value>Fournir votre PayPal Pro paramètres du compte</value>
   </data>
   <data name="PaymentConfigurationSubTextPostfix" xml:space="preserve">
-    <value>to create a new pro account if you do not have one.</value>
+    <value>pour créer un nouveau compte pro si vous n’en avez pas.</value>
   </data>
   <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
-    <value>To receive payments from your customers, you should use a PayPal pro account, please visit:</value>
+    <value>Pour recevoir les paiements de vos clients, vous devriez utiliser un compte pro PayPal, veuillez visiter :</value>
   </data>
   <data name="PayPalAccountTypeCaption" xml:space="preserve">
-    <value>PayPal account type:</value>
+    <value>Type de compte PayPal :</value>
   </data>
   <data name="PayPalAccountTypeSubText" xml:space="preserve">
-    <value>You can select a test account type to test your transactions. Once working, you can switch to a live account type to start transacting</value>
+    <value>Vous pouvez sélectionner un type de compte de test pour tester vos transactions. Une fois que le travail, vous pouvez basculer vers un type de compte live pour commencer à exercer des</value>
   </data>
   <data name="PayPalClientIdCaption" xml:space="preserve">
-    <value>PayPal Client ID:</value>
+    <value>ID de Client de PayPal :</value>
   </data>
   <data name="PayPalClientIdSubText" xml:space="preserve">
-    <value>Enter your PayPal client ID</value>
+    <value>Entrez votre ID de client de PayPal</value>
   </data>
   <data name="PayPalClientSecretCaption" xml:space="preserve">
-    <value>PayPal Client Secret:</value>
+    <value>Secret de Client de PayPal :</value>
   </data>
   <data name="PayPalClientSecretSubText" xml:space="preserve">
-    <value>Enter your PayPal client secret</value>
+    <value>Entrez votre secret de client de PayPal</value>
   </data>
   <data name="SandboxAccountTypeCaption" xml:space="preserve">
-    <value>Paypal sandbox account</value>
+    <value>Compte de sandbox de PayPal</value>
   </data>
   <data name="UndoUnsavedChanges" xml:space="preserve">
-    <value>Undo unsaved payment changes</value>
+    <value>Annuler les modifications non enregistrées de paiement</value>
   </data>
   <data name="UpdatePaymentErrorMessage" xml:space="preserve">
-    <value>Could not save payment information</value>
+    <value>Pas pu enregistrer les informations de paiement</value>
   </data>
   <data name="UpdatePaymentProgressMessage" xml:space="preserve">
-    <value>Updating payment information</value>
+    <value>Mise à jour des informations de paiement</value>
   </data>
   <data name="UpdatePaymentSuccessMessage" xml:space="preserve">
-    <value>Payment information updated</value>
+    <value>Mise à jour des informations de paiement</value>
   </data>
   <data name="CustomerProfileAddressLine1Caption" xml:space="preserve">
-    <value>Address line 1</value>
+    <value>Adresse ligne 1</value>
   </data>
   <data name="CustomerProfileAddressLine2Caption" xml:space="preserve">
-    <value>Address line 2</value>
+    <value>Adresse ligne 2</value>
   </data>
   <data name="CustomerProfileCityCaption" xml:space="preserve">
-    <value>City</value>
+    <value>Ville</value>
   </data>
   <data name="CustomerProfileCompanyCountryCaption" xml:space="preserve">
-    <value>Country</value>
+    <value>Pays</value>
   </data>
   <data name="CustomerProfileCompanyInfoSectionCaption" xml:space="preserve">
-    <value>Company Information</value>
+    <value>Informations sur la compagnie</value>
   </data>
   <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
-    <value>Contact Information</value>
+    <value>Informations de contact</value>
   </data>
   <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
-    <value>Your domain prefix will appear after the @ in your domain email address. It has to be unique and it can't contain any punctuations. Example: 'yourcompany'.</value>
+    <value>Le préfixe de votre domaine s’affiche après le @ dans votre adresse de courrier électronique de domaine. Il doit être unique et ne peut contenir aucune ponctuation. Exemple : « yourcompany ».</value>
   </data>
   <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
-    <value>Domain prefix</value>
+    <value>Préfixe de domaine</value>
   </data>
   <data name="CustomerProfileEmailAddressIdCaption" xml:space="preserve">
-    <value>Email address</value>
+    <value>Adresse de courriel</value>
   </data>
   <data name="CustomerProfileEmailWarningCaption" xml:space="preserve">
-    <value>Make sure you enter a valid email address. It will be the main point of contact to send you important information to get you started and to set up your payment data.</value>
+    <value>Assurez-vous de qu'entrer une adresse email valide. Il sera le principal point de contact pour vous envoyer des informations importantes pour vous aider à démarrer et à mettre en place vos données de paiement.</value>
   </data>
   <data name="CustomerProfileFirstNameCaption" xml:space="preserve">
-    <value>First name</value>
+    <value>Prénom</value>
   </data>
   <data name="CustomerProfileLastNameCaption" xml:space="preserve">
-    <value>Last name</value>
+    <value>Nom de famille</value>
   </data>
   <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
-    <value>This will be the user id you'll use with your Office 365 account.</value>
+    <value>Il s’agit de l’id utilisateur que vous utilisez avec votre compte Office 365.</value>
   </data>
   <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
-    <value>Username</value>
+    <value>Nom d’utilisateur</value>
   </data>
   <data name="CustomerProfileStateCaption" xml:space="preserve">
-    <value>State/Province</value>
+    <value>État/Province</value>
   </data>
   <data name="CustomerProfileZipPostalCaption" xml:space="preserve">
-    <value>Zip / Postal code</value>
+    <value>Zip / code Postal</value>
   </data>
   <data name="UnpaidSubscriptionSuffix" xml:space="preserve">
-    <value>-Unpaid</value>
+    <value>-Non rémunéré</value>
   </data>
   <data name="ConfigurePortalMessage" xml:space="preserve">
-    <value>Configure your website</value>
+    <value>Configurer votre site Web</value>
   </data>
   <data name="PortalNotConfiguredYet" xml:space="preserve">
-    <value>This website is still under construction. Please visit later.</value>
+    <value>Ce site est encore en construction. S’il vous plaît visiter plus tard.</value>
   </data>
   <data name="CouldNotRetrievePartnerOffers" xml:space="preserve">
-    <value>Could not retrieve offers</value>
+    <value>Pas pu récupérer les offres</value>
   </data>
   <data name="SubscriptionSummaryAmountPaidOnPrefixCaption" xml:space="preserve">
-    <value>Amount paid on</value>
+    <value>Somme payée à la</value>
   </data>
   <data name="SubscriptionSummaryAnnualPricePrefixCaption" xml:space="preserve">
-    <value>Price Paid</value>
+    <value>Prix payé</value>
   </data>
   <data name="SubscriptionSummaryRateCaption" xml:space="preserve">
-    <value>Rate</value>
+    <value>Taux</value>
   </data>
   <data name="SubscriptionSummaryRenewLinkCaption" xml:space="preserve">
-    <value>Renew</value>
+    <value>Renouveler</value>
   </data>
   <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
-    <value>Added seats</value>
+    <value>Ajout de sièges</value>
   </data>
   <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
-    <value>Purchase</value>
+    <value>Achat</value>
   </data>
   <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
-    <value>Renewal</value>
+    <value>Renouvellement</value>
   </data>
   <data name="CustomerRegistrationFailureMessage" xml:space="preserve">
-    <value>Could not register the customer. Please try later.</value>
+    <value>Pas pu inscrire le client. Veuillez essayer plus tard.</value>
   </data>
   <data name="CustomerRegistrationMessage" xml:space="preserve">
-    <value>Registering customer...</value>
+    <value>Inscription client...</value>
   </data>
   <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
-    <value>Successfully created customer</value>
+    <value>Créé avec succès client</value>
   </data>
   <data name="OrderRegistrationFailureMessage" xml:space="preserve">
-    <value>Order Registration Error</value>
+    <value>Erreur d’enregistrement de commande</value>
   </data>
   <data name="BuyMoreSubscriptionsMessage" xml:space="preserve">
-    <value>Buy more subscriptions</value>
+    <value>Acheter des abonnements plus</value>
   </data>
   <data name="UserLicencesCaption" xml:space="preserve">
     <value>Licenses</value>
   </data>
   <data name="ProratedPaymentTotal" xml:space="preserve">
-    <value>Pro-rated</value>
+    <value>Calculé au prorata</value>
   </data>
   <data name="SelectPortalOfferCaption" xml:space="preserve">
-    <value>Select one or more offers</value>
+    <value>Sélectionnez une ou plusieurs offres</value>
   </data>
   <data name="AccessDeniedMessage" xml:space="preserve">
-    <value>You do not have the rights needed to access this area</value>
+    <value>Vous n’avez pas les droits nécessaires pour accéder à cette zone</value>
   </data>
   <data name="OrderUpdateFailureMessage" xml:space="preserve">
-    <value>Order Update Error</value>
+    <value>Erreur de mise à jour de commande</value>
   </data>
   <data name="BadInputGenericMessage" xml:space="preserve">
-    <value>There was an input error encountered. Please check the inputs and try again.</value>
+    <value>Il y avait une erreur de saisie détectée. S’il vous plaît vérifier les entrées et réessayez.</value>
   </data>
   <data name="DomainNotAvailable" xml:space="preserve">
-    <value>The domain is not available. Please enter another domain prefix</value>
+    <value>Le domaine n’est pas disponible. Veuillez saisir un autre préfixe de domaine</value>
   </data>
   <data name="ImagesTooLarge" xml:space="preserve">
-    <value>The selected images are too large. Please specify smaller images or upload one by one</value>
+    <value>Les images sélectionnées sont trop grands. S’il vous plaît spécifier des images plus petites ou télécharger un par un</value>
   </data>
   <data name="InvalidAddress" xml:space="preserve">
-    <value>Please specify a valid address</value>
+    <value>S’il vous plaît spécifier une adresse valide</value>
   </data>
   <data name="InvalidFileType" xml:space="preserve">
-    <value>Please select a valid image file to upload</value>
+    <value>Veuillez sélectionner un fichier image valide à télécharger</value>
   </data>
   <data name="DeleteOffersPromptMessage" xml:space="preserve">
-    <value>Are you sure you want to delete the selected offers? If your customers have already purchased these offers, the purchased subscriptions will still be honored but will not be renewable.</value>
+    <value>Êtes-vous sûr de que vouloir supprimer les offres sélectionnées ? Si vos clients ont déjà acheté ces offres, les abonnements achetés seront toujours honorés, mais ne sera pas renouvelables.</value>
   </data>
   <data name="RegistrationConfirmationPasswordNoticeCaption" xml:space="preserve">
-    <value>Please copy the Admin user account and Password and save in a secure location. You won’t be able to retrieve it after you leave this page.</value>
+    <value>S’il vous plaît copiez le compte d’utilisateur Admin et le mot de passe et enregistrer dans un emplacement sécurisé. Vous ne serez pas en mesure de le récupérer après avoir quitté cette page.</value>
   </data>
   <data name="SubscriptionSummaryAnnualCommitmentExpiryCaption" xml:space="preserve">
-    <value>expires on</value>
+    <value>expire le</value>
   </data>
   <data name="SubscriptionSummaryProratepriceCaption" xml:space="preserve">
-    <value>Price paid is displayed pro-rated as applicable. </value>
+    <value>Prix payé est affiché au prorata selon le cas. </value>
   </data>
   <data name="AnnualPriceCaption" xml:space="preserve">
-    <value>Annual price</value>
+    <value>Prix annuel</value>
   </data>
   <data name="EmptyListCaption" xml:space="preserve">
-    <value>Please add a subscription</value>
+    <value>S’il vous plaît ajouter un abonnement</value>
   </data>
   <data name="HomePage" xml:space="preserve">
-    <value>Home page</value>
+    <value>Page d’accueil</value>
   </data>
   <data name="ContactUsTooltip" xml:space="preserve">
-    <value>Display contact details</value>
+    <value>Coordonnées d’écran</value>
   </data>
   <data name="NonAdminUnauthorizedMessage" xml:space="preserve">
-    <value>Partner non admins are not authorized to sign in.</value>
+    <value>Partenaire non admins n’êtes pas autorisés à vous connecter.</value>
   </data>
   <data name="ContactSales" xml:space="preserve">
-    <value>Contact sales</value>
+    <value>Contacter le service commercial</value>
   </data>
   <data name="ContactUsEmailCaption" xml:space="preserve">
-    <value>Email:</value>
+    <value>Messagerie :</value>
   </data>
   <data name="ContactUsPhoneCaption" xml:space="preserve">
-    <value>Phone:</value>
+    <value>Téléphone :</value>
   </data>
   <data name="InvalidInputErrorPrefix" xml:space="preserve">
-    <value>Please correct the invalid input :</value>
+    <value>S’il vous plaît corriger l’entrée non valide :</value>
   </data>
   <data name="DownstreamErrorPrefix" xml:space="preserve">
-    <value>We are unable to process your request at this time. Please try later or contact us over email. Error Details -    </value>
+    <value>Nous ne pouvons pas traiter votre demande en ce moment. Veuillez essayer plus tard ou contactez-nous par e-mail. Détails de l’erreur-    </value>
   </data>
   <data name="MoreThanOneSubscriptionUpdateErrorMessage" xml:space="preserve">
-    <value>Only one subcription can be updated.</value>
+    <value>Un seul abonnement peut être mis à jour.</value>
   </data>
   <data name="PreparingOrderAndRedirectingMessage" xml:space="preserve">
-    <value>Preparing order and redirecting to payment gateway...</value>
+    <value>Préparation de commande et la redirection vers la passerelle de paiement...</value>
   </data>
   <data name="OrderAddFailureMessage" xml:space="preserve">
-    <value>Error during adding subscriptions. </value>
+    <value>Erreur lors de l’ajout d’abonnements. </value>
   </data>
   <data name="PaymentGatewayErrorPrefix" xml:space="preserve">
-    <value>We are unable to process your payment – </value>
+    <value>Nous ne pouvons pas traiter votre paiement – </value>
   </data>
   <data name="PortalStartupFailure" xml:space="preserve">
-    <value>Could not startup the portal</value>
+    <value>Pouvait pas le démarrage du chantier</value>
   </data>
   <data name="PaymentGatewayIdentityFailureDuringConfiguration" xml:space="preserve">
-    <value>Payment configuration is invalid.</value>
+    <value>Configuration de paiement n’est pas valide.</value>
   </data>
   <data name="PaymentGatewayIdentityFailureDuringPayment" xml:space="preserve">
-    <value>Your payment cannot be processed at this time. Please contact us by email. </value>
+    <value>Impossible de traiter votre paiement en ce moment. Veuillez nous contacter par email. </value>
   </data>
   <data name="InvalidHeaderImageUri" xml:space="preserve">
-    <value>Invalid header image Uri. Please make sure the Uri is valid.</value>
+    <value>Image d’en-tête non valide Uri. Vérifiez que l’Uri est valide.</value>
   </data>
   <data name="InvalidInput" xml:space="preserve">
-    <value>There was a problem in one of the fields you entered: </value>
+    <value>Il y avait un problème dans un des champs de saisie : </value>
   </data>
   <data name="InvalidOrganizationLogoUri" xml:space="preserve">
-    <value>Invalid organization logo Uri. Please make sure the Uri is valid.</value>
+    <value>Organisation non valide logo Uri. Vérifiez que l’Uri est valide.</value>
   </data>
   <data name="InvalidPrivacyAgreementUri" xml:space="preserve">
-    <value>Invalid privacy Uri. Please make sure the Uri is valid.</value>
+    <value>Vie privée invalide Uri. Vérifiez que l’Uri est valide.</value>
   </data>
   <data name="PrivacyAgreement" xml:space="preserve">
-    <value>Privacy</value>
+    <value>Vie privée</value>
   </data>
   <data name="PrivacyAgreementFieldHeader" xml:space="preserve">
-    <value>Privacy link:</value>
+    <value>Lien de la vie privée :</value>
   </data>
   <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
-    <value>You can specify a link that shows privacy terms to your customers here which will show up in the home page footer</value>
+    <value>Vous pouvez spécifier un lien qui montre les conditions de la vie privée à vos clients ici qui seront affiché dans le pied de page d’accueil</value>
   </data>
   <data name="PrivacyAgreementToolTip" xml:space="preserve">
-    <value>View this website's privacy terms</value>
+    <value>Découvre les conditions de la vie privée du site Internet</value>
   </data>
   <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
-    <value>Could not retrieve your account. Please try again later.</value>
+    <value>Pas pu récupérer votre compte. Veuillez réessayer ultérieurement.</value>
   </data>
   <data name="CouldNotRetrieveSubscriptionsSummary" xml:space="preserve">
-    <value>Could not retrieve your subscriptions. Please try again later.</value>
+    <value>Pas pu récupérer vos abonnements. Veuillez réessayer ultérieurement.</value>
   </data>
   <data name="SalesEmailAddressHeader" xml:space="preserve">
-    <value>Sales email</value>
+    <value>Courriel vente</value>
   </data>
   <data name="RenewSubscriptionTitleCaption" xml:space="preserve">
-    <value>Renew subscription</value>
+    <value>Renouveler abonnement</value>
   </data>
   <data name="CustomerOrganizationNameCaption" xml:space="preserve">
-    <value>Organization name</value>
+    <value>Nom de l’Organisation</value>
   </data>
   <data name="CustomerPrimaryContactCaption" xml:space="preserve">
-    <value>Primary contact</value>
+    <value>Contact principal</value>
   </data>
   <data name="CouldNotRetrieveOffer" xml:space="preserve">
-    <value>Could not retrieve offer details. Please try again later. </value>
+    <value>Pas pu récupérer des détails de l’offre. Veuillez réessayer ultérieurement. </value>
   </data>
   <data name="InvalidInputInFormCaption" xml:space="preserve">
-    <value>One or more fields are invalid. Please correct them and then submit.</value>
+    <value>Un ou plusieurs champs ne sont pas valides. Veuillez les corriger et de les soumettre.</value>
   </data>
   <data name="PlaceOrderCaption" xml:space="preserve">
-    <value>Place your order</value>
+    <value>Passez votre commande</value>
   </data>
   <data name="AnnualTotalCaption" xml:space="preserve">
-    <value>Annual total</value>
+    <value>Total annuel</value>
   </data>
   <data name="PickOfferCaption" xml:space="preserve">
-    <value>Pick Offer</value>
+    <value>Choisissez l’offre</value>
   </data>
   <data name="PickOfferTooltip" xml:space="preserve">
-    <value>Pick the offer you would like to sell</value>
+    <value>Choisissez l’offre que vous souhaitez vendre</value>
   </data>
   <data name="CannotAddExistingSubscriptionError" xml:space="preserve">
-    <value>One or more offers you are trying to add already exists. You can add more licenses to existing subscriptions.</value>
+    <value>Une ou plusieurs offres vous essayez d’ajouter déjà existe. Vous pouvez ajouter plus de licences à des abonnements existants.</value>
   </data>
   <data name="UserPerYear" xml:space="preserve">
-    <value>user/year</value>
+    <value>utilisateur/an</value>
   </data>
   <data name="InvalidContactSalesPhone" xml:space="preserve">
-    <value>Please enter a valid contact sales phone</value>
+    <value>Veuillez entrer un téléphone valide de vente contact</value>
   </data>
   <data name="InvalidContactUsPhone" xml:space="preserve">
-    <value>Please enter a valid contact support phone</value>
+    <value>Veuillez entrer un téléphone valide contacter le support technique</value>
   </data>
   <data name="ProcessingOrderMessage" xml:space="preserve">
-    <value>Payment information collected, processing order...</value>
+    <value>Informations de paiement recueillies, traitement de commande...</value>
   </data>
   <data name="AddSeatsOperationCaption" xml:space="preserve">
-    <value>Adding seats to subscription.</value>
+    <value>Ajouter des sièges à abonnement.</value>
   </data>
   <data name="NewPurchaseOperationCaption" xml:space="preserve">
-    <value>Adding subscriptions.</value>
+    <value>L’ajout d’abonnements.</value>
   </data>
   <data name="RenewOperationCaption" xml:space="preserve">
-    <value>Renewing subscription.</value>
+    <value>Renouveler l’abonnement.</value>
   </data>
   <data name="OrderFailureMessage" xml:space="preserve">
-    <value>Error while processing order. Please retry later.</value>
+    <value>Erreur lors de l’ordre de traitement. Veuillez réessayer plus tard.</value>
   </data>
   <data name="OrderProcessingFailureNotification" xml:space="preserve">
-    <value>Failure in processing order. Please click done to try again.</value>
+    <value>Échec dans l’ordre de traitement. S’il vous plaît, cliquez sur OK pour réessayer.</value>
   </data>
   <data name="PaymentReceiptFailureNotification" xml:space="preserve">
-    <value>Failure in receiving payment information. Please click done to try again.</value>
+    <value>Défaillance dans la réception des informations de paiement. S’il vous plaît, cliquez sur OK pour réessayer.</value>
   </data>
   <data name="ProcessingOrderNotification" xml:space="preserve">
-    <value>Successfully received payment information. Processing order...</value>
+    <value>Bien reçu des informations de paiement. Ordre de traitement...</value>
   </data>
   <data name="ProcessOrderPageCaption" xml:space="preserve">
-    <value>Order Processing Page.</value>
+    <value>Page de commande de traitement.</value>
   </data>
   <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
-    <value>Your registration order was successfully processed.</value>
+    <value>Votre ordre d’inscription a été traitée avec succès.</value>
   </data>
   <data name="NewCustomerProcessOrderFailureReceivingPaymentMessage" xml:space="preserve">
-    <value>Failure in receiving payment information. Please login and add subscriptions.</value>
+    <value>Défaillance dans la réception des informations de paiement. Veuillez vous connecter et ajouter des abonnements.</value>
   </data>
   <data name="PayPalUnableToProcessPayment" xml:space="preserve">
-    <value>We are unable to process your payment.</value>
+    <value>Nous ne pouvons pas traiter votre paiement.</value>
   </data>
   <data name="ShowInContactUsHeaderCaption" xml:space="preserve">
-    <value>Shown in the Contact us section of the header</value>
+    <value>Montré dans le Contact nous section de l’en-tête</value>
   </data>
   <data name="ADTenantIsAlreadyRegisteredToCustomer" xml:space="preserve">
-    <value>{0} AD tenant is already registered to Partner Center customer: {1}</value>
+    <value>{0} AD locataire est déjà inscrite au client Partner Center : {1}</value>
   </data>
   <data name="AssertNumberPositiveInvalidPrefix" xml:space="preserve">
-    <value>number</value>
+    <value>nombre</value>
   </data>
   <data name="AssertNumberPositiveInvalidError" xml:space="preserve">
-    <value>{0} must be greater than zero</value>
+    <value>{0} doit être supérieur à zéro</value>
   </data>
   <data name="AssertStringNotEmptyInvalidPrefix" xml:space="preserve">
-    <value>string</value>
+    <value>chaîne</value>
   </data>
   <data name="AssertStringNotEmptyInvalidError" xml:space="preserve">
-    <value>{0} is not set</value>
+    <value>{0} n’est pas définie</value>
   </data>
   <data name="RenewSubscriptionFailedMessage" xml:space="preserve">
-    <value>RenewSubscription.ExecuteAsync() Failed: {0}, SubscriptionId: {1}</value>
+    <value>RenewSubscription.ExecuteAsync() a échoué : {0}, SubscriptionId : {1}</value>
   </data>
   <data name="InvalidOrganizationLogoFileTypeMessage" xml:space="preserve">
-    <value>Provide an image file type for the organization logo</value>
+    <value>Fournir un type de fichier d’image pour le logo de l’Organisation</value>
   </data>
   <data name="InvalidOrganizationLogoUriMessage" xml:space="preserve">
-    <value>Invalid organization logo URI uploaded</value>
+    <value>Logo de l’organisation non valide URI téléchargées</value>
   </data>
   <data name="InvalidHeaderImageMessage" xml:space="preserve">
-    <value>Provide an image file type for the header image</value>
+    <value>Fournir un type de fichier image pour l’image d’en-tête</value>
   </data>
   <data name="InvalidHeaderImageUriMessage" xml:space="preserve">
-    <value>Invalid header image URI uploaded</value>
+    <value>URI de l’image en-tête non valide téléchargées</value>
   </data>
   <data name="InvalidPrivacyUriMessage" xml:space="preserve">
-    <value>Invalid privacy agreement URI uploaded</value>
+    <value>Accord de confidentialité non valide URI téléchargées</value>
   </data>
   <data name="ErrorPageDetailsCaption" xml:space="preserve">
-    <value>An error occurred while processing your request.</value>
+    <value>Une erreur s’est produite lors du traitement de votre demande.</value>
   </data>
   <data name="ErrorPageTitleCaption" xml:space="preserve">
-    <value>Error</value>
+    <value>Erreur</value>
   </data>
   <data name="InvalidOperationForOrderMessage" xml:space="preserve">
-    <value>Invalid operation being performed.</value>
+    <value>Opération non valide en cours.</value>
   </data>
   <data name="NotEnoughItemsInOrderErrorMessage" xml:space="preserve">
-    <value>Order should have at least one subscription item.</value>
+    <value>Ordonnance devrait avoir au moins un élément d’abonnement.</value>
   </data>
   <data name="InvalidPaymentModeErrorMessage" xml:space="preserve">
-    <value>Payment mode is not supported</value>
+    <value>Mode de paiement n’est pas pris en charge</value>
   </data>
   <data name="OfferPriceShouldBeMoreThanZero" xml:space="preserve">
-    <value>Offer price should be more than zero</value>
+    <value>Prix de l’offre devrait être supérieure à zéro</value>
   </data>
   <data name="MicrosoftOfferIdMustBeSet" xml:space="preserve">
-    <value>MicrosoftOfferId must be set</value>
+    <value>MicrosoftOfferId doit avoir la valeur</value>
   </data>
   <data name="IdMustBeAValidGUID" xml:space="preserve">
-    <value>Id must be a valid GUID</value>
+    <value>ID doit être un GUID valide</value>
   </data>
   <data name="FailedToUpdatePartnerOffersStore" xml:space="preserve">
-    <value>Failed to update partner offers persistence</value>
+    <value>N’a pas pu mettre à jour la persistance des offres partenaire</value>
   </data>
   <data name="MicrosoftOfferImmutableErrorMessage" xml:space="preserve">
-    <value>Microsoft offer is not allowed to be updated. Create a new offer instead.</value>
+    <value>Offre Microsoft n’est pas autorisé à mettre à jour. Créer une nouvelle offre à la place.</value>
   </data>
   <data name="OfferNotFound" xml:space="preserve">
-    <value>Offer not found</value>
+    <value>Offre non trouvé</value>
   </data>
   <data name="ContactUsSectionNotFound" xml:space="preserve">
-    <value>ContactUs section not found in portal branding configuration</value>
+    <value>ContactUs section introuvable dans portail configuration Personnalisation</value>
   </data>
   <data name="InvalidContactUsEmailAddress" xml:space="preserve">
-    <value>Invalid contact us email address</value>
+    <value>Contact non valide nous adresse email</value>
   </data>
   <data name="InvalidContactUsPhoneExceptionMessage" xml:space="preserve">
-    <value>Invalid contact us phone</value>
+    <value>Invalid Contactez-nous Tél</value>
   </data>
   <data name="InvalidContactSalesEmailAddress" xml:space="preserve">
-    <value>Invalid contact sales email address</value>
+    <value>Adresse email non valide de vente contact</value>
   </data>
   <data name="InvalidContactSalesPhoneExceptionMessage" xml:space="preserve">
-    <value>Invalid contact sales phone</value>
+    <value>Téléphone non valide de vente contact</value>
   </data>
   <data name="AddMoreLicensesCaption" xml:space="preserve">
-    <value>Add more licenses</value>
+    <value>Ajouter plus de licences</value>
   </data>
   <data name="PayPalWebsiteCaption" xml:space="preserve">
     <value>PayPal.com</value>
   </data>
   <data name="CouldNotRegisterNewPartnerCenterCustomer" xml:space="preserve">
-    <value>Could not register new Partner Center customer</value>
+    <value>Pas pu enregistrer de nouveau client Partner Center</value>
   </data>
   <data name="HomePluginDisplayName" xml:space="preserve">
-    <value>Home</value>
+    <value>Accueil</value>
   </data>
   <data name="AdminConsoleDisplayName" xml:space="preserve">
-    <value>Web Store Builder</value>
+    <value>Magasin Web Builder</value>
   </data>
   <data name="BrandingDisplayName" xml:space="preserve">
-    <value>Branding Setup</value>
+    <value>Le programme d’installation d’image de marque </value>
   </data>
   <data name="OffersDisplayName" xml:space="preserve">
-    <value>Offers Setup</value>
+    <value>Offre le programme d’installation</value>
   </data>
   <data name="PaymentDisplayName" xml:space="preserve">
-    <value>Payment Setup</value>
+    <value>Installation de paiement</value>
   </data>
   <data name="MySubscriptionsDisplayName" xml:space="preserve">
-    <value>My Subscriptions</value>
+    <value>Mes abonnements</value>
   </data>
   <data name="MyAccountDisplayName" xml:space="preserve">
-    <value>My Account</value>
+    <value>Mon compte</value>
   </data>
   <data name="GoToHomePageCaption" xml:space="preserve">
-    <value>Go to home page</value>
+    <value>Aller à la page d’accueil</value>
   </data>
   <data name="CountryNameAU" xml:space="preserve">
-    <value>Australia</value>
+    <value>Australie</value>
   </data>
   <data name="CountryNameAT" xml:space="preserve">
-    <value>Austria</value>
+    <value>Autriche</value>
   </data>
   <data name="CountryNameBE" xml:space="preserve">
-    <value>Belgium</value>
+    <value>Belgique</value>
   </data>
   <data name="CountryNameBG" xml:space="preserve">
-    <value>Bulgaria</value>
+    <value>Bulgarie</value>
   </data>
   <data name="CountryNameCA" xml:space="preserve">
     <value>Canada</value>
   </data>
   <data name="CountryNameHR" xml:space="preserve">
-    <value>Croatia</value>
+    <value>Croatie (Hrvatska)</value>
   </data>
   <data name="CountryNameCY" xml:space="preserve">
-    <value>Cyprus</value>
+    <value>Chypre</value>
   </data>
   <data name="CountryNameCZ" xml:space="preserve">
-    <value>Czech Republic</value>
+    <value>République tchèque</value>
   </data>
   <data name="CountryNameDK" xml:space="preserve">
-    <value>Denmark</value>
+    <value>Danemark</value>
   </data>
   <data name="CountryNameEE" xml:space="preserve">
-    <value>Estonia</value>
+    <value>Estonie</value>
   </data>
   <data name="CountryNameFI" xml:space="preserve">
-    <value>Finland</value>
+    <value>Finlande</value>
   </data>
   <data name="CountryNameFR" xml:space="preserve">
     <value>France</value>
   </data>
   <data name="CountryNameDE" xml:space="preserve">
-    <value>Germany</value>
+    <value>Allemagne</value>
   </data>
   <data name="CountryNameGR" xml:space="preserve">
-    <value>Greece</value>
+    <value>Grèce</value>
   </data>
   <data name="CountryNameHU" xml:space="preserve">
-    <value>Hungary</value>
+    <value>Hongrie</value>
   </data>
   <data name="CountryNameIS" xml:space="preserve">
-    <value>Iceland</value>
+    <value>Islande</value>
   </data>
   <data name="CountryNameIE" xml:space="preserve">
-    <value>Ireland</value>
+    <value>Irlande</value>
   </data>
   <data name="CountryNameIT" xml:space="preserve">
-    <value>Italy</value>
+    <value>Italie</value>
   </data>
   <data name="CountryNameJP" xml:space="preserve">
-    <value>Japan</value>
+    <value>Japon</value>
   </data>
   <data name="CountryNameLV" xml:space="preserve">
-    <value>Latvia</value>
+    <value>Lettonie</value>
   </data>
   <data name="CountryNameLI" xml:space="preserve">
     <value>Liechtenstein</value>
   </data>
   <data name="CountryNameLT" xml:space="preserve">
-    <value>Lithuania</value>
+    <value>Lituanie</value>
   </data>
   <data name="CountryNameLU" xml:space="preserve">
     <value>Luxembourg</value>
   </data>
   <data name="CountryNameMT" xml:space="preserve">
-    <value>Malta</value>
+    <value>Malte</value>
   </data>
   <data name="CountryNameMC" xml:space="preserve">
     <value>Monaco</value>
   </data>
   <data name="CountryNameNL" xml:space="preserve">
-    <value>Netherlands</value>
+    <value>Pays-Bas</value>
   </data>
   <data name="CountryNameNZ" xml:space="preserve">
-    <value>New Zealand</value>
+    <value>Nouvelle-Zélande</value>
   </data>
   <data name="CountryNameNO" xml:space="preserve">
-    <value>Norway</value>
+    <value>Norvège</value>
   </data>
   <data name="CountryNamePO" xml:space="preserve">
-    <value>Poland</value>
+    <value>Pologne</value>
   </data>
   <data name="CountryNamePT" xml:space="preserve">
     <value>Portugal</value>
   </data>
   <data name="CountryNameRO" xml:space="preserve">
-    <value>Romania</value>
+    <value>Roumanie</value>
   </data>
   <data name="CountryNameSK" xml:space="preserve">
-    <value>Slovakia</value>
+    <value>Slovaquie</value>
   </data>
   <data name="CountryNameSL" xml:space="preserve">
-    <value>Slovenia</value>
+    <value>Slovénie</value>
   </data>
   <data name="CountryNameES" xml:space="preserve">
-    <value>Spain</value>
+    <value>Espagne</value>
   </data>
   <data name="CountryNameSE" xml:space="preserve">
-    <value>Sweden</value>
+    <value>Suède</value>
   </data>
   <data name="CountryNameCH" xml:space="preserve">
-    <value>Switzerland</value>
+    <value>Suisse</value>
   </data>
   <data name="CountryNameGB" xml:space="preserve">
-    <value>United Kingdom</value>
+    <value>Royaume-Uni</value>
   </data>
   <data name="CountryNameUS" xml:space="preserve">
-    <value>United States</value>
+    <value>États-Unis</value>
   </data>
   <data name="CustomerOrganizationRequired" xml:space="preserve">
-    <value>Organization name is required.</value>
+    <value>Nom de l’organisation est nécessaire.</value>
   </data>
   <data name="CustomerProfileCompanyCountryRequired" xml:space="preserve">
-    <value>Country is required.</value>
+    <value>Pays est nécessaire.</value>
   </data>
   <data name="CustomerProfileAddressLine1Required" xml:space="preserve">
-    <value>Address line 1 is required.</value>
+    <value>Adresse ligne 1 est requise.</value>
   </data>
   <data name="CustomerProfileCityRequired" xml:space="preserve">
-    <value>City is required.</value>
+    <value>Ville est requise.</value>
   </data>
   <data name="CustomerProfileEmailAddressIdRequired" xml:space="preserve">
-    <value>The Email field is not a valid e-mail address.</value>
+    <value>Le champ Email n’est pas une adresse e-mail valide.</value>
   </data>
   <data name="CustomerProfileDomainPrefixRequired" xml:space="preserve">
-    <value>Domain prefix is required.</value>
+    <value>Préfixe de domaine est requis.</value>
   </data>
   <data name="CustomerProfileFirstNameRequired" xml:space="preserve">
-    <value>First name is required.</value>
+    <value>Le prénom est requis.</value>
   </data>
   <data name="CustomerProfileLastNameRequired" xml:space="preserve">
-    <value>Last name is required.</value>
+    <value>Nom de famille est nécessaire.</value>
   </data>
   <data name="PhoneHeaderRequired" xml:space="preserve">
-    <value>Phone number is required.</value>
+    <value>Numéro de téléphone est requis.</value>
   </data>
   <data name="SignOutToolTipCaption" xml:space="preserve">
-    <value>Sign out from the application</value>
+    <value>Se déconnecter de l’application</value>
   </data>
   <data name="SubscriptionStatusTypeActive" xml:space="preserve">
-    <value>Active</value>
+    <value>Actif</value>
   </data>
   <data name="SubscriptionStatusTypeDeleted" xml:space="preserve">
-    <value>Deleted</value>
+    <value>Supprimé</value>
   </data>
   <data name="SubscriptionStatusTypeNone" xml:space="preserve">
-    <value>None</value>
+    <value>Aucun</value>
   </data>
   <data name="SubscriptionStatusTypeSuspended" xml:space="preserve">
-    <value>Suspended</value>
+    <value>Suspendu</value>
   </data>
   <data name="LicenseCreatedDateCaption" xml:space="preserve">
-    <value>Created Date</value>
+    <value>Date de création</value>
   </data>
   <data name="LicenseNameCaption" xml:space="preserve">
-    <value>Name</value>
+    <value>Nom</value>
   </data>
   <data name="LicenseQuantityCaption" xml:space="preserve">
-    <value>Quantity</value>
+    <value>Quantité</value>
   </data>
   <data name="LicenseStatusCaption" xml:space="preserve">
-    <value>Status</value>
+    <value>Statut</value>
   </data>
 </root>

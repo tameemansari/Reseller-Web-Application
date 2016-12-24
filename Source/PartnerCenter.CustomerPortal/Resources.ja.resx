@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,1053 +118,1053 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Back" xml:space="preserve">
-    <value>Back</value>
+    <value>戻る</value>
   </data>
   <data name="BuyNow" xml:space="preserve">
-    <value>Buy now</value>
+    <value>今すぐ購入します。</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
   </data>
   <data name="ClearAll" xml:space="preserve">
-    <value>Clear all</value>
+    <value>すべてクリア</value>
   </data>
   <data name="ContactUs" xml:space="preserve">
-    <value>Contact us</value>
+    <value>お問い合わせ</value>
   </data>
   <data name="CopyRight" xml:space="preserve">
-    <value>Copyright 2016</value>
+    <value>著作権 2016</value>
   </data>
   <data name="Ellipsis" xml:space="preserve">
-    <value>...</value>
+    <value>.</value>
   </data>
   <data name="EmptyListMessage" xml:space="preserve">
-    <value>No entities found</value>
+    <value>見つけたないエンティティ</value>
   </data>
   <data name="FailedToLoadPortal" xml:space="preserve">
-    <value>Could not get portal content</value>
+    <value>ポータルのコンテンツを取得できませんでした。</value>
   </data>
   <data name="First" xml:space="preserve">
-    <value>First</value>
+    <value>最初</value>
   </data>
   <data name="InvalidPortalConfiguration" xml:space="preserve">
-    <value>Portal configuration seems to be invalid</value>
+    <value>ポータルの構成が無効であると思われる</value>
   </data>
   <data name="Last" xml:space="preserve">
-    <value>Last</value>
+    <value>最後</value>
   </data>
   <data name="Loading" xml:space="preserve">
-    <value>Loading</value>
+    <value>読み込み</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>ログイン</value>
   </data>
   <data name="MoreActionsTooltip" xml:space="preserve">
-    <value>More actions...</value>
+    <value>他の操作.</value>
   </data>
   <data name="NavigateBackTo" xml:space="preserve">
-    <value>Go back to: </value>
+    <value>戻ってください。</value>
   </data>
   <data name="Next" xml:space="preserve">
-    <value>Next</value>
+    <value>次</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No</value>
+    <value>違います</value>
   </data>
   <data name="NotificationSectionTooltip" xml:space="preserve">
-    <value>Active notifications</value>
+    <value>アクティブな通知</value>
   </data>
   <data name="NotificationsSummary" xml:space="preserve">
-    <value> new notifications</value>
+    <value>新しい通知</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>OK</value>
+    <value>わかりました</value>
   </data>
   <data name="PasswordLabel" xml:space="preserve">
-    <value>Password</value>
+    <value>パスワード</value>
   </data>
   <data name="PortalConfigurationNotFound" xml:space="preserve">
-    <value>Portal configuation could not be found</value>
+    <value>ポータルの構成が見つかりませんでした。</value>
   </data>
   <data name="RememberMe" xml:space="preserve">
-    <value>Remember Me</value>
+    <value>私を覚えなさい</value>
   </data>
   <data name="RetryCapital" xml:space="preserve">
-    <value>Retry</value>
+    <value>再試行</value>
   </data>
   <data name="Signout" xml:space="preserve">
-    <value>Sign out</value>
+    <value>サインアウトします。</value>
   </data>
   <data name="TemplateLoadFailureMessage" xml:space="preserve">
-    <value>Could not get the feature content</value>
+    <value>機能の内容を取得できませんでした。</value>
   </data>
   <data name="TemplateLoadRetryMessage" xml:space="preserve">
-    <value>Getting feature content</value>
+    <value>機能の内容を取得</value>
   </data>
   <data name="UserNameLabel" xml:space="preserve">
-    <value>User name:</value>
+    <value>ユーザー名:</value>
   </data>
   <data name="ViewTilesTooltip" xml:space="preserve">
-    <value>View tiles</value>
+    <value>表示タイル</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>[はい]</value>
   </data>
   <data name="EmptyOffersErrorMessage" xml:space="preserve">
-    <value>You must select at least one offer to purchase.</value>
+    <value>少なくとも 1 つの提供を購入するを選択してください。</value>
   </data>
   <data name="TotalAmountCaption" xml:space="preserve">
-    <value>Total Amount</value>
+    <value>合計金額</value>
   </data>
   <data name="RemoveFromCart" xml:space="preserve">
-    <value>Remove from cart</value>
+    <value>カートから削除します。</value>
   </data>
   <data name="Address" xml:space="preserve">
-    <value>Address</value>
+    <value>アドレス</value>
   </data>
   <data name="AdminUserAccount" xml:space="preserve">
-    <value>Admin user account</value>
+    <value>管理者ユーザー アカウント</value>
   </data>
   <data name="Confirmation" xml:space="preserve">
-    <value>Confirmation</value>
+    <value>確認</value>
   </data>
   <data name="ConfirmationMessage" xml:space="preserve">
-    <value>Thank you! Customer information has been setup. Please review this page and click submit to place your order.</value>
+    <value>ありがとう！お客様の情報は、セットアップをされています。このページをご覧ください、ご注文送信] をクリックします。</value>
   </data>
   <data name="ContactInformation" xml:space="preserve">
-    <value>Customer information</value>
+    <value>顧客情報</value>
   </data>
   <data name="Done" xml:space="preserve">
-    <value>Done</value>
+    <value>行われます</value>
   </data>
   <data name="MicrosoftId" xml:space="preserve">
-    <value>Microsoft ID</value>
+    <value>マイクロソフトの ID</value>
   </data>
   <data name="SetupInformation" xml:space="preserve">
-    <value>Details</value>
+    <value>詳細</value>
   </data>
   <data name="Subscription" xml:space="preserve">
-    <value>Subscription</value>
+    <value>サブスクリプション</value>
   </data>
   <data name="Subscriptions" xml:space="preserve">
-    <value>Subscriptions</value>
+    <value>サブスクリプション</value>
   </data>
   <data name="Total" xml:space="preserve">
-    <value>Total</value>
+    <value>合計</value>
   </data>
   <data name="AddSubscriptions" xml:space="preserve">
-    <value>Add subscriptions</value>
+    <value>サブスクリプションを追加します。</value>
   </data>
   <data name="Submit" xml:space="preserve">
-    <value>Submit</value>
+    <value>送信</value>
   </data>
   <data name="AcceptTerms" xml:space="preserve">
-    <value>I accept the terms and conditions</value>
+    <value>利用規約に同意します。</value>
   </data>
   <data name="AcceptTermsValidationMessage" xml:space="preserve">
-    <value>You must accept the terms and conditions</value>
+    <value>諸条件に同意する必要があります。</value>
   </data>
   <data name="DomainPrefixValidationMessage" xml:space="preserve">
-    <value>Please enter a valid domain prefix</value>
+    <value>有効なドメインのプレフィックスを入力してください。</value>
   </data>
   <data name="PhoneValidationMessage" xml:space="preserve">
-    <value>Please enter a valid phone number</value>
+    <value>有効な電話番号を入力してください。</value>
   </data>
   <data name="SubscriptionIDLabel" xml:space="preserve">
-    <value>Subscription ID:</value>
+    <value>サブスクリプション ID:</value>
   </data>
   <data name="CompanyBrandingConfigurationCaption" xml:space="preserve">
-    <value>Update your company information</value>
+    <value>会社情報を更新します。</value>
   </data>
   <data name="DashboardBuildingProgressMessage" xml:space="preserve">
-    <value>Building your dashboard</value>
+    <value>あなたのダッシュ ボードを構築</value>
   </data>
   <data name="OffersConfigurationCaption" xml:space="preserve">
-    <value>Choose which offers to sell</value>
+    <value>販売する提供していますを選択</value>
   </data>
   <data name="PaymentConfigurationCaption" xml:space="preserve">
-    <value>Add a payment method</value>
+    <value>お支払い方法を追加します。</value>
   </data>
   <data name="WelcomeCaptionPrefix" xml:space="preserve">
-    <value>Welcome</value>
+    <value>ようこそ</value>
   </data>
   <data name="WelcomeCaptionSuffix" xml:space="preserve">
-    <value>to your Web Store Builder!</value>
+    <value>あなたの Web ストア ビルダー!</value>
   </data>
   <data name="BillingTypeListRowCaption" xml:space="preserve">
-    <value>based billing</value>
+    <value>ベースの課金</value>
   </data>
   <data name="Comma" xml:space="preserve">
-    <value>,</value>
+    <value>、</value>
   </data>
   <data name="Dash" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="SummaryListRowCaption" xml:space="preserve">
-    <value>Summary:</value>
+    <value>概要:</value>
   </data>
   <data name="AddCaption" xml:space="preserve">
-    <value>Add</value>
+    <value>追加</value>
   </data>
   <data name="Customization" xml:space="preserve">
-    <value>Customization</value>
+    <value>カスタマイズ</value>
   </data>
   <data name="FeaturesCaption" xml:space="preserve">
-    <value>Features:</value>
+    <value>機能:</value>
   </data>
   <data name="SelectMicrosoftOfferCaption" xml:space="preserve">
-    <value>Select a Microsoft offer:</value>
+    <value>マイクロソフトのオファーを選択します。</value>
   </data>
   <data name="YourAnnualPriceCaption" xml:space="preserve">
-    <value>Annual price:</value>
+    <value>年間の価格:</value>
   </data>
   <data name="YourOfferingSubtitleCaption" xml:space="preserve">
-    <value>Offer subtitle:</value>
+    <value>字幕を提供しています。</value>
   </data>
   <data name="YourOfferingTitleCaption" xml:space="preserve">
-    <value>Offer name:</value>
+    <value>プラン名。</value>
   </data>
   <data name="AddOfferFeaturesTooltip" xml:space="preserve">
-    <value>Add offer features</value>
+    <value>提供機能を追加します。</value>
   </data>
   <data name="AddOfferFeatureTooltip" xml:space="preserve">
-    <value>Add offer feature after this</value>
+    <value>この後提供機能を追加します。</value>
   </data>
   <data name="AddSummaryPointsTooltip" xml:space="preserve">
-    <value>Add offer summary points</value>
+    <value>ご要約ポイントを追加します。</value>
   </data>
   <data name="AddSummaryPointTooltip" xml:space="preserve">
-    <value>Add offer summary after this</value>
+    <value>この後キャンペーン概要を追加します。</value>
   </data>
   <data name="BrandingSectionTooltip" xml:space="preserve">
-    <value>Click to configure your company's branding</value>
+    <value>あなたの会社のブランドを構成する] をクリックします。</value>
   </data>
   <data name="OfferFeaturePlaceHolder" xml:space="preserve">
-    <value>Describe a feature this offer gives</value>
+    <value>このオファーを与える機能について説明します。</value>
   </data>
   <data name="OffersSectionTooltip" xml:space="preserve">
-    <value>Click to configure your offers</value>
+    <value>あなたのオファーを構成します</value>
   </data>
   <data name="OfferSummaryPlaceHolder" xml:space="preserve">
-    <value>Write an offer summary</value>
+    <value>キャンペーン概要を書く</value>
   </data>
   <data name="PaymentSectionTooltip" xml:space="preserve">
-    <value>Click to configure your payment options</value>
+    <value>支払いオプションを構成する] をクリックします。</value>
   </data>
   <data name="PriceHeader" xml:space="preserve">
-    <value>Price:</value>
+    <value>価格:</value>
   </data>
   <data name="RemoveOfferFeatureTooltip" xml:space="preserve">
-    <value>Remove offer feature</value>
+    <value>提供機能を削除します。</value>
   </data>
   <data name="RemoveSummaryPointTooltip" xml:space="preserve">
-    <value>Remove offer summary</value>
+    <value>キャンペーン概要を削除します。</value>
   </data>
   <data name="DashboardItemConfigured" xml:space="preserve">
-    <value>Configured</value>
+    <value>構成</value>
   </data>
   <data name="DashboardItemNeedsConfiguration" xml:space="preserve">
-    <value>Needs configuration</value>
+    <value>構成が必要</value>
   </data>
   <data name="DashboardLoadingError" xml:space="preserve">
-    <value>Could not retrieve the dashboard information</value>
+    <value>ダッシュ ボードの情報を取得できませんでした。</value>
   </data>
   <data name="DashboardStatusNotOk" xml:space="preserve">
-    <value>Personalize your site before you start selling</value>
+    <value>販売を開始する前に、あなたのサイトをパーソナライズします。</value>
   </data>
   <data name="DashboardStatusOk" xml:space="preserve">
-    <value>You are good to to go and start selling!</value>
+    <value>販売を開始してもいいです!</value>
   </data>
   <data name="AddOfferCaption" xml:space="preserve">
-    <value>Add a new offer</value>
+    <value>新たな申込みを追加します。</value>
   </data>
   <data name="Category" xml:space="preserve">
-    <value>Category</value>
+    <value>カテゴリ</value>
   </data>
   <data name="CustomizationOfferListColumnCaption" xml:space="preserve">
-    <value>Customization</value>
+    <value>カスタマイズ</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>削除</value>
   </data>
   <data name="DeleteOffersCaption" xml:space="preserve">
-    <value>Delete Offer(s)</value>
+    <value>オファーを削除します。</value>
   </data>
   <data name="DeletingOfferMessage" xml:space="preserve">
-    <value>Deleting offers</value>
+    <value>オファーを削除します。</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Description</value>
+    <value>説明</value>
   </data>
   <data name="EmptyMicrosoftOfferListMessage" xml:space="preserve">
-    <value>There are no Microsoft offers to choose from</value>
+    <value>選択する Microsoft 提供がないです。</value>
   </data>
   <data name="EmptyOfferListMessage" xml:space="preserve">
-    <value>You do not have any offers configured. Click Add Offer above to start adding your offers.</value>
+    <value>構成されている任意のオファーがありません。あなたのオファーを追加する上記提供を追加をクリックします。</value>
   </data>
   <data name="MicrosoftOfferListColumnCaption" xml:space="preserve">
-    <value>Microsoft Offering</value>
+    <value>マイクロソフト提供</value>
   </data>
   <data name="MicrosoftOfferRetrievalErrorMessage" xml:space="preserve">
-    <value>Could not retrieve Microsoft offers</value>
+    <value>マイクロソフトのオファーを取得できませんでした。</value>
   </data>
   <data name="Offer" xml:space="preserve">
-    <value>Offer</value>
+    <value>提供します。</value>
   </data>
   <data name="OfferAutomaticallyRenewable" xml:space="preserve">
-    <value>Automatically renewable</value>
+    <value>自動的に再生可能</value>
   </data>
   <data name="OfferAvailableForPurchase" xml:space="preserve">
-    <value>Available for purchase</value>
+    <value>購入可能</value>
   </data>
   <data name="OfferDeletionConfirmation" xml:space="preserve">
-    <value>Offers have been deleted</value>
+    <value>提供が削除されています。</value>
   </data>
   <data name="OfferDeletionFailure" xml:space="preserve">
-    <value>Could not delete the offer(s)</value>
+    <value>オファーを削除できませんでした。</value>
   </data>
   <data name="OfferManuallyRenewable" xml:space="preserve">
-    <value>Manually renewable</value>
+    <value>手動で再生可能</value>
   </data>
   <data name="OfferSaveErrorMessage" xml:space="preserve">
-    <value>Could not save the offer</value>
+    <value>オファーを保存できませんでした。</value>
   </data>
   <data name="OfferSaveSuccessMessage" xml:space="preserve">
-    <value>Offer successfully saved!</value>
+    <value>正常に保存を提供します!</value>
   </data>
   <data name="OffersFetchFailure" xml:space="preserve">
-    <value>Could not retrieve the offers</value>
+    <value>オファーを取得できませんでした。</value>
   </data>
   <data name="OffersFetchProgress" xml:space="preserve">
-    <value>Retrieving offers</value>
+    <value>オファーを取得</value>
   </data>
   <data name="OfferUnavailableForPurchase" xml:space="preserve">
-    <value>Unavailable for purchase</value>
+    <value>購入はできません。</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>保存</value>
   </data>
   <data name="SaveOfferCaption" xml:space="preserve">
-    <value>Save offer</value>
+    <value>オファーを保存します。</value>
   </data>
   <data name="SavingOfferMessage" xml:space="preserve">
-    <value>Saving offer</value>
+    <value>オファーを保存</value>
   </data>
   <data name="Seats" xml:space="preserve">
-    <value> seats</value>
+    <value>席</value>
   </data>
   <data name="SelectOfferErrorMessage" xml:space="preserve">
-    <value>Please select an offer</value>
+    <value>オファーを選択してください。</value>
   </data>
   <data name="To" xml:space="preserve">
-    <value> to </value>
+    <value>宛先</value>
   </data>
   <data name="UpdatingOfferMessage" xml:space="preserve">
-    <value>Updating offer</value>
+    <value>オファーを更新</value>
   </data>
   <data name="DefaultOrganizationName" xml:space="preserve">
-    <value>Your Organization Name</value>
+    <value>組織名</value>
   </data>
   <data name="Undo" xml:space="preserve">
-    <value>Undo</value>
+    <value>元に戻す</value>
   </data>
   <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
-    <value>Could not retrieve partner branding</value>
+    <value>ブランディング パートナーを取得できませんでした。</value>
   </data>
   <data name="BrandingRetrievalProgressMessage" xml:space="preserve">
-    <value>Retrieving partner branding</value>
+    <value>取得パートナー ブランド</value>
   </data>
   <data name="BrandingSetupPromptMessage" xml:space="preserve">
-    <value>Configure your web store</value>
+    <value>Web ストアを構成します。</value>
   </data>
   <data name="BrandingSetupSecondaryMessage" xml:space="preserve">
-    <value>Provide your Organization information that will be visible in the header and footer on all pages</value>
+    <value>ヘッダーとフッターのすべてのページに表示される組織情報を指定します。</value>
   </data>
   <data name="BrandingUpdateErrorMessage" xml:space="preserve">
-    <value>Could not save branding</value>
+    <value>ブランディングを保存できませんでした。</value>
   </data>
   <data name="BrandingUpdateProgressMessage" xml:space="preserve">
-    <value>Updating branding information</value>
+    <value>ブランド情報を更新</value>
   </data>
   <data name="BrandingUpdateSuccessMessage" xml:space="preserve">
-    <value>Branding saved. Click the reload button in the header bar to see your changes</value>
+    <value>ブランディングに保存されます。変更を表示するには、ヘッダー バーのリロード ボタンをクリックします。</value>
   </data>
   <data name="ContactSalesHeader" xml:space="preserve">
-    <value>Sales contact:</value>
+    <value>営業担当:</value>
   </data>
   <data name="ContactUsFieldHeader" xml:space="preserve">
-    <value>Support contact:</value>
+    <value>サポートのお問い合わせ:</value>
   </data>
   <data name="SupportEmailAddressHeader" xml:space="preserve">
-    <value>Support email</value>
+    <value>サポートのメール アドレス</value>
   </data>
   <data name="HeaderImageFieldHeader" xml:space="preserve">
-    <value>Header Image:</value>
+    <value>ヘッダー イメージ:</value>
   </data>
   <data name="HeaderImageSubText" xml:space="preserve">
-    <value>Shown at the top of the home page. (.jpg, .jpeg, .img, .gif). Upload a file or enter a valid image URL</value>
+    <value>ホーム ページの上部に表示されます。(.jpg、.jpeg、.img、.gif)。ファイルをアップロードまたは有効なイメージの URL を入力</value>
   </data>
   <data name="HeaderImageUploadTooltip" xml:space="preserve">
-    <value>Select Header image file from your computer</value>
+    <value>お使いのコンピューターからヘッダー画像ファイルを選択します。</value>
   </data>
   <data name="OrganizationLogoFieldHeader" xml:space="preserve">
-    <value>Logo:</value>
+    <value>ロゴ:</value>
   </data>
   <data name="OrganizationLogoSubText" xml:space="preserve">
-    <value>Shown in the header of every page, images of size 32 by 32 work best. Upload a file or enter a valid image URL</value>
+    <value>すべてのページのヘッダーに表示される、サイズ 32 で 32 の画像に適しています。ファイルをアップロードまたは有効なイメージの URL を入力</value>
   </data>
   <data name="OrganizationLogoUploadTooltip" xml:space="preserve">
-    <value>Select Organization logo image file from your computer</value>
+    <value>お使いのコンピューターから組織のロゴの画像ファイルを選択します。</value>
   </data>
   <data name="OrganizationNameFieldHeader" xml:space="preserve">
-    <value>Name:</value>
+    <value>名前:</value>
   </data>
   <data name="OrganizationNameFieldSubText" xml:space="preserve">
-    <value>Your company’s legal name, shown on the header of every page</value>
+    <value>あなたの会社の法的な名前、各ページのヘッダーに</value>
   </data>
   <data name="PhoneHeaderCaption" xml:space="preserve">
-    <value>Phone number</value>
+    <value>電話番号</value>
   </data>
   <data name="ReloadPortalButtonCaption" xml:space="preserve">
-    <value>Reload portal</value>
+    <value>リロード ポータル</value>
   </data>
   <data name="ReloadPortalButtonTooltip" xml:space="preserve">
-    <value>Reload the portal to see your changes</value>
+    <value>変更を確認するポータルを再読み込み</value>
   </data>
   <data name="UndoBrandingChangesTooltip" xml:space="preserve">
-    <value>Undo local branding changes</value>
+    <value>ローカル ブランドの変更を元に戻す</value>
   </data>
   <data name="FetchPaymentConfigurationErrorMessage" xml:space="preserve">
-    <value>Could not retrieve payment information</value>
+    <value>お支払い情報を取得できませんでした。</value>
   </data>
   <data name="FetchPaymentConfigurationProgressMessage" xml:space="preserve">
-    <value>Retrieving payment information</value>
+    <value>お支払い情報の取得</value>
   </data>
   <data name="LiveAccountTypeCaption" xml:space="preserve">
-    <value>Paypal live account</value>
+    <value>ライブ口座</value>
   </data>
   <data name="PaymentConfigurationHeader" xml:space="preserve">
-    <value>Provide your PayPal Pro account settings</value>
+    <value>アカウントの設定あなたの PayPal のプロを提供します。</value>
   </data>
   <data name="PaymentConfigurationSubTextPostfix" xml:space="preserve">
-    <value>to create a new pro account if you do not have one.</value>
+    <value>あなたは 1 つを持っていない場合は、新しい pro アカウントを作成。</value>
   </data>
   <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
-    <value>To receive payments from your customers, you should use a PayPal pro account, please visit:</value>
+    <value>あなたの顧客から支払いを受け取る、PayPal pro アカウントを使用、訪問をしてくださいする必要があります。</value>
   </data>
   <data name="PayPalAccountTypeCaption" xml:space="preserve">
-    <value>PayPal account type:</value>
+    <value>PayPal アカウントの種類:</value>
   </data>
   <data name="PayPalAccountTypeSubText" xml:space="preserve">
-    <value>You can select a test account type to test your transactions. Once working, you can switch to a live account type to start transacting</value>
+    <value>あなたのトランザクションをテストするためのテスト アカウントの種類を選択できます。作業は、取引を開始するライブ アカウントの種類を切り替えることができます。</value>
   </data>
   <data name="PayPalClientIdCaption" xml:space="preserve">
-    <value>PayPal Client ID:</value>
+    <value>PayPal クライアント ID:</value>
   </data>
   <data name="PayPalClientIdSubText" xml:space="preserve">
-    <value>Enter your PayPal client ID</value>
+    <value>PayPal のクライアント ID を入力してください。</value>
   </data>
   <data name="PayPalClientSecretCaption" xml:space="preserve">
-    <value>PayPal Client Secret:</value>
+    <value>PayPal クライアント シークレット:</value>
   </data>
   <data name="PayPalClientSecretSubText" xml:space="preserve">
-    <value>Enter your PayPal client secret</value>
+    <value>あなたの PayPal のクライアント シークレットを入力します。</value>
   </data>
   <data name="SandboxAccountTypeCaption" xml:space="preserve">
-    <value>Paypal sandbox account</value>
+    <value>サンド ボックスの Paypal アカウント</value>
   </data>
   <data name="UndoUnsavedChanges" xml:space="preserve">
-    <value>Undo unsaved payment changes</value>
+    <value>保存されていないお支払いの変更を元に戻す</value>
   </data>
   <data name="UpdatePaymentErrorMessage" xml:space="preserve">
-    <value>Could not save payment information</value>
+    <value>お支払い情報を保存できませんでした。</value>
   </data>
   <data name="UpdatePaymentProgressMessage" xml:space="preserve">
-    <value>Updating payment information</value>
+    <value>お支払い情報の更新</value>
   </data>
   <data name="UpdatePaymentSuccessMessage" xml:space="preserve">
-    <value>Payment information updated</value>
+    <value>お支払い情報の更新</value>
   </data>
   <data name="CustomerProfileAddressLine1Caption" xml:space="preserve">
-    <value>Address line 1</value>
+    <value>住所行 1</value>
   </data>
   <data name="CustomerProfileAddressLine2Caption" xml:space="preserve">
-    <value>Address line 2</value>
+    <value>住所 2 行目</value>
   </data>
   <data name="CustomerProfileCityCaption" xml:space="preserve">
-    <value>City</value>
+    <value>市</value>
   </data>
   <data name="CustomerProfileCompanyCountryCaption" xml:space="preserve">
-    <value>Country</value>
+    <value>国</value>
   </data>
   <data name="CustomerProfileCompanyInfoSectionCaption" xml:space="preserve">
-    <value>Company Information</value>
+    <value>会社情報</value>
   </data>
   <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
-    <value>Contact Information</value>
+    <value>連絡先情報</value>
   </data>
   <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
-    <value>Your domain prefix will appear after the @ in your domain email address. It has to be unique and it can't contain any punctuations. Example: 'yourcompany'.</value>
+    <value>ドメイン プレフィックスが表示されます後、@ あなたのドメインのメール アドレスで。一意である必要があり、任意の句読点を含めることはできません。例: ' 会社 '。</value>
   </data>
   <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
-    <value>Domain prefix</value>
+    <value>ドメイン プレフィックス</value>
   </data>
   <data name="CustomerProfileEmailAddressIdCaption" xml:space="preserve">
-    <value>Email address</value>
+    <value>メール アドレス</value>
   </data>
   <data name="CustomerProfileEmailWarningCaption" xml:space="preserve">
-    <value>Make sure you enter a valid email address. It will be the main point of contact to send you important information to get you started and to set up your payment data.</value>
+    <value>有効な電子メール アドレスを入力することを確認します。それは、支払いデータを設定する開始するための重要な情報を送信する連絡先の主なポイントになります。</value>
   </data>
   <data name="CustomerProfileFirstNameCaption" xml:space="preserve">
-    <value>First name</value>
+    <value>最初の名前</value>
   </data>
   <data name="CustomerProfileLastNameCaption" xml:space="preserve">
-    <value>Last name</value>
+    <value>最後の名前</value>
   </data>
   <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
-    <value>This will be the user id you'll use with your Office 365 account.</value>
+    <value>これは、Office 365 アカウントに使用するユーザー id になります。</value>
   </data>
   <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
-    <value>Username</value>
+    <value>ユーザー名</value>
   </data>
   <data name="CustomerProfileStateCaption" xml:space="preserve">
-    <value>State/Province</value>
+    <value>都道府県/州</value>
   </data>
   <data name="CustomerProfileZipPostalCaption" xml:space="preserve">
-    <value>Zip / Postal code</value>
+    <value>郵便番号/郵便番号</value>
   </data>
   <data name="UnpaidSubscriptionSuffix" xml:space="preserve">
-    <value>-Unpaid</value>
+    <value>-未払い</value>
   </data>
   <data name="ConfigurePortalMessage" xml:space="preserve">
-    <value>Configure your website</value>
+    <value>ウェブサイトを設定します。</value>
   </data>
   <data name="PortalNotConfiguredYet" xml:space="preserve">
-    <value>This website is still under construction. Please visit later.</value>
+    <value>このウェブサイトはまだ建設中です。後で参照してください。</value>
   </data>
   <data name="CouldNotRetrievePartnerOffers" xml:space="preserve">
-    <value>Could not retrieve offers</value>
+    <value>オファーを取得できませんでした。</value>
   </data>
   <data name="SubscriptionSummaryAmountPaidOnPrefixCaption" xml:space="preserve">
-    <value>Amount paid on</value>
+    <value>支払った金額</value>
   </data>
   <data name="SubscriptionSummaryAnnualPricePrefixCaption" xml:space="preserve">
-    <value>Price Paid</value>
+    <value>支払った価格</value>
   </data>
   <data name="SubscriptionSummaryRateCaption" xml:space="preserve">
-    <value>Rate</value>
+    <value>レート</value>
   </data>
   <data name="SubscriptionSummaryRenewLinkCaption" xml:space="preserve">
-    <value>Renew</value>
+    <value>更新</value>
   </data>
   <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
-    <value>Added seats</value>
+    <value>追加席</value>
   </data>
   <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
-    <value>Purchase</value>
+    <value>購入</value>
   </data>
   <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
-    <value>Renewal</value>
+    <value>更新</value>
   </data>
   <data name="CustomerRegistrationFailureMessage" xml:space="preserve">
-    <value>Could not register the customer. Please try later.</value>
+    <value>顧客を登録できませんでした。後でやり直してください。</value>
   </data>
   <data name="CustomerRegistrationMessage" xml:space="preserve">
-    <value>Registering customer...</value>
+    <value>顧客を登録しています.</value>
   </data>
   <data name="CustomerRegistrationSuccessMessage" xml:space="preserve">
-    <value>Successfully created customer</value>
+    <value>正常に顧客を作成</value>
   </data>
   <data name="OrderRegistrationFailureMessage" xml:space="preserve">
-    <value>Order Registration Error</value>
+    <value>注文登録エラー</value>
   </data>
   <data name="BuyMoreSubscriptionsMessage" xml:space="preserve">
-    <value>Buy more subscriptions</value>
+    <value>多くのサブスクリプションを購入します。</value>
   </data>
   <data name="UserLicencesCaption" xml:space="preserve">
-    <value>Licenses</value>
+    <value>ライセンス</value>
   </data>
   <data name="ProratedPaymentTotal" xml:space="preserve">
-    <value>Pro-rated</value>
+    <value>プロ格</value>
   </data>
   <data name="SelectPortalOfferCaption" xml:space="preserve">
-    <value>Select one or more offers</value>
+    <value>1 つまたは複数のオファーを選択します。</value>
   </data>
   <data name="AccessDeniedMessage" xml:space="preserve">
-    <value>You do not have the rights needed to access this area</value>
+    <value>このエリアにアクセスするための権限がありません。</value>
   </data>
   <data name="OrderUpdateFailureMessage" xml:space="preserve">
-    <value>Order Update Error</value>
+    <value>順序の更新エラー</value>
   </data>
   <data name="BadInputGenericMessage" xml:space="preserve">
-    <value>There was an input error encountered. Please check the inputs and try again.</value>
+    <value>入力エラーが発生しました。入力を確認して、もう一度やり直してください。</value>
   </data>
   <data name="DomainNotAvailable" xml:space="preserve">
-    <value>The domain is not available. Please enter another domain prefix</value>
+    <value>ドメインは利用できません。別のドメイン プレフィックスを入力してください。</value>
   </data>
   <data name="ImagesTooLarge" xml:space="preserve">
-    <value>The selected images are too large. Please specify smaller images or upload one by one</value>
+    <value>選択した画像は大きすぎます。お小さい画像を指定するか、1 つずつをアップロード</value>
   </data>
   <data name="InvalidAddress" xml:space="preserve">
-    <value>Please specify a valid address</value>
+    <value>有効なアドレスを指定してください。</value>
   </data>
   <data name="InvalidFileType" xml:space="preserve">
-    <value>Please select a valid image file to upload</value>
+    <value>有効な画像ファイルをアップロードするを選択してください。</value>
   </data>
   <data name="DeleteOffersPromptMessage" xml:space="preserve">
-    <value>Are you sure you want to delete the selected offers? If your customers have already purchased these offers, the purchased subscriptions will still be honored but will not be renewable.</value>
+    <value>選択した提供していますを削除するよろしいですか。お客様はすでに、これらのオファーを購入した、購入したサブスクリプションはまだ使用されますが、再生はできません。</value>
   </data>
   <data name="RegistrationConfirmationPasswordNoticeCaption" xml:space="preserve">
-    <value>Please copy the Admin user account and Password and save in a secure location. You won’t be able to retrieve it after you leave this page.</value>
+    <value>管理者ユーザー アカウントとパスワードをコピーして安全な場所に保存してください。このページを終了後、それを取得することはできません。</value>
   </data>
   <data name="SubscriptionSummaryAnnualCommitmentExpiryCaption" xml:space="preserve">
-    <value>expires on</value>
+    <value>有効期限します。</value>
   </data>
   <data name="SubscriptionSummaryProratepriceCaption" xml:space="preserve">
-    <value>Price paid is displayed pro-rated as applicable. </value>
+    <value>プロ格に応じて支払われた価格が表示されます。</value>
   </data>
   <data name="AnnualPriceCaption" xml:space="preserve">
-    <value>Annual price</value>
+    <value>年間の価格</value>
   </data>
   <data name="EmptyListCaption" xml:space="preserve">
-    <value>Please add a subscription</value>
+    <value>サブスクリプションを追加してください。</value>
   </data>
   <data name="HomePage" xml:space="preserve">
-    <value>Home page</value>
+    <value>ホーム ページ</value>
   </data>
   <data name="ContactUsTooltip" xml:space="preserve">
-    <value>Display contact details</value>
+    <value>連絡先の詳細を表示</value>
   </data>
   <data name="NonAdminUnauthorizedMessage" xml:space="preserve">
-    <value>Partner non admins are not authorized to sign in.</value>
+    <value>パートナー管理者以外がログインする権限がありません。</value>
   </data>
   <data name="ContactSales" xml:space="preserve">
-    <value>Contact sales</value>
+    <value>営業担当に連絡</value>
   </data>
   <data name="ContactUsEmailCaption" xml:space="preserve">
-    <value>Email:</value>
+    <value>電子メール：</value>
   </data>
   <data name="ContactUsPhoneCaption" xml:space="preserve">
-    <value>Phone:</value>
+    <value>電話番号:</value>
   </data>
   <data name="InvalidInputErrorPrefix" xml:space="preserve">
-    <value>Please correct the invalid input :</value>
+    <value>無効な入力を修正してください。</value>
   </data>
   <data name="DownstreamErrorPrefix" xml:space="preserve">
-    <value>We are unable to process your request at this time. Please try later or contact us over email. Error Details -    </value>
+    <value>この時点であなたの要求を処理できておりません。後で試すか、メールでお問い合わせください。エラーの詳細-   </value>
   </data>
   <data name="MoreThanOneSubscriptionUpdateErrorMessage" xml:space="preserve">
-    <value>Only one subcription can be updated.</value>
+    <value>1 つだけ subcription を更新できます。</value>
   </data>
   <data name="PreparingOrderAndRedirectingMessage" xml:space="preserve">
-    <value>Preparing order and redirecting to payment gateway...</value>
+    <value>注文の準備とお支払いゲートウェイにリダイレクトする.</value>
   </data>
   <data name="OrderAddFailureMessage" xml:space="preserve">
-    <value>Error during adding subscriptions. </value>
+    <value>サブスクリプションの追加中にエラー。</value>
   </data>
   <data name="PaymentGatewayErrorPrefix" xml:space="preserve">
-    <value>We are unable to process your payment – </value>
+    <value>我々 は-あなたの支払いを処理することは</value>
   </data>
   <data name="PortalStartupFailure" xml:space="preserve">
-    <value>Could not startup the portal</value>
+    <value>ポータルを起動できませんでした。</value>
   </data>
   <data name="PaymentGatewayIdentityFailureDuringConfiguration" xml:space="preserve">
-    <value>Payment configuration is invalid.</value>
+    <value>お支払い設定は無効です。</value>
   </data>
   <data name="PaymentGatewayIdentityFailureDuringPayment" xml:space="preserve">
-    <value>Your payment cannot be processed at this time. Please contact us by email. </value>
+    <value>この時点で、お支払いを処理できません。メールでお問い合わせください。</value>
   </data>
   <data name="InvalidHeaderImageUri" xml:space="preserve">
-    <value>Invalid header image Uri. Please make sure the Uri is valid.</value>
+    <value>無効なヘッダー イメージ Uri。Uri が有効なことを確認してください。</value>
   </data>
   <data name="InvalidInput" xml:space="preserve">
-    <value>There was a problem in one of the fields you entered: </value>
+    <value>入力したフィールドのいずれかで問題が発生しました。</value>
   </data>
   <data name="InvalidOrganizationLogoUri" xml:space="preserve">
-    <value>Invalid organization logo Uri. Please make sure the Uri is valid.</value>
+    <value>無効な組織ロゴ Uri。Uri が有効なことを確認してください。</value>
   </data>
   <data name="InvalidPrivacyAgreementUri" xml:space="preserve">
-    <value>Invalid privacy Uri. Please make sure the Uri is valid.</value>
+    <value>無効な Uri のプライバシー。Uri が有効なことを確認してください。</value>
   </data>
   <data name="PrivacyAgreement" xml:space="preserve">
-    <value>Privacy</value>
+    <value>プライバシー</value>
   </data>
   <data name="PrivacyAgreementFieldHeader" xml:space="preserve">
-    <value>Privacy link:</value>
+    <value>プライバシー リンク:</value>
   </data>
   <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
-    <value>You can specify a link that shows privacy terms to your customers here which will show up in the home page footer</value>
+    <value>ここでホーム ページのフッターに表示されますあなたの顧客にプライバシー条件を示すリンクを指定できます。</value>
   </data>
   <data name="PrivacyAgreementToolTip" xml:space="preserve">
-    <value>View this website's privacy terms</value>
+    <value>このウェブサイトのプライバシー規約を表示します。</value>
   </data>
   <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
-    <value>Could not retrieve your account. Please try again later.</value>
+    <value>あなたのアカウントを取得できませんでした。後でもう一度試してください。</value>
   </data>
   <data name="CouldNotRetrieveSubscriptionsSummary" xml:space="preserve">
-    <value>Could not retrieve your subscriptions. Please try again later.</value>
+    <value>あなたのサブスクリプションを取得できませんでした。後でもう一度試してください。</value>
   </data>
   <data name="SalesEmailAddressHeader" xml:space="preserve">
-    <value>Sales email</value>
+    <value>営業メール</value>
   </data>
   <data name="RenewSubscriptionTitleCaption" xml:space="preserve">
-    <value>Renew subscription</value>
+    <value>サブスクリプションを更新します。</value>
   </data>
   <data name="CustomerOrganizationNameCaption" xml:space="preserve">
-    <value>Organization name</value>
+    <value>組織名</value>
   </data>
   <data name="CustomerPrimaryContactCaption" xml:space="preserve">
-    <value>Primary contact</value>
+    <value>主な連絡先</value>
   </data>
   <data name="CouldNotRetrieveOffer" xml:space="preserve">
-    <value>Could not retrieve offer details. Please try again later. </value>
+    <value>オファーの詳細を取得できませんでした。後でもう一度試してください。</value>
   </data>
   <data name="InvalidInputInFormCaption" xml:space="preserve">
-    <value>One or more fields are invalid. Please correct them and then submit.</value>
+    <value>1 つ以上のフィールドが無効です。くださいそれらを修正し、送信。</value>
   </data>
   <data name="PlaceOrderCaption" xml:space="preserve">
-    <value>Place your order</value>
+    <value>ご注文します。</value>
   </data>
   <data name="AnnualTotalCaption" xml:space="preserve">
-    <value>Annual total</value>
+    <value>年間合計</value>
   </data>
   <data name="PickOfferCaption" xml:space="preserve">
-    <value>Pick Offer</value>
+    <value>オファーを選択します。</value>
   </data>
   <data name="PickOfferTooltip" xml:space="preserve">
-    <value>Pick the offer you would like to sell</value>
+    <value>販売したい申し出をピックアップします。</value>
   </data>
   <data name="CannotAddExistingSubscriptionError" xml:space="preserve">
-    <value>One or more offers you are trying to add already exists. You can add more licenses to existing subscriptions.</value>
+    <value>既に追加しようとしている 1 つまたは複数提供していますが存在します。ライセンスは、既存のサブスクリプションに追加できます。</value>
   </data>
   <data name="UserPerYear" xml:space="preserve">
-    <value>user/year</value>
+    <value>ユーザー/年</value>
   </data>
   <data name="InvalidContactSalesPhone" xml:space="preserve">
-    <value>Please enter a valid contact sales phone</value>
+    <value>有効な販売連絡先を入力してください。</value>
   </data>
   <data name="InvalidContactUsPhone" xml:space="preserve">
-    <value>Please enter a valid contact support phone</value>
+    <value>有効な連絡先サポートの電話番号を入力してください。</value>
   </data>
   <data name="ProcessingOrderMessage" xml:space="preserve">
-    <value>Payment information collected, processing order...</value>
+    <value>お支払い情報を収集、処理順序.</value>
   </data>
   <data name="AddSeatsOperationCaption" xml:space="preserve">
-    <value>Adding seats to subscription.</value>
+    <value>席をサブスクリプションに追加します。</value>
   </data>
   <data name="NewPurchaseOperationCaption" xml:space="preserve">
-    <value>Adding subscriptions.</value>
+    <value>サブスクリプションを追加します。</value>
   </data>
   <data name="RenewOperationCaption" xml:space="preserve">
-    <value>Renewing subscription.</value>
+    <value>サブスクリプションを更新します。</value>
   </data>
   <data name="OrderFailureMessage" xml:space="preserve">
-    <value>Error while processing order. Please retry later.</value>
+    <value>処理順序エラーが発生しました。後で再試行してください。</value>
   </data>
   <data name="OrderProcessingFailureNotification" xml:space="preserve">
-    <value>Failure in processing order. Please click done to try again.</value>
+    <value>処理順序に失敗しました。再試行する完了] をクリックしてください。</value>
   </data>
   <data name="PaymentReceiptFailureNotification" xml:space="preserve">
-    <value>Failure in receiving payment information. Please click done to try again.</value>
+    <value>支払い情報の受信に失敗しました。再試行する完了] をクリックしてください。</value>
   </data>
   <data name="ProcessingOrderNotification" xml:space="preserve">
-    <value>Successfully received payment information. Processing order...</value>
+    <value>お支払い情報を正常に受信します。処理順序.</value>
   </data>
   <data name="ProcessOrderPageCaption" xml:space="preserve">
-    <value>Order Processing Page.</value>
+    <value>注文処理のページ。</value>
   </data>
   <data name="NewCustomerOrderSuccessMessage" xml:space="preserve">
-    <value>Your registration order was successfully processed.</value>
+    <value>登録注文が正常に処理されました。</value>
   </data>
   <data name="NewCustomerProcessOrderFailureReceivingPaymentMessage" xml:space="preserve">
-    <value>Failure in receiving payment information. Please login and add subscriptions.</value>
+    <value>支払い情報の受信に失敗しました。ログインし、サブスクリプションを追加します。</value>
   </data>
   <data name="PayPalUnableToProcessPayment" xml:space="preserve">
-    <value>We are unable to process your payment.</value>
+    <value>あなたの支払いを処理できておりません。</value>
   </data>
   <data name="ShowInContactUsHeaderCaption" xml:space="preserve">
-    <value>Shown in the Contact us section of the header</value>
+    <value>連絡先に示す私たちのヘッダー セクション</value>
   </data>
   <data name="ADTenantIsAlreadyRegisteredToCustomer" xml:space="preserve">
-    <value>{0} AD tenant is already registered to Partner Center customer: {1}</value>
+    <value>{0} 広告テナントは、パートナー センターの顧客に既に登録されている: {1}</value>
   </data>
   <data name="AssertNumberPositiveInvalidPrefix" xml:space="preserve">
-    <value>number</value>
+    <value>番号</value>
   </data>
   <data name="AssertNumberPositiveInvalidError" xml:space="preserve">
-    <value>{0} must be greater than zero</value>
+    <value>{0} は 0 より大きくなければなりません</value>
   </data>
   <data name="AssertStringNotEmptyInvalidPrefix" xml:space="preserve">
-    <value>string</value>
+    <value>文字列</value>
   </data>
   <data name="AssertStringNotEmptyInvalidError" xml:space="preserve">
-    <value>{0} is not set</value>
+    <value>{0} が設定されていません</value>
   </data>
   <data name="RenewSubscriptionFailedMessage" xml:space="preserve">
-    <value>RenewSubscription.ExecuteAsync() Failed: {0}, SubscriptionId: {1}</value>
+    <value>RenewSubscription.ExecuteAsync() に失敗しました: {0}、サブスクリプション Id: {1}</value>
   </data>
   <data name="InvalidOrganizationLogoFileTypeMessage" xml:space="preserve">
-    <value>Provide an image file type for the organization logo</value>
+    <value>組織のロゴのイメージ ファイルの種類を提供します。</value>
   </data>
   <data name="InvalidOrganizationLogoUriMessage" xml:space="preserve">
-    <value>Invalid organization logo URI uploaded</value>
+    <value>無効な組織ロゴ URI をアップロード</value>
   </data>
   <data name="InvalidHeaderImageMessage" xml:space="preserve">
-    <value>Provide an image file type for the header image</value>
+    <value>ヘッダー画像は、画像ファイルの種類</value>
   </data>
   <data name="InvalidHeaderImageUriMessage" xml:space="preserve">
-    <value>Invalid header image URI uploaded</value>
+    <value>無効なヘッダー イメージ URI がアップロード</value>
   </data>
   <data name="InvalidPrivacyUriMessage" xml:space="preserve">
-    <value>Invalid privacy agreement URI uploaded</value>
+    <value>無効なプライバシー規約 URI をアップロード</value>
   </data>
   <data name="ErrorPageDetailsCaption" xml:space="preserve">
-    <value>An error occurred while processing your request.</value>
+    <value>要求の処理中にエラーが発生しました。</value>
   </data>
   <data name="ErrorPageTitleCaption" xml:space="preserve">
-    <value>Error</value>
+    <value>エラー</value>
   </data>
   <data name="InvalidOperationForOrderMessage" xml:space="preserve">
-    <value>Invalid operation being performed.</value>
+    <value>無効な操作が行われています。</value>
   </data>
   <data name="NotEnoughItemsInOrderErrorMessage" xml:space="preserve">
-    <value>Order should have at least one subscription item.</value>
+    <value>少なくとも 1 つのサブスクリプション アイテム順序が必要です。</value>
   </data>
   <data name="InvalidPaymentModeErrorMessage" xml:space="preserve">
-    <value>Payment mode is not supported</value>
+    <value>お支払いモードはサポートされていません</value>
   </data>
   <data name="OfferPriceShouldBeMoreThanZero" xml:space="preserve">
-    <value>Offer price should be more than zero</value>
+    <value>提供価格であるべきよりもゼロ</value>
   </data>
   <data name="MicrosoftOfferIdMustBeSet" xml:space="preserve">
-    <value>MicrosoftOfferId must be set</value>
+    <value>MicrosoftOfferId を設定する必要があります。</value>
   </data>
   <data name="IdMustBeAValidGUID" xml:space="preserve">
-    <value>Id must be a valid GUID</value>
+    <value>Id は有効な GUID である必要があります。</value>
   </data>
   <data name="FailedToUpdatePartnerOffersStore" xml:space="preserve">
-    <value>Failed to update partner offers persistence</value>
+    <value>パートナー提供の永続性を更新できませんでした。</value>
   </data>
   <data name="MicrosoftOfferImmutableErrorMessage" xml:space="preserve">
-    <value>Microsoft offer is not allowed to be updated. Create a new offer instead.</value>
+    <value>マイクロソフトのオファーを更新することはできません。新しい提案を作成します。</value>
   </data>
   <data name="OfferNotFound" xml:space="preserve">
-    <value>Offer not found</value>
+    <value>見つかりませんを提供します。</value>
   </data>
   <data name="ContactUsSectionNotFound" xml:space="preserve">
-    <value>ContactUs section not found in portal branding configuration</value>
+    <value>振込セクション ポータルのブランド構成が見つかりませんでした。</value>
   </data>
   <data name="InvalidContactUsEmailAddress" xml:space="preserve">
-    <value>Invalid contact us email address</value>
+    <value>無効な連絡先私たちの e メール アドレス</value>
   </data>
   <data name="InvalidContactUsPhoneExceptionMessage" xml:space="preserve">
-    <value>Invalid contact us phone</value>
+    <value>無効な電話お問い合わせ</value>
   </data>
   <data name="InvalidContactSalesEmailAddress" xml:space="preserve">
-    <value>Invalid contact sales email address</value>
+    <value>無効な連絡先販売メール アドレス</value>
   </data>
   <data name="InvalidContactSalesPhoneExceptionMessage" xml:space="preserve">
-    <value>Invalid contact sales phone</value>
+    <value>無効な連絡先営業電話</value>
   </data>
   <data name="AddMoreLicensesCaption" xml:space="preserve">
-    <value>Add more licenses</value>
+    <value>ライセンスを追加します。</value>
   </data>
   <data name="PayPalWebsiteCaption" xml:space="preserve">
     <value>PayPal.com</value>
   </data>
   <data name="CouldNotRegisterNewPartnerCenterCustomer" xml:space="preserve">
-    <value>Could not register new Partner Center customer</value>
+    <value>新しいパートナー ・ センター顧客を登録できませんでした。</value>
   </data>
   <data name="HomePluginDisplayName" xml:space="preserve">
-    <value>Home</value>
+    <value>ホーム</value>
   </data>
   <data name="AdminConsoleDisplayName" xml:space="preserve">
-    <value>Web Store Builder</value>
+    <value>Web 店の建築者</value>
   </data>
   <data name="BrandingDisplayName" xml:space="preserve">
-    <value>Branding Setup</value>
+    <value>ブランドのセットアップ</value>
   </data>
   <data name="OffersDisplayName" xml:space="preserve">
-    <value>Offers Setup</value>
+    <value>提供セットアップ</value>
   </data>
   <data name="PaymentDisplayName" xml:space="preserve">
-    <value>Payment Setup</value>
+    <value>お支払い設定</value>
   </data>
   <data name="MySubscriptionsDisplayName" xml:space="preserve">
-    <value>My Subscriptions</value>
+    <value>個人用サブスクリプション</value>
   </data>
   <data name="MyAccountDisplayName" xml:space="preserve">
-    <value>My Account</value>
+    <value>私のアカウント</value>
   </data>
   <data name="GoToHomePageCaption" xml:space="preserve">
-    <value>Go to home page</value>
+    <value>ホーム ページに移動します。</value>
   </data>
   <data name="CountryNameAU" xml:space="preserve">
-    <value>Australia</value>
+    <value>オーストラリア</value>
   </data>
   <data name="CountryNameAT" xml:space="preserve">
-    <value>Austria</value>
+    <value>オーストリア</value>
   </data>
   <data name="CountryNameBE" xml:space="preserve">
-    <value>Belgium</value>
+    <value>ベルギー</value>
   </data>
   <data name="CountryNameBG" xml:space="preserve">
-    <value>Bulgaria</value>
+    <value>ブルガリア</value>
   </data>
   <data name="CountryNameCA" xml:space="preserve">
-    <value>Canada</value>
+    <value>カナダ</value>
   </data>
   <data name="CountryNameHR" xml:space="preserve">
-    <value>Croatia</value>
+    <value>クロアチア</value>
   </data>
   <data name="CountryNameCY" xml:space="preserve">
-    <value>Cyprus</value>
+    <value>キプロス</value>
   </data>
   <data name="CountryNameCZ" xml:space="preserve">
-    <value>Czech Republic</value>
+    <value>チェコ共和国</value>
   </data>
   <data name="CountryNameDK" xml:space="preserve">
-    <value>Denmark</value>
+    <value>デンマーク</value>
   </data>
   <data name="CountryNameEE" xml:space="preserve">
-    <value>Estonia</value>
+    <value>エストニア</value>
   </data>
   <data name="CountryNameFI" xml:space="preserve">
-    <value>Finland</value>
+    <value>フィンランド</value>
   </data>
   <data name="CountryNameFR" xml:space="preserve">
-    <value>France</value>
+    <value>フランス</value>
   </data>
   <data name="CountryNameDE" xml:space="preserve">
-    <value>Germany</value>
+    <value>ドイツ</value>
   </data>
   <data name="CountryNameGR" xml:space="preserve">
-    <value>Greece</value>
+    <value>ギリシャ</value>
   </data>
   <data name="CountryNameHU" xml:space="preserve">
-    <value>Hungary</value>
+    <value>ハンガリー</value>
   </data>
   <data name="CountryNameIS" xml:space="preserve">
-    <value>Iceland</value>
+    <value>アイスランド</value>
   </data>
   <data name="CountryNameIE" xml:space="preserve">
-    <value>Ireland</value>
+    <value>アイルランド</value>
   </data>
   <data name="CountryNameIT" xml:space="preserve">
-    <value>Italy</value>
+    <value>イタリア</value>
   </data>
   <data name="CountryNameJP" xml:space="preserve">
-    <value>Japan</value>
+    <value>日本</value>
   </data>
   <data name="CountryNameLV" xml:space="preserve">
-    <value>Latvia</value>
+    <value>ラトビア</value>
   </data>
   <data name="CountryNameLI" xml:space="preserve">
-    <value>Liechtenstein</value>
+    <value>リヒテンシュタイン</value>
   </data>
   <data name="CountryNameLT" xml:space="preserve">
-    <value>Lithuania</value>
+    <value>リトアニア</value>
   </data>
   <data name="CountryNameLU" xml:space="preserve">
-    <value>Luxembourg</value>
+    <value>ルクセンブルク</value>
   </data>
   <data name="CountryNameMT" xml:space="preserve">
-    <value>Malta</value>
+    <value>マルタ</value>
   </data>
   <data name="CountryNameMC" xml:space="preserve">
-    <value>Monaco</value>
+    <value>モナコ</value>
   </data>
   <data name="CountryNameNL" xml:space="preserve">
-    <value>Netherlands</value>
+    <value>オランダ</value>
   </data>
   <data name="CountryNameNZ" xml:space="preserve">
-    <value>New Zealand</value>
+    <value>ニュージーランド</value>
   </data>
   <data name="CountryNameNO" xml:space="preserve">
-    <value>Norway</value>
+    <value>ノルウェー</value>
   </data>
   <data name="CountryNamePO" xml:space="preserve">
-    <value>Poland</value>
+    <value>ポーランド</value>
   </data>
   <data name="CountryNamePT" xml:space="preserve">
-    <value>Portugal</value>
+    <value>ポルトガル</value>
   </data>
   <data name="CountryNameRO" xml:space="preserve">
-    <value>Romania</value>
+    <value>ルーマニア</value>
   </data>
   <data name="CountryNameSK" xml:space="preserve">
-    <value>Slovakia</value>
+    <value>スロバキア</value>
   </data>
   <data name="CountryNameSL" xml:space="preserve">
-    <value>Slovenia</value>
+    <value>スロベニア</value>
   </data>
   <data name="CountryNameES" xml:space="preserve">
-    <value>Spain</value>
+    <value>スペイン</value>
   </data>
   <data name="CountryNameSE" xml:space="preserve">
-    <value>Sweden</value>
+    <value>スウェーデン</value>
   </data>
   <data name="CountryNameCH" xml:space="preserve">
-    <value>Switzerland</value>
+    <value>スイス</value>
   </data>
   <data name="CountryNameGB" xml:space="preserve">
-    <value>United Kingdom</value>
+    <value>英国</value>
   </data>
   <data name="CountryNameUS" xml:space="preserve">
-    <value>United States</value>
+    <value>米国</value>
   </data>
   <data name="CustomerOrganizationRequired" xml:space="preserve">
-    <value>Organization name is required.</value>
+    <value>組織名は必須です。</value>
   </data>
   <data name="CustomerProfileCompanyCountryRequired" xml:space="preserve">
-    <value>Country is required.</value>
+    <value>国は必須です。</value>
   </data>
   <data name="CustomerProfileAddressLine1Required" xml:space="preserve">
-    <value>Address line 1 is required.</value>
+    <value>住所行 1 が必要です。</value>
   </data>
   <data name="CustomerProfileCityRequired" xml:space="preserve">
-    <value>City is required.</value>
+    <value>都市が必要です。</value>
   </data>
   <data name="CustomerProfileEmailAddressIdRequired" xml:space="preserve">
-    <value>The Email field is not a valid e-mail address.</value>
+    <value>電子メールのフィールドは、有効な電子メール アドレスではありません。</value>
   </data>
   <data name="CustomerProfileDomainPrefixRequired" xml:space="preserve">
-    <value>Domain prefix is required.</value>
+    <value>ドメイン プレフィックスが必要です。</value>
   </data>
   <data name="CustomerProfileFirstNameRequired" xml:space="preserve">
-    <value>First name is required.</value>
+    <value>最初の名前が必要です。</value>
   </data>
   <data name="CustomerProfileLastNameRequired" xml:space="preserve">
-    <value>Last name is required.</value>
+    <value>最後の名前が必要です。</value>
   </data>
   <data name="PhoneHeaderRequired" xml:space="preserve">
-    <value>Phone number is required.</value>
+    <value>電話番号が必要です。</value>
   </data>
   <data name="SignOutToolTipCaption" xml:space="preserve">
-    <value>Sign out from the application</value>
+    <value>アプリケーションからサインアウトします。</value>
   </data>
   <data name="SubscriptionStatusTypeActive" xml:space="preserve">
-    <value>Active</value>
+    <value>アクティブです</value>
   </data>
   <data name="SubscriptionStatusTypeDeleted" xml:space="preserve">
-    <value>Deleted</value>
+    <value>削除</value>
   </data>
   <data name="SubscriptionStatusTypeNone" xml:space="preserve">
-    <value>None</value>
+    <value>どれも</value>
   </data>
   <data name="SubscriptionStatusTypeSuspended" xml:space="preserve">
-    <value>Suspended</value>
+    <value>中断</value>
   </data>
   <data name="LicenseCreatedDateCaption" xml:space="preserve">
-    <value>Created Date</value>
+    <value>作成日</value>
   </data>
   <data name="LicenseNameCaption" xml:space="preserve">
-    <value>Name</value>
+    <value>名</value>
   </data>
   <data name="LicenseQuantityCaption" xml:space="preserve">
-    <value>Quantity</value>
+    <value>数量</value>
   </data>
   <data name="LicenseStatusCaption" xml:space="preserve">
-    <value>Status</value>
+    <value>ステータス</value>
   </data>
 </root>

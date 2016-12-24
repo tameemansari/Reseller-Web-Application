@@ -45,7 +45,7 @@ Microsoft.WebPortal.CustomerAccountPresenter.prototype.onRender = function () {
                 customerInformation.Phone
             ];
             self.viewModel.Language = customerInformation.Language;
-            self.viewModel.CompanyName = customerInformation.CompanyName;
+            self.viewModel.CompanyName = customerInformation.CompanyName;            
 
             var addressLine = customerInformation.AddressLine1;
 
@@ -59,6 +59,7 @@ Microsoft.WebPortal.CustomerAccountPresenter.prototype.onRender = function () {
                 customerInformation.Country
             ];
 
+            self.viewModel.Licenses = customerInformation.Licenses;
             self.viewModel.IsSet(true);
         }).fail(function (result, status, error) {
             var notification = new Microsoft.WebPortal.Services.Notification(Microsoft.WebPortal.Services.Notification.NotificationType.Error,

@@ -83,7 +83,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
 
             if (!supportedPaymentModes.Contains(paymentConfig.AccountType))
             {
-                throw new PartnerDomainException("Payment mode is not supported");
+                throw new PartnerDomainException(Resources.InvalidPaymentModeErrorMessage);
             }
 
             try
@@ -158,8 +158,22 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                         landing_page_type = "billing"
                     }
                 };
+                
+                var createdProfile = profile.Create(apiContext);
 
-                var createdProfile = profile.Create(apiContext);                
+                // Now that new experience profile is created hence delete the older one.  
+                if (!string.IsNullOrWhiteSpace(paymentConfig.WebExperienceProfileId))
+                {
+                    try
+                    {
+                        WebProfile existingWebProfile = WebProfile.Get(apiContext, paymentConfig.WebExperienceProfileId);
+                        existingWebProfile.Delete(apiContext);
+                    }
+                    catch
+                    {
+                    }
+                }
+
                 return createdProfile.id;
             }
             catch (PayPalException paypalException)
@@ -206,7 +220,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                     description = this.paymentDescription,
                     sku = subscriptionItem.SubscriptionId,
                     currency = this.ApplicationDomain.PortalLocalization.CurrencyCode,
-                    price = subscriptionItem.SeatPrice.ToString("F", CultureInfo.InvariantCulture), // TODO :: Loc. Validate for other cultures. 
+                    price = subscriptionItem.SeatPrice.ToString("F", CultureInfo.InvariantCulture),  
                     quantity = subscriptionItem.Quantity.ToString()
                 });
                 paymentTotal += Math.Round(subscriptionItem.Quantity * subscriptionItem.SeatPrice, 2);
@@ -230,7 +244,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                         amount = new Amount()
                         {
                             currency = this.ApplicationDomain.PortalLocalization.CurrencyCode,
-                            total = paymentTotal.ToString("F", CultureInfo.InvariantCulture) // TODO :: Loc. Validate for other cultures. 
+                            total = paymentTotal.ToString("F", CultureInfo.InvariantCulture)  
                         }
                     }
                 },
@@ -394,7 +408,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                         {   
                             SubscriptionId = paymentTransactionItem.sku,
                             OfferId = paymentTransactionItem.sku,
-                            Quantity = Convert.ToInt32(paymentTransactionItem.quantity, CultureInfo.InvariantCulture) // TODO :: Loc. Validate for other cultures. 
+                            Quantity = Convert.ToInt32(paymentTransactionItem.quantity, CultureInfo.InvariantCulture) 
                         });
                     }
                 }
@@ -426,8 +440,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
             configMap.Add("clientId", paymentConfig.ClientId);
             configMap.Add("clientSecret", paymentConfig.ClientSecret);
             configMap.Add("mode", paymentConfig.AccountType);
-            configMap.Add("WebExperienceProfileId", paymentConfig.WebExperienceProfileId);
-            configMap.Add("connectionTimeout", "120000");
+            configMap.Add("WebExperienceProfileId", paymentConfig.WebExperienceProfileId);            
+            configMap.Add("connectionTimeout", "120000");            
 
             string accessToken = new OAuthTokenCredential(configMap).GetAccessToken();
             var apiContext = new APIContext(accessToken);

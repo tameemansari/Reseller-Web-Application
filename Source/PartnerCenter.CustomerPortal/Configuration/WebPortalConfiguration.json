@@ -350,78 +350,78 @@
             ]
         },
         "Plugins": [
-            {
+          {
+            "Name": "Home",
+            "DisplayName": "HomePluginDisplayName",
+            "Tile": "/Content/Images/Plugins/Tiles/home-tile.png",
+            "DefaultFeature": "Home",
+            "Features": [
+              {
                 "Name": "Home",
-                "DisplayName": "Home",
-                "Tile": "/Content/Images/Plugins/Tiles/home-tile.png",
-                "DefaultFeature": "Home",
-              "Features": [
-                {
-                  "Name": "Home",
-                  "DefaultAssetVersion": "1.0",
-                  "Assets": [
-                    {
-                      "Version": "1.0",
-                      "JavaScript": [
-                        "~/Scripts/Plugins/HomePagePresenter.js"
-                      ],
-                      "Css": [
-                        "~/Content/Styles/Plugins/HomePage.css"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "Name": "CustomerRegistration",
-                  "DefaultAssetVersion": "1.0",
-                  "Assets": [
-                    {
-                      "Version": "1.0",
-                      "JavaScript": [
-                        "~/Scripts/Plugins/CustomerRegistrationPresenter.js"
-                      ],
-                      "Css": [
-                        "~/Content/Styles/Plugins/CustomerRegistration.css"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "Name": "RegistrationConfirmation",
-                  "DefaultAssetVersion": "1.0",
-                  "Assets": [
-                    {
-                      "Version": "1.0",
-                      "JavaScript": [
-                        "~/Scripts/Plugins/RegistrationConfirmationPresenter.js"
-                      ],
-                      "Css": [
-                        "~/Content/Styles/Plugins/RegistrationConfirmation.css"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "Name": "ProcessOrder",
-                  "DefaultAssetVersion": "1.0",
-                  "Assets": [
-                    {
-                      "Version": "1.0",
-                      "JavaScript": [
-                        "~/Scripts/Plugins/ProcessOrderPresenter.js"
-                      ],
-                      "Css": [
-                        "~/Content/Styles/Plugins/ProcessOrder.css"
-                      ]
-                    }
-                  ]
-                }
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/HomePagePresenter.js"
+                    ],
+                    "Css": [
+                      "~/Content/Styles/Plugins/HomePage.css"
+                    ]
+                  }
+                ]
+              },
+              {
+                "Name": "CustomerRegistration",
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/CustomerRegistrationPresenter.js"
+                    ],
+                    "Css": [
+                      "~/Content/Styles/Plugins/CustomerRegistration.css"
+                    ]
+                  }
+                ]
+              },
+              {
+                "Name": "RegistrationConfirmation",
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/RegistrationConfirmationPresenter.js"
+                    ],
+                    "Css": [
+                      "~/Content/Styles/Plugins/RegistrationConfirmation.css"
+                    ]
+                  }
+                ]
+              },
+              {
+                "Name": "ProcessOrder",
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/ProcessOrderPresenter.js"
+                    ],
+                    "Css": [
+                      "~/Content/Styles/Plugins/ProcessOrder.css"
+                    ]
+                  }
+                ]
+              }
 
-              ]
-            },
+            ]
+          },
             {
                 "Name": "AdminConsole",
-                "DisplayName": "Web Store Builder",
+                "DisplayName": "AdminConsoleDisplayName",
                 "Tile": "/Content/Images/Plugins/Tiles/dashboard-tile.png",
                 "Color": "#3090C7",
                 "AlternateColor": "#2080B7",
@@ -444,204 +444,204 @@
                     }
                 ]
             },
-            {
+          {
+            "Name": "BrandingSetup",
+            "DisplayName": "BrandingDisplayName",
+            "Tile": "/Content/Images/Plugins/Tiles/branding-tile.png",
+            "Color": "#2874a6",
+            "AlternateColor": "#3884b6",
+            "DefaultFeature": "BrandingSetup",
+            "Features": [
+              {
                 "Name": "BrandingSetup",
-                "DisplayName": "Branding",
-                "Tile": "/Content/Images/Plugins/Tiles/branding-tile.png",
-                "Color": "#2874a6",
-                "AlternateColor": "#3884b6",
-                "DefaultFeature": "BrandingSetup",
-                "Features": [
-                    {
-                        "Name": "BrandingSetup",
-                        "DefaultAssetVersion": "1.0",
-                        "Assets": [
-                            {
-                                "Version": "1.0",
-                                "JavaScript": [
-                                    "~/Scripts/Plugins/BrandingSetupPresenter.js"
-                                ],
-                                "Css": [
-                                    "~/Content/Styles/Plugins/BrandingSetup.css"
-                                ]
-                            }
-                        ]
-                    }
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/BrandingSetupPresenter.js"
+                    ],
+                    "Css": [
+                      "~/Content/Styles/Plugins/BrandingSetup.css"
+                    ]
+                  }
                 ]
-            },
-            {
-                "Name": "PartnerOffersSetup",
-                "DisplayName": "Offers Setup",
-                "Tile": "/Content/Images/Plugins/Tiles/offers-tile.png",
-                "Color": "#25383C",
-                "AlternateColor": "#35484C",
-                "DefaultFeature": "OfferList",
-                "Features": [
-                    {
-                        "Name": "OfferList",
-                        "DefaultAssetVersion": "1.0",
-                        "Assets": [
-                            {
-                                "Version": "1.0",
-                                "JavaScript": [
-                                    "~/Scripts/Plugins/OfferListPresenter.js"
-                                ],
-                                "Css": [
-                                    "~/Content/Styles/Plugins/OfferList.css"
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "Name": "AddOrUpdateOffers",
-                        "DefaultAssetVersion": "1.0",
-                        "Assets": [
-                            {
-                                "Version": "1.0",
-                                "JavaScript": [
-                                    "~/Scripts/Plugins/AddOrUpdateOfferPresenter.js"
-                                ],
-                                "Css": [
-                                    "~/Content/Styles/Plugins/AddOrUpdateOffer.css"
-                                ]
-                            }
-                        ]
-                    }
+              }
+            ]
+          },
+          {
+            "Name": "PartnerOffersSetup",
+            "DisplayName": "OffersDisplayName",
+            "Tile": "/Content/Images/Plugins/Tiles/offers-tile.png",
+            "Color": "#25383C",
+            "AlternateColor": "#35484C",
+            "DefaultFeature": "OfferList",
+            "Features": [
+              {
+                "Name": "OfferList",
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/OfferListPresenter.js"
+                    ],
+                    "Css": [
+                      "~/Content/Styles/Plugins/OfferList.css"
+                    ]
+                  }
                 ]
-            },
-            {
+              },
+              {
+                "Name": "AddOrUpdateOffers",
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/AddOrUpdateOfferPresenter.js"
+                    ],
+                    "Css": [
+                      "~/Content/Styles/Plugins/AddOrUpdateOffer.css"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "PaymentSetup",
+            "DisplayName": "PaymentDisplayName",
+            "Tile": "/Content/Images/Plugins/Tiles/payment-tile.png",
+            "Color": "#667C26",
+            "AlternateColor": "#768C36",
+            "DefaultFeature": "PaymentSetup",
+            "Features": [
+              {
                 "Name": "PaymentSetup",
-                "DisplayName": "Payment",
-                "Tile": "/Content/Images/Plugins/Tiles/payment-tile.png",
-                "Color": "#667C26",
-                "AlternateColor": "#768C36",
-                "DefaultFeature": "PaymentSetup",
-                "Features": [
-                    {
-                        "Name": "PaymentSetup",
-                        "DefaultAssetVersion": "1.0",
-                        "Assets": [
-                            {
-                                "Version": "1.0",
-                                "JavaScript": [
-                                    "~/Scripts/Plugins/PaymentSetupPresenter.js"
-                                ],
-                                "Css": [
-                                    "~/Content/Styles/Plugins/PaymentSetup.css"
-                                ]
-                            }
-                        ]
-                    }
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/PaymentSetupPresenter.js"
+                    ],
+                    "Css": [
+                      "~/Content/Styles/Plugins/PaymentSetup.css"
+                    ]
+                  }
                 ]
-            },
-            {
-                "Name": "CustomerSubscriptions",
-                "DisplayName": "My Subscriptions",
-                "Tile": "/Content/Images/Plugins/Tiles/subscriptions-tile.png",
-                "Color": "#3090C7",
-                "AlternateColor": "#2080B7",
-                "DefaultFeature": "Subscriptions",
-                "Features": [
-                    {
-                        "Name": "Subscriptions",
-                        "DefaultAssetVersion": "1.0",
-                        "Assets": [
-                            {
-                                "Version": "1.0",
-                                "JavaScript": [
-                                    "~/Scripts/Plugins/SubscriptionsPresenter.js"
-                                ],
-                                "Css": [
-                                    "~/Content/Styles/Plugins/Subscriptions.css"
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "Name": "AddSubscriptions",
-                        "DefaultAssetVersion": "1.0",
-                        "Assets": [
-                            {
-                                "Version": "1.0",
-                                "JavaScript": [
-                                    "~/Scripts/Plugins/AddSubscriptionsPresenter.js"
-                                ],
-                                "Css": [
-                                    "~/Content/Styles/Plugins/AddSubscriptionsPage.css"
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "Name": "UpdateSubscriptions",
-                        "DefaultAssetVersion": "1.0",
-                        "Assets": [
-                            {
-                                "Version": "1.0",
-                                "JavaScript": [
-                                    "~/Scripts/Plugins/UpdateSubscriptionsPresenter.js"
-                                ],
-                                "Css": [
-                                    "~/Content/Styles/Plugins/UpdateSubscriptions.css"
-                                ]
-                            }
-                        ]
-                    }
+              }
+            ]
+          },
+          {
+            "Name": "CustomerSubscriptions",
+            "DisplayName": "MySubscriptionsDisplayName",
+            "Tile": "/Content/Images/Plugins/Tiles/subscriptions-tile.png",
+            "Color": "#3090C7",
+            "AlternateColor": "#2080B7",
+            "DefaultFeature": "Subscriptions",
+            "Features": [
+              {
+                "Name": "Subscriptions",
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/SubscriptionsPresenter.js"
+                    ],
+                    "Css": [
+                      "~/Content/Styles/Plugins/Subscriptions.css"
+                    ]
+                  }
                 ]
-            },
-            {
+              },
+              {
+                "Name": "AddSubscriptions",
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/AddSubscriptionsPresenter.js"
+                    ],
+                    "Css": [
+                      "~/Content/Styles/Plugins/AddSubscriptionsPage.css"
+                    ]
+                  }
+                ]
+              },
+              {
+                "Name": "UpdateSubscriptions",
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/UpdateSubscriptionsPresenter.js"
+                    ],
+                    "Css": [
+                      "~/Content/Styles/Plugins/UpdateSubscriptions.css"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "CustomerAccount",
+            "DisplayName": "MyAccountDisplayName",
+            "Tile": "/Content/Images/Plugins/Tiles/account-tile.png",
+            "Color": "#667C26",
+            "AlternateColor": "#768C36",
+            "DefaultFeature": "CustomerAccount",
+            "Features": [
+              {
                 "Name": "CustomerAccount",
-                "DisplayName": "My Account",
-                "Tile": "/Content/Images/Plugins/Tiles/account-tile.png",
-                "Color": "#667C26",
-                "AlternateColor": "#768C36",
-                "DefaultFeature": "CustomerAccount",
-                "Features": [
-                    {
-                        "Name": "CustomerAccount",
-                        "DefaultAssetVersion": "1.0",
-                        "Assets": [
-                            {
-                                "Version": "1.0",
-                                "JavaScript": [
-                                    "~/Scripts/Plugins/CustomerAccountPresenter.js"
-                                ],
-                                "Css": [
-                                    "~/Content/Styles/Plugins/CustomerAccount.css"
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "Name": "UpdateContactInformation",
-                        "DefaultAssetVersion": "1.0",
-                        "Assets": [
-                            {
-                                "Version": "1.0",
-                                "JavaScript": [
-                                    "~/Scripts/Plugins/UpdateContactInformationPresenter.js"
-                                ],
-                                "Css": [
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "Name": "UpdateCompanyInformation",
-                        "DefaultAssetVersion": "1.0",
-                        "Assets": [
-                            {
-                                "Version": "1.0",
-                                "JavaScript": [
-                                    "~/Scripts/Plugins/UpdateCompanyInformationPresenter.js"
-                                ],
-                                "Css": [
-                                ]
-                            }
-                        ]
-                    }
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/CustomerAccountPresenter.js"
+                    ],
+                    "Css": [
+                      "~/Content/Styles/Plugins/CustomerAccount.css"
+                    ]
+                  }
                 ]
-            }
+              },
+              {
+                "Name": "UpdateContactInformation",
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/UpdateContactInformationPresenter.js"
+                    ],
+                    "Css": [
+                    ]
+                  }
+                ]
+              },
+              {
+                "Name": "UpdateCompanyInformation",
+                "DefaultAssetVersion": "1.0",
+                "Assets": [
+                  {
+                    "Version": "1.0",
+                    "JavaScript": [
+                      "~/Scripts/Plugins/UpdateCompanyInformationPresenter.js"
+                    ],
+                    "Css": [
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         ],
 
         "DefaultPlugin": "Home"

@@ -53,7 +53,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             var principal = this.HttpContext.User as CustomerPortalPrincipal;
 
             ViewBag.OrganizationName = portalBranding.OrganizationName;
-            ViewBag.IsPortalAdmin = principal.IsPortalAdmin;
+            ViewBag.IsPortalAdmin = principal.IsPortalAdmin;            
 
             return this.PartialView();
         }
@@ -138,6 +138,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult UpdateSubscriptions()
         {
+            ViewBag.CurrencySymbol = ApplicationDomain.Instance.PortalLocalization.CurrencySymbol;
             return this.PartialView();
         }
 
@@ -196,6 +197,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         [OutputCache(NoStore = true, Duration = 0)]
         public ActionResult OfferList()
         {
+            ViewBag.CurrencySymbol = ApplicationDomain.Instance.PortalLocalization.CurrencySymbol;
             return this.PartialView();
         }
 

@@ -270,10 +270,6 @@ Microsoft.WebPortal.Core.Shell.prototype._run = function () {
 
     // notify all interested components that the application has finished initializing
     this.EventSystem.broadcast(Microsoft.WebPortal.Event.PortalInitialized);
-
-    //this.Services.UserMenu.add(new Microsoft.WebPortal.Services.Action("SignOut", "Sign Out", function () {
-    //    // Implement sign out
-    //}, null, "Sign out from the portal"));
 }
 
 $WebPortal = new Microsoft.WebPortal.Core.Shell();
