@@ -66,12 +66,12 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
                             // login to the user AD tenant
                             ClientCredential webPortalcredentials = new ClientCredential(ApplicationConfiguration.ActiveDirectoryClientID, ApplicationConfiguration.ActiveDirectoryClientSecret);
                             AuthenticationContext userAuthContext = new AuthenticationContext(ApplicationConfiguration.ActiveDirectoryEndPoint + userTenantId);
-                            AuthenticationResult userAuthResult = userAuthContext.AcquireTokenByAuthorizationCode(
+                            AuthenticationResult userAuthResult = userAuthContext.AcquireTokenByAuthorizationCodeAsync(
                                 context.Code,
                                 new Uri(
                                     HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path)),
                                     webPortalcredentials,
-                                    ApplicationConfiguration.ActiveDirectoryGraphEndPoint);
+                                    ApplicationConfiguration.ActiveDirectoryGraphEndPoint).Result;
 
                             // acquire a graph token to manage the user tenant
                             Uri serviceRoot = new Uri(new Uri(ApplicationConfiguration.ActiveDirectoryGraphEndPoint), userTenantId);

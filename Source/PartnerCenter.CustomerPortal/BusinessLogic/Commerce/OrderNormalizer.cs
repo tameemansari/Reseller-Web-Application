@@ -213,8 +213,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
                 throw new PartnerDomainException(ErrorCode.SubscriptionExpired);
             }
 
-            decimal proratedSeatCharge = Math.Round(CommerceOperations.CalculateProratedSeatCharge(subscriptionToAugment.ExpiryDate, partnerOffer.Price), 2);
-            decimal totalCharge = Math.Round(proratedSeatCharge * seatsToPurchase, 2);
+            decimal proratedSeatCharge = Math.Round(CommerceOperations.CalculateProratedSeatCharge(subscriptionToAugment.ExpiryDate, partnerOffer.Price));
+            decimal totalCharge = Math.Round(proratedSeatCharge * seatsToPurchase);
 
             List<OrderSubscriptionItemViewModel> resultOrderSubscriptions = new List<OrderSubscriptionItemViewModel>();
             resultOrderSubscriptions.Add(new OrderSubscriptionItemViewModel()

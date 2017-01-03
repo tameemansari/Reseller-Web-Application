@@ -220,10 +220,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                     description = this.paymentDescription,
                     sku = subscriptionItem.SubscriptionId,
                     currency = this.ApplicationDomain.PortalLocalization.CurrencyCode,
-                    price = subscriptionItem.SeatPrice.ToString("F", CultureInfo.InvariantCulture),  
+                    price = subscriptionItem.SeatPrice.ToString("F0", CultureInfo.InvariantCulture), // price in a few countries needs to be without decimals. 
                     quantity = subscriptionItem.Quantity.ToString()
                 });
-                paymentTotal += Math.Round(subscriptionItem.Quantity * subscriptionItem.SeatPrice, 2);
+                paymentTotal += Math.Round(subscriptionItem.Quantity * Math.Round(subscriptionItem.SeatPrice));
             }
 
             string webExperienceId = string.Empty;
@@ -244,7 +244,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                         amount = new Amount()
                         {
                             currency = this.ApplicationDomain.PortalLocalization.CurrencyCode,
-                            total = paymentTotal.ToString("F", CultureInfo.InvariantCulture)  
+                            total = paymentTotal.ToString("F0", CultureInfo.InvariantCulture)  
                         }
                     }
                 },
