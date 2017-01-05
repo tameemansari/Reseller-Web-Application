@@ -1170,4 +1170,10 @@
   <data name="OrdersCaption" xml:space="preserve">
     <value>Bestellungen</value>
   </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>Instrumentierung</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>Sie können einen Application Insights-Instrumentierung-Schlüssel angeben, um die Telemetrie-Daten aus dem Portal zu erfassen.!</value>
+  </data>
 </root>

@@ -1170,4 +1170,10 @@
   <data name="OrdersCaption" xml:space="preserve">
     <value>Bestellingen</value>
   </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>Instrumentatie sleutel:!</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>U kunt een toepassing inzichten instrumentatie sleutel opgeven om te vangen telemetrie gegevens vanaf de portal.!</value>
+  </data>
 </root>
