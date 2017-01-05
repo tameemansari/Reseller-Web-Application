@@ -1171,9 +1171,9 @@
     <value>Bestellungen</value>
   </data>
   <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
-    <value>Instrumentierung</value>
+    <value>Instrumentationsschlüssel:</value>
   </data>
   <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
-    <value>Sie können einen Application Insights-Instrumentierung-Schlüssel angeben, um die Telemetrie-Daten aus dem Portal zu erfassen.!</value>
+    <value>Sie können eine Application Insights Instrumentationsschlüssel angeben, um die Telemetrie-Daten aus dem Portal zu erfassen.</value>
   </data>
 </root>

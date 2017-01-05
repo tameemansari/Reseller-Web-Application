@@ -1171,9 +1171,9 @@
     <value>注文</value>
   </data>
   <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
-    <value>計装</value>
+    <value>インストルメンテーションのキー:</value>
   </data>
   <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
-    <value>ポータルからのテレメトリ データをキャプチャするためにアプリケーション洞察力計測キーを指定できます!。</value>
+    <value>ポータルからのテレメトリ データをキャプチャするために、アプリケーションのインサイト インストルメンテーション キーを指定できます。</value>
   </data>
 </root>

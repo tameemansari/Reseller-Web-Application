@@ -1171,9 +1171,9 @@
     <value>Commandes</value>
   </data>
   <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
-    <value>Clé de l’instrumentation : !</value>
+    <value>Clé de l’instrumentation :</value>
   </data>
   <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
-    <value>Vous pouvez spécifier une clé d’instrumentation aperçus de l’Application afin de capturer les données de télémétrie à partir du portail. !</value>
+    <value>Vous pouvez spécifier une clé d’instrumentation aperçus de l’Application afin de capturer les données de télémétrie à partir du portail.</value>
   </data>
 </root>

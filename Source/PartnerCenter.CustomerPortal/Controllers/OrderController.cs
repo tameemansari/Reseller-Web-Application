@@ -74,6 +74,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
             // execute to paypal and get paypal action URI. 
             PayPalGateway paymentGateway = new PayPalGateway(ApplicationDomain.Instance, operationDescription);
+            string generatedUri = await paymentGateway.GeneratePaymentUriAsync(redirectUrl, orderDetails);
 
             // Capture the request for the customer summary for analysis.
             var eventProperties = new Dictionary<string, string> { { "CustomerId", orderDetails.CustomerId }, { "OperationType", orderDetails.OperationType.ToString() } };
@@ -83,7 +84,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
             ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent("api/order/prepare", eventProperties, eventMetrics);
 
-            return await paymentGateway.GeneratePaymentUriAsync(redirectUrl, orderDetails);
+            return generatedUri;
         }
 
         /// <summary>
@@ -165,13 +166,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
             // execute to paypal and get paypal action URI. 
             PayPalGateway paymentGateway = new PayPalGateway(ApplicationDomain.Instance, Resources.NewPurchaseOperationCaption);
+            string generatedUri = await paymentGateway.GeneratePaymentUriAsync(redirectUrl, orderDetails);
 
             // Track the event measurements for analysis.
             var eventMetrics = new Dictionary<string, double> { { "ElapsedMilliseconds", DateTime.Now.Subtract(startTime).TotalMilliseconds } };
 
             ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent("api/order/NewCustomerPrepareOrder", null, eventMetrics);
 
-            return await paymentGateway.GeneratePaymentUriAsync(redirectUrl, orderDetails);
+            return generatedUri;
         }
 
         /// <summary>
@@ -198,6 +200,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             OrderViewModel orderToProcess = await paymentGateway.GetOrderDetailsFromPaymentAsync();
             CommerceOperations commerceOperation = new CommerceOperations(ApplicationDomain.Instance, customerId, paymentGateway);
             await commerceOperation.PurchaseAsync(orderToProcess);
+            SubscriptionsSummary summaryResult = await this.GetSubscriptionSummaryAsync(customerId);
 
             // Capture the request for the customer summary for analysis.
             var eventProperties = new Dictionary<string, string> { { "CustomerId", orderToProcess.CustomerId }, { "PayerId", payerId }, { "PaymentId", paymentId } };
@@ -207,7 +210,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
             ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent("api/order/NewCustomerProcessOrder", eventProperties, eventMetrics);
 
-            return await this.GetSubscriptionSummaryAsync(customerId);
+            return summaryResult;
         }
 
         /// <summary>
