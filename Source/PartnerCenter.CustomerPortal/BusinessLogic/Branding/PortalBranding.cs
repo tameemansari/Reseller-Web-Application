@@ -97,7 +97,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             await portalBrandingBlob.UploadTextAsync(JsonConvert.SerializeObject(updatedBrandingConfiguration));
 
             // invalidate the cache, we do not update it to avoid race condition between web instances
-            await this.ApplicationDomain.CachingService.ClearAsync(PortalBranding.PortalBrandingCacheKey);
+            await this.ApplicationDomain.CachingService.ClearAsync(PortalBrandingCacheKey);
+
+            // re-initialize the telemetry service because the configuration might have changed.
+            await this.ApplicationDomain.TelemetryService.InitializeAsync();
 
             return updatedBrandingConfiguration;
         }

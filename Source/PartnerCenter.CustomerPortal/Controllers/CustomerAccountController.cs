@@ -22,7 +22,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
     using PartnerCenter.Models.Customers;
     using PartnerCenter.Models.Invoices;
     using PartnerCenter.Models.Subscriptions;
-    using PartnerCenter.RequestContext;
+    using RequestContext;
 
     /// <summary>
     /// Customer Account API Controller.
@@ -45,41 +45,16 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             var localeSpecificPartnerCenterClient = ApplicationDomain.Instance.PartnerCenterClient.With(RequestContextFactory.Instance.Create(responseCulture.Name));
             var customerAllSubscriptions = await localeSpecificPartnerCenterClient.Customers.ById(clientCustomerId).Subscriptions.GetAsync();
 
-            List<CustomerLicensesModel> allSubscriptionsOfCustomer = new List<CustomerLicensesModel>();
-            foreach (var item in customerAllSubscriptions.Items)
-            {
-                if (item.BillingType == BillingType.License)
-                {                   
-                    allSubscriptionsOfCustomer.Add(new CustomerLicensesModel()
-                    {
-                        Id = item.Id,
-                        OfferName = item.OfferName,
-                        Quantity = item.Quantity.ToString("G", responseCulture),
-                        Status = this.GetStatusType(item.Status), 
-                        CreationDate = item.CreationDate.ToString("d", responseCulture)
-                    });
-                }                    
-            }
-
-            CultureInfo responseCulture = new CultureInfo(ApplicationDomain.Instance.PortalLocalization.Locale);
-            var localeSpecificPartnerCenterClient = ApplicationDomain.Instance.PartnerCenterClient.With(RequestContextFactory.Instance.Create(responseCulture.Name));
-            var customerAllSubscriptions = await localeSpecificPartnerCenterClient.Customers.ById(clientCustomerId).Subscriptions.GetAsync();
-
-            List<CustomerLicensesModel> allSubscriptionsOfCustomer = new List<CustomerLicensesModel>();
-            foreach (var item in customerAllSubscriptions.Items)
-            {
-                if (item.BillingType == BillingType.License)
-                {                   
-                    allSubscriptionsOfCustomer.Add(new CustomerLicensesModel()
-                    {
-                        Id = item.Id,
-                        OfferName = item.OfferName,
-                        Quantity = item.Quantity.ToString("G", responseCulture),
-                        Status = this.GetStatusType(item.Status), 
-                        CreationDate = item.CreationDate.ToString("d", responseCulture)
-                    });
-                }                    
-            }
+            List<CustomerLicensesModel> allSubscriptionsOfCustomer = (from item in customerAllSubscriptions.Items
+                where item.BillingType == BillingType.License
+                select new CustomerLicensesModel()
+                {
+                    Id = item.Id,
+                    OfferName = item.OfferName,
+                    Quantity = item.Quantity.ToString("G", responseCulture),
+                    Status = this.GetStatusType(item.Status),
+                    CreationDate = item.CreationDate.ToString("d", responseCulture)
+                }).ToList();
 
             return new CustomerViewModel()
             {

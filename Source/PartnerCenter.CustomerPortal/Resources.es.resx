@@ -1170,4 +1170,10 @@
   <data name="OrdersCaption" xml:space="preserve">
     <value>Órdenes de</value>
   </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>Instrumentación</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>Puede especificar una clave de instrumentación de aplicación de conocimientos con el fin de capturar los datos de telemetría desde el portal.!</value>
+  </data>
 </root>
