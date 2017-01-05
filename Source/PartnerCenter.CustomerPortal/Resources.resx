@@ -267,9 +267,6 @@
   <data name="DomainPrefixValidationMessage" xml:space="preserve">
     <value>Please enter a valid domain prefix</value>
   </data>
-  <data name="PhoneValidationMessage" xml:space="preserve">
-    <value>Please enter a valid phone number</value>
-  </data>
   <data name="SubscriptionIDLabel" xml:space="preserve">
     <value>Subscription ID:</value>
   </data>
@@ -991,10 +988,10 @@
     <value>Payment Setup</value>
   </data>
   <data name="MySubscriptionsDisplayName" xml:space="preserve">
-    <value>My Subscriptions</value>
+    <value>My Orders</value>
   </data>
   <data name="MyAccountDisplayName" xml:space="preserve">
-    <value>My Account</value>
+    <value>My Subscriptions</value>
   </data>
   <data name="GoToHomePageCaption" xml:space="preserve">
     <value>Go to home page</value>
@@ -1166,5 +1163,11 @@
   </data>
   <data name="LicenseStatusCaption" xml:space="preserve">
     <value>Status</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>License based subscriptions</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>Orders</value>
   </data>
 </root>
