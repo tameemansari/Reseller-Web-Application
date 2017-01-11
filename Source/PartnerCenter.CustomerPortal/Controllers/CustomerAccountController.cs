@@ -56,9 +56,20 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                     CreationDate = item.CreationDate.ToString("d", responseCulture)
                 }).ToList();
 
+            List<CustomerUsageSubscriptionsModel> allUsageSubscriptionsOfCustomer = (from item in customerAllSubscriptions.Items
+                where item.BillingType == BillingType.Usage
+                select new CustomerUsageSubscriptionsModel()
+                {                                                                          
+                    Id = item.Id,
+                    Name = item.FriendlyName,                                        
+                    Status = this.GetStatusType(item.Status),
+                    CreationDate = item.CreationDate.ToString("d", responseCulture)
+                }).ToList();
+
             return new CustomerViewModel()
             {
-                Licenses = allSubscriptionsOfCustomer.OrderBy(items => items.OfferName)
+                Licenses = allSubscriptionsOfCustomer.OrderBy(items => items.OfferName),
+                UsageSubscriptions = allUsageSubscriptionsOfCustomer.OrderBy(items => items.Name)                
             };
         }
 

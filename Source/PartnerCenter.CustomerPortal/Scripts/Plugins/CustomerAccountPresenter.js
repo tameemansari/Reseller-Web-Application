@@ -40,6 +40,7 @@ Microsoft.WebPortal.CustomerAccountPresenter.prototype.onRender = function () {
 
         customerInfoProgress.done(function (customerInformation) {
             self.viewModel.Licenses = customerInformation.Licenses;
+            self.viewModel.UsageSubscriptions = customerInformation.UsageSubscriptions;
             self.viewModel.IsSet(true);
         }).fail(function (result, status, error) {
             var notification = new Microsoft.WebPortal.Services.Notification(Microsoft.WebPortal.Services.Notification.NotificationType.Error,

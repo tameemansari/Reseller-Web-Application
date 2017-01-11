@@ -1176,4 +1176,7 @@
   <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
     <value>U kunt een toepassing inzichten instrumentatie sleutel opgeven om te vangen telemetrie gegevens vanaf de portal.</value>
   </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Gebruik op basis abonnementen</value>
+  </data>
 </root>

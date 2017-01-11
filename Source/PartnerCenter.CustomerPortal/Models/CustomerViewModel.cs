@@ -124,5 +124,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
         /// Gets or sets the customers licenses in this summary.
         /// </summary>
         public IEnumerable<CustomerLicensesModel> Licenses { get; set; }
+
+        /// <summary>
+        /// Gets or sets the customers usage subscriptions in this summary.
+        /// </summary>
+        public IEnumerable<CustomerUsageSubscriptionsModel> UsageSubscriptions { get; set; }
     }
 }

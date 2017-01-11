@@ -263,6 +263,7 @@
     <Compile Include="BusinessLogic\Commerce\ICommerceOperations.cs" />
     <Compile Include="BusinessLogic\Commerce\PaymentGateways\PayPalGateway.cs" />
     <Compile Include="BusinessLogic\Commerce\IPaymentGateway.cs" />
+    <Compile Include="Models\CustomerUsageSubscriptionsModel.cs" />
     <Compile Include="Models\OfferCatalogViewModel.cs" />
     <Compile Include="Models\Validators\ExpiryDateInTenYearsAttribute.cs" />
     <Compile Include="Models\PurchaseLineItem.cs" />
@@ -582,6 +583,7 @@
     <EmbeddedResource Include="Resources.nl.resx" />
     <EmbeddedResource Include="Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>

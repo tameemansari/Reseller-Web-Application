@@ -1176,4 +1176,7 @@
   <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
     <value>ポータルからのテレメトリ データをキャプチャするために、アプリケーションのインサイト インストルメンテーション キーを指定できます。</value>
   </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>使用状況ベースのサブスクリプション</value>
+  </data>
 </root>

@@ -1176,4 +1176,7 @@
   <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
     <value>Puede especificar una clave de instrumentación de aplicación de conocimientos con el fin de capturar los datos de telemetría desde el portal.</value>
   </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Suscripciones de uso basado en</value>
+  </data>
 </root>

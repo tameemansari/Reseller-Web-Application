@@ -1176,4 +1176,7 @@
   <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
     <value>Vous pouvez spécifier une clé d’instrumentation aperçus de l’Application afin de capturer les données de télémétrie à partir du portail.</value>
   </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Abonnements d’utilisation en fonction</value>
+  </data>
 </root>

@@ -3148,6 +3148,15 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string UsageBasedSubscriptionsCaption {
+            get {
+                return ResourceManager.GetString("UsageBasedSubscriptionsCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Licenses.
         /// </summary>
         public static string UserLicencesCaption {

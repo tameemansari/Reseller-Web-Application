@@ -1176,4 +1176,7 @@
   <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
     <value>Sie können eine Application Insights Instrumentationsschlüssel angeben, um die Telemetrie-Daten aus dem Portal zu erfassen.</value>
   </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Nutzung-Abonnements</value>
+  </data>
 </root>

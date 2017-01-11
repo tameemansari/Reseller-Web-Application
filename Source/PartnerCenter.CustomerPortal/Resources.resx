@@ -1176,4 +1176,7 @@
   <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
     <value>You can specify an Application Insights instrumentation key in order to capture telemetry data from the portal.</value>
   </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Usage based subscriptions</value>
+  </data>
 </root>
