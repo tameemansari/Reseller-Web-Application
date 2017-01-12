@@ -130,24 +130,17 @@ Microsoft.WebPortal.Core.SessionManager.prototype.fetchCustomerDetails = functio
     /// <param name="resolver">A JQuery deferred object which will be notified with the customer details once they
     /// are available or get a rejection if there was a failure retrieving them.</param>
 
-    if (this.CustomerDetails) {
-        resolver.resolve(this.CustomerDetails);
-        return;
-    }        
-
     var getCustomerServerCall =
         new Microsoft.WebPortal.Utilities.RetryableServerCall(this.webPortal.Helpers.ajaxCall("api/CustomerAccounts", Microsoft.WebPortal.HttpMethod.Get))
 
     var self = this;
 
     getCustomerServerCall.execute()
-    .done(function (customerInfo) {
-        self.CustomerDetails = customerInfo;
+    .done(function (customerInfo) {        
         self.webPortal.Diagnostics.information("Acquired Customer Information.");
-        resolver.resolve(self.CustomerDetails);
+        resolver.resolve(customerInfo);
     })
-    .fail(function (result, status, error) {
-        self.CustomerDetails = null;
+    .fail(function (result, status, error) {        
         self.webPortal.Diagnostics.error("Failed to acquire Customer Information: " + error);
         resolver.reject();
     });

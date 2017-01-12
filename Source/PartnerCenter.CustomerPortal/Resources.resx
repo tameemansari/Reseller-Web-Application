@@ -267,9 +267,6 @@
   <data name="DomainPrefixValidationMessage" xml:space="preserve">
     <value>Please enter a valid domain prefix</value>
   </data>
-  <data name="PhoneValidationMessage" xml:space="preserve">
-    <value>Please enter a valid phone number</value>
-  </data>
   <data name="SubscriptionIDLabel" xml:space="preserve">
     <value>Subscription ID:</value>
   </data>
@@ -888,12 +885,6 @@
   <data name="ADTenantIsAlreadyRegisteredToCustomer" xml:space="preserve">
     <value>{0} AD tenant is already registered to Partner Center customer: {1}</value>
   </data>
-  <data name="AssertPhoneNumberInvalidPrefix" xml:space="preserve">
-    <value>phone number</value>
-  </data>
-  <data name="AssertPhoneNumberInvalidError" xml:space="preserve">
-    <value>{0} is invalid.</value>
-  </data>
   <data name="AssertNumberPositiveInvalidPrefix" xml:space="preserve">
     <value>number</value>
   </data>
@@ -977,5 +968,215 @@
   </data>
   <data name="PayPalWebsiteCaption" xml:space="preserve">
     <value>PayPal.com</value>
+  </data>
+  <data name="CouldNotRegisterNewPartnerCenterCustomer" xml:space="preserve">
+    <value>Could not register new Partner Center customer</value>
+  </data>
+  <data name="HomePluginDisplayName" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="AdminConsoleDisplayName" xml:space="preserve">
+    <value>Web Store Builder</value>
+  </data>
+  <data name="BrandingDisplayName" xml:space="preserve">
+    <value>Branding Setup</value>
+  </data>
+  <data name="OffersDisplayName" xml:space="preserve">
+    <value>Offers Setup</value>
+  </data>
+  <data name="PaymentDisplayName" xml:space="preserve">
+    <value>Payment Setup</value>
+  </data>
+  <data name="MySubscriptionsDisplayName" xml:space="preserve">
+    <value>My Orders</value>
+  </data>
+  <data name="MyAccountDisplayName" xml:space="preserve">
+    <value>My Subscriptions</value>
+  </data>
+  <data name="GoToHomePageCaption" xml:space="preserve">
+    <value>Go to home page</value>
+  </data>
+  <data name="CountryNameAU" xml:space="preserve">
+    <value>Australia</value>
+  </data>
+  <data name="CountryNameAT" xml:space="preserve">
+    <value>Austria</value>
+  </data>
+  <data name="CountryNameBE" xml:space="preserve">
+    <value>Belgium</value>
+  </data>
+  <data name="CountryNameBG" xml:space="preserve">
+    <value>Bulgaria</value>
+  </data>
+  <data name="CountryNameCA" xml:space="preserve">
+    <value>Canada</value>
+  </data>
+  <data name="CountryNameHR" xml:space="preserve">
+    <value>Croatia</value>
+  </data>
+  <data name="CountryNameCY" xml:space="preserve">
+    <value>Cyprus</value>
+  </data>
+  <data name="CountryNameCZ" xml:space="preserve">
+    <value>Czech Republic</value>
+  </data>
+  <data name="CountryNameDK" xml:space="preserve">
+    <value>Denmark</value>
+  </data>
+  <data name="CountryNameEE" xml:space="preserve">
+    <value>Estonia</value>
+  </data>
+  <data name="CountryNameFI" xml:space="preserve">
+    <value>Finland</value>
+  </data>
+  <data name="CountryNameFR" xml:space="preserve">
+    <value>France</value>
+  </data>
+  <data name="CountryNameDE" xml:space="preserve">
+    <value>Germany</value>
+  </data>
+  <data name="CountryNameGR" xml:space="preserve">
+    <value>Greece</value>
+  </data>
+  <data name="CountryNameHU" xml:space="preserve">
+    <value>Hungary</value>
+  </data>
+  <data name="CountryNameIS" xml:space="preserve">
+    <value>Iceland</value>
+  </data>
+  <data name="CountryNameIE" xml:space="preserve">
+    <value>Ireland</value>
+  </data>
+  <data name="CountryNameIT" xml:space="preserve">
+    <value>Italy</value>
+  </data>
+  <data name="CountryNameJP" xml:space="preserve">
+    <value>Japan</value>
+  </data>
+  <data name="CountryNameLV" xml:space="preserve">
+    <value>Latvia</value>
+  </data>
+  <data name="CountryNameLI" xml:space="preserve">
+    <value>Liechtenstein</value>
+  </data>
+  <data name="CountryNameLT" xml:space="preserve">
+    <value>Lithuania</value>
+  </data>
+  <data name="CountryNameLU" xml:space="preserve">
+    <value>Luxembourg</value>
+  </data>
+  <data name="CountryNameMT" xml:space="preserve">
+    <value>Malta</value>
+  </data>
+  <data name="CountryNameMC" xml:space="preserve">
+    <value>Monaco</value>
+  </data>
+  <data name="CountryNameNL" xml:space="preserve">
+    <value>Netherlands</value>
+  </data>
+  <data name="CountryNameNZ" xml:space="preserve">
+    <value>New Zealand</value>
+  </data>
+  <data name="CountryNameNO" xml:space="preserve">
+    <value>Norway</value>
+  </data>
+  <data name="CountryNamePO" xml:space="preserve">
+    <value>Poland</value>
+  </data>
+  <data name="CountryNamePT" xml:space="preserve">
+    <value>Portugal</value>
+  </data>
+  <data name="CountryNameRO" xml:space="preserve">
+    <value>Romania</value>
+  </data>
+  <data name="CountryNameSK" xml:space="preserve">
+    <value>Slovakia</value>
+  </data>
+  <data name="CountryNameSL" xml:space="preserve">
+    <value>Slovenia</value>
+  </data>
+  <data name="CountryNameES" xml:space="preserve">
+    <value>Spain</value>
+  </data>
+  <data name="CountryNameSE" xml:space="preserve">
+    <value>Sweden</value>
+  </data>
+  <data name="CountryNameCH" xml:space="preserve">
+    <value>Switzerland</value>
+  </data>
+  <data name="CountryNameGB" xml:space="preserve">
+    <value>United Kingdom</value>
+  </data>
+  <data name="CountryNameUS" xml:space="preserve">
+    <value>United States</value>
+  </data>
+  <data name="CustomerOrganizationRequired" xml:space="preserve">
+    <value>Organization name is required.</value>
+  </data>
+  <data name="CustomerProfileCompanyCountryRequired" xml:space="preserve">
+    <value>Country is required.</value>
+  </data>
+  <data name="CustomerProfileAddressLine1Required" xml:space="preserve">
+    <value>Address line 1 is required.</value>
+  </data>
+  <data name="CustomerProfileCityRequired" xml:space="preserve">
+    <value>City is required.</value>
+  </data>
+  <data name="CustomerProfileEmailAddressIdRequired" xml:space="preserve">
+    <value>The Email field is not a valid e-mail address.</value>
+  </data>
+  <data name="CustomerProfileDomainPrefixRequired" xml:space="preserve">
+    <value>Domain prefix is required.</value>
+  </data>
+  <data name="CustomerProfileFirstNameRequired" xml:space="preserve">
+    <value>First name is required.</value>
+  </data>
+  <data name="CustomerProfileLastNameRequired" xml:space="preserve">
+    <value>Last name is required.</value>
+  </data>
+  <data name="PhoneHeaderRequired" xml:space="preserve">
+    <value>Phone number is required.</value>
+  </data>
+  <data name="SignOutToolTipCaption" xml:space="preserve">
+    <value>Sign out from the application</value>
+  </data>
+  <data name="SubscriptionStatusTypeActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="SubscriptionStatusTypeDeleted" xml:space="preserve">
+    <value>Deleted</value>
+  </data>
+  <data name="SubscriptionStatusTypeNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="SubscriptionStatusTypeSuspended" xml:space="preserve">
+    <value>Suspended</value>
+  </data>
+  <data name="LicenseCreatedDateCaption" xml:space="preserve">
+    <value>Created Date</value>
+  </data>
+  <data name="LicenseNameCaption" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="LicenseQuantityCaption" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="LicenseStatusCaption" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="LicenseBasedSubscriptionsCaption" xml:space="preserve">
+    <value>License based subscriptions</value>
+  </data>
+  <data name="OrdersCaption" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="InstrumentationKeyFieldHeader" xml:space="preserve">
+    <value>Instrumentation key:</value>
+  </data>
+  <data name="InstrumentationKeyFieldSubText" xml:space="preserve">
+    <value>You can specify an Application Insights instrumentation key in order to capture telemetry data from the portal.</value>
+  </data>
+  <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
+    <value>Usage based subscriptions</value>
   </data>
 </root>

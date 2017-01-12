@@ -32,6 +32,11 @@ Microsoft.WebPortal.Views.OfferTile = function (webPortal, elementSelector, part
         }
     }, this);
 
+    this.viewModel.formattedPrice = ko.computed(function () {
+        Globalize.culture(webPortal.Resources.Strings.CurrentLocale);
+        return Globalize.format(this.viewModel.partnerOffer().Price, "c");
+    }, this);
+
     this.viewModel.Features = ko.computed(function () {
         // concatenates the feature offers into a comma separated list
         if (this.viewModel.partnerOffer().Features && this.viewModel.partnerOffer().Features.length > 0) {

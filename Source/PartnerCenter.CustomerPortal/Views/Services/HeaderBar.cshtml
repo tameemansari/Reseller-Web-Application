@@ -4,7 +4,7 @@
 <script id="TitleSection-template" type="text/html">
     <table cellpadding="0" cellspacing="0" style="height: 100%">
         <tr>
-            <td id="LogoSection" title="Go to @ViewBag.OrganizationName home page" data-bind="click: onLogoClicked, event: { mouseover: onHover.bind($data, '#LogoSection') , mouseout: onUnhover.bind($data, '#LogoSection') }">
+            <td id="LogoSection" title="@Resources.GoToHomePageCaption" data-bind="click: onLogoClicked, event: { mouseover: onHover.bind($data, '#LogoSection') , mouseout: onUnhover.bind($data, '#LogoSection') }">
                 <table>
                     <tr>
                         @if (ViewBag.OrganizationLogo != null)

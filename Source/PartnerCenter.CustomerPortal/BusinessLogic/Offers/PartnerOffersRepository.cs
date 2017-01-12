@@ -14,7 +14,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
     using Exceptions;
     using Models;
     using Newtonsoft.Json;
-    using WindowsAzure.Storage.Blob;
+    using RequestContext;
+    using WindowsAzure.Storage.Blob;    
 
     /// <summary>
     /// Encapsulates the behavior of offers a partner has configured to sell to their customers.
@@ -64,8 +65,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
 
             if (microsoftOffers == null)
             {
-                var partnerCenterOffers = await this.ApplicationDomain.PartnerCenterClient.Offers
-                    .ByCountry(this.ApplicationDomain.PortalLocalization.CountryIso2Code).GetAsync();
+                // Need to manage this based on the partner's country locale to retrieve localized offers for the store front.             
+                var localeSpecificPartnerCenterClient = this.ApplicationDomain.PartnerCenterClient.With(RequestContextFactory.Instance.Create(this.ApplicationDomain.PortalLocalization.Locale));
+
+                var partnerCenterOffers = await localeSpecificPartnerCenterClient.Offers.ByCountry(this.ApplicationDomain.PortalLocalization.CountryIso2Code).GetAsync();
 
                 var eligibleOffers = partnerCenterOffers?.Items.Where(offer =>
                     !offer.IsAddOn &&

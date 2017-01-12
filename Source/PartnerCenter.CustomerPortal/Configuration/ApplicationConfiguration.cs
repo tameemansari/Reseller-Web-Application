@@ -192,8 +192,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Configuration
             }
         }
 
-        /// <summary>
-        /// Gets the default web portal locale.
+        /// <summary>        
         /// Gets the cache connection string.
         /// </summary>
         public static string CacheConnectionString

@@ -118,6 +118,18 @@
 </script>
 
 <script>
+
+    $.validator.addMethod("validateprice", function (value, element) {
+        Globalize.culture("@Resources.Culture.Name");        
+        var evalExpr = this.optional(element) || !isNaN(Globalize.parseFloat(value));
+        if (evalExpr == true) {
+            // validate if number is > 0.
+            if (Globalize.parseFloat(value) <= 0)
+                return false; 
+        }        
+        return evalExpr;
+    }, "@Resources.OfferPriceShouldBeMoreThanZero");
+
     $("#AddOrUpdateOfferForm").validate({
             rules: {
                 OfferTitle: {
@@ -125,8 +137,7 @@
                 },
                 OfferPrice: {
                     required: true,
-                    number: true,
-                    min: 0.01
+                    validateprice:true
                 }
             },
             messages: {

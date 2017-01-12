@@ -6,9 +6,11 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
+    <meta http-equiv="content-language" content="@Resources.Culture.Name" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <title>@ViewBag.OrganizationName</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <script type="text/javascript">
         var pageLoadTimeStart = Date.now();
@@ -26,6 +28,13 @@
 
     @* Render the classes needed to start up the portal *@
     @Scripts.Render("~/StartupClasses/")    
+
+    <script type="text/javascript" src="@ViewBag.ValidatorMessagesSrc"></script>
+
+    <!-- pick up jQuery Globalize from CDN. -->
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/cultures/globalize.cultures.js"></script>    
+    <!-- https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js -->    
 </head>
 <body>
     <div id="SplashScreen" data-bind="template: { name: SplashScreen.template, data: SplashScreen }">

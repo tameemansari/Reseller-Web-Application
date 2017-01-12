@@ -11,9 +11,8 @@
             </td>
         </tr>
         <tr>
-            <td class="PriceContainer">
-                <label>@ViewBag.CurrencySymbol</label>
-                <label data-bind="text: viewModel.partnerOffer().Price, css: { Hoverable: viewModel.isSelectable() }"></label>
+            <td class="PriceContainer">                
+                <label data-bind="text: viewModel.formattedPrice, css: { Hoverable: viewModel.isSelectable() }"></label>
                 <label class="PerYear">@Resources.UserPerYear</label>
                 <label title="Buy this offer" class="Link BuyNow" data-bind="visible: viewModel.showBuyLink, click: onBuyNowClicked">@Resources.BuyNow</label>
             </td>

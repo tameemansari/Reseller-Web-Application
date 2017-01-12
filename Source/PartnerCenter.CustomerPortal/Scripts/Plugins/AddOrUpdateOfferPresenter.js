@@ -11,6 +11,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter = function (webPortal, feature, ex
     this.base.constructor.call(this, webPortal, feature, "AddOrUpdatePartnerOffer", "/Template/AddOrUpdateOffer/");
     this.offerToUpdate = existingOffer;
     this.isNewOffer = typeof this.offerToUpdate === 'undefined' || this.offerToUpdate === null;
+    Globalize.culture(this.webPortal.Resources.Strings.CurrentLocale);
 
     this.viewModel = {
         ShowProgress: ko.observable(true),
@@ -19,7 +20,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter = function (webPortal, feature, ex
         MicrosoftOffer: ko.observable(this.isNewOffer ? "" : existingOffer.MicrosoftOffer),
         Title: ko.observable(this.isNewOffer ? "" : existingOffer.Title),
         SubTitle: ko.observable(this.isNewOffer ? "" : existingOffer.SubTitle),
-        Price: ko.observable(this.isNewOffer ? "" : existingOffer.Price),
+        Price: ko.observable(this.isNewOffer ? "" : Globalize.format(existingOffer.Price, "n")),        
         Features: ko.observableArray([]),
         Summary: ko.observableArray([]),
         Logo: ko.observable(this.isNewOffer ? "" : existingOffer.LogoUri),
@@ -203,8 +204,12 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSaveOffer = function (
         MicrosoftOfferId: this.viewModel.MicrosoftOffer().Offer.Id,
         Title: this.viewModel.Title(),
         Subtitle: this.viewModel.SubTitle(),
-        Price: this.viewModel.Price()
+        Price: 0.0
     }
+
+    // Only save the culture neutral value for price in the backend. 
+    Globalize.culture(this.webPortal.Resources.Strings.CurrentLocale);
+    offerPayload.Price = Globalize.parseFloat(this.viewModel.Price());
 
     offerPayload.Features = ko.utils.arrayMap(this.viewModel.Features(), function (feature) {
         return feature();
@@ -239,6 +244,7 @@ Microsoft.WebPortal.AddOrUpdateOfferPresenter.prototype.onSaveOffer = function (
         self.saveOfferAction.enabled(false);
 
         saveOfferServerCall.execute().done(function (updatedOfferInformation) {
+            self.viewModel.Price(updatedOfferInformation.Price); // display reconciled price from server. 
             offerSaveNotification.type(Microsoft.WebPortal.Services.Notification.NotificationType.Success);
             offerSaveNotification.message(self.webPortal.Resources.Strings.Plugins.AddOrUpdateOffer.OfferSaveSuccessMessage);
             offerSaveNotification.buttons([

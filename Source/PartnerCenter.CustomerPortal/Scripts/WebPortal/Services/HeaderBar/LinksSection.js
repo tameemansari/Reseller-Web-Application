@@ -48,10 +48,11 @@ Microsoft.WebPortal.Services.LinksSection = function (webPortal) {
         if (isLoggedIn) {
             webPortal.Services.HeaderBar.addSection(new Microsoft.WebPortal.Services.UserSection(webPortal));
 
-            webPortal.Services.UserMenu.add(new Microsoft.WebPortal.Services.Action("SignOut", "Sign Out", function () {
+            // TODO :: Loc review. 
+            webPortal.Services.UserMenu.add(new Microsoft.WebPortal.Services.Action("SignOut", webPortal.Resources.Strings.SignOut, function () {
                 // Implement sign out
                 webPortal.Services.Login.logout();
-            }, null, "Sign out from the application"));
+            }, null, webPortal.Resources.Strings.SignOutToolTipCaption));
         } else {
             webPortal.Services.HeaderBar.removeSection("UserInfoSection");
         }
@@ -60,4 +61,4 @@ Microsoft.WebPortal.Services.LinksSection = function (webPortal) {
 
 $WebPortal.Helpers.inherit(Microsoft.WebPortal.Services.LinksSection, Microsoft.WebPortal.Services.HeaderBarSection);
 
-//@ sourceURL=HelpSection.js
+//@ sourceURL=LinksSection.js

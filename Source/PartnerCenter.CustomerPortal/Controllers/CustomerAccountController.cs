@@ -6,10 +6,9 @@
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 {
+    using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
-    using System.Net;
-    using System.Net.Http;
     using System.Threading.Tasks;
     using System.Web;
     using System.Web.Http;
@@ -20,7 +19,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
     using Models;
     using Newtonsoft.Json;
     using PartnerCenter.Models;
-    using PartnerCenter.Models.Customers;    
+    using PartnerCenter.Models.Customers;
+    using PartnerCenter.Models.Invoices;
+    using PartnerCenter.Models.Subscriptions;
+    using RequestContext;
 
     /// <summary>
     /// Customer Account API Controller.
@@ -39,24 +41,35 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         {
             string clientCustomerId = this.Principal.PartnerCenterCustomerId;
 
-            Customer thisCustomer; 
-            thisCustomer = await ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(clientCustomerId).GetAsync();
+            CultureInfo responseCulture = new CultureInfo(ApplicationDomain.Instance.PortalLocalization.Locale);
+            var localeSpecificPartnerCenterClient = ApplicationDomain.Instance.PartnerCenterClient.With(RequestContextFactory.Instance.Create(responseCulture.Name));
+            var customerAllSubscriptions = await localeSpecificPartnerCenterClient.Customers.ById(clientCustomerId).Subscriptions.GetAsync();
+
+            List<CustomerLicensesModel> allSubscriptionsOfCustomer = (from item in customerAllSubscriptions.Items
+                where item.BillingType == BillingType.License
+                select new CustomerLicensesModel()
+                {
+                    Id = item.Id,
+                    OfferName = item.OfferName,
+                    Quantity = item.Quantity.ToString("G", responseCulture),
+                    Status = this.GetStatusType(item.Status),
+                    CreationDate = item.CreationDate.ToString("d", responseCulture)
+                }).ToList();
+
+            List<CustomerUsageSubscriptionsModel> allUsageSubscriptionsOfCustomer = (from item in customerAllSubscriptions.Items
+                where item.BillingType == BillingType.Usage
+                select new CustomerUsageSubscriptionsModel()
+                {                                                                          
+                    Id = item.Id,
+                    Name = item.FriendlyName,                                        
+                    Status = this.GetStatusType(item.Status),
+                    CreationDate = item.CreationDate.ToString("d", responseCulture)
+                }).ToList();
 
             return new CustomerViewModel()
             {
-                MicrosoftId = thisCustomer.Id,
-                AddressLine1 = thisCustomer.BillingProfile.DefaultAddress.AddressLine1,
-                AddressLine2 = thisCustomer.BillingProfile.DefaultAddress.AddressLine2,
-                City = thisCustomer.BillingProfile.DefaultAddress.City,
-                State = thisCustomer.BillingProfile.DefaultAddress.State,
-                ZipCode = thisCustomer.BillingProfile.DefaultAddress.PostalCode,
-                Country = thisCustomer.BillingProfile.DefaultAddress.Country,
-                Phone = thisCustomer.BillingProfile.DefaultAddress.PhoneNumber,
-                Language = thisCustomer.BillingProfile.Language,
-                FirstName = thisCustomer.BillingProfile.DefaultAddress.FirstName,
-                LastName = thisCustomer.BillingProfile.DefaultAddress.LastName,
-                Email = thisCustomer.BillingProfile.Email,
-                CompanyName = thisCustomer.BillingProfile.CompanyName                
+                Licenses = allSubscriptionsOfCustomer.OrderBy(items => items.OfferName),
+                UsageSubscriptions = allUsageSubscriptionsOfCustomer.OrderBy(items => items.Name)                
             };
         }
 
@@ -81,7 +94,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
             Customer newCustomer = null;
             
-            // TODO :: Loc. may need special handling for national clouds deployments.
+            // TODO :: Loc. may need special handling for national clouds deployments (China).
             string domainName = string.Format(CultureInfo.InvariantCulture, "{0}.onmicrosoft.com", customerViewModel.DomainPrefix);  
 
             // check domain available.
@@ -91,7 +104,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 throw new PartnerDomainException(ErrorCode.DomainNotAvailable).AddDetail("DomainPrefix", domainName);
             }
 
-            string billingLanguage = new CultureInfo(ApplicationDomain.Instance.PortalLocalization.Locale).TwoLetterISOLanguageName;
+            // get the locale, we default to the first locale used in a country for now.
+            var customerCountryValidationRules = await ApplicationDomain.Instance.PartnerCenterClient.CountryValidationRules.ByCountry(customerViewModel.Country).GetAsync();
+            string billingCulture = customerCountryValidationRules.SupportedCulturesList.FirstOrDefault();      // default billing culture is the first supported culture for the customer's selected country. 
+            string billingLanguage = customerCountryValidationRules.SupportedLanguagesList.FirstOrDefault();    // default billing culture is the first supported language for the customer's selected country. 
+
             newCustomer = new Customer()
             {
                 CompanyProfile = new CustomerCompanyProfile()
@@ -100,7 +117,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 },
                 BillingProfile = new CustomerBillingProfile()
                 {
-                    Culture = ApplicationDomain.Instance.PortalLocalization.Locale,
+                    Culture = billingCulture,
                     Language = billingLanguage,
                     Email = customerViewModel.Email,
                     CompanyName = customerViewModel.CompanyName,
@@ -147,6 +164,28 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 Password = newCustomer.UserCredentials.Password,
                 AdminUserAccount = newCustomer.UserCredentials.UserName + "@" + newCustomer.CompanyProfile.Domain
             };
+        }
+
+        /// <summary>
+        /// Retrieves the localized status type string. 
+        /// </summary>
+        /// <param name="statusType">The subscription status type.</param>
+        /// <returns>Localized Operation Type string.</returns>
+        private string GetStatusType(SubscriptionStatus statusType)
+        {
+            switch (statusType)
+            {
+                case SubscriptionStatus.Active:
+                    return Resources.SubscriptionStatusTypeActive;
+                case SubscriptionStatus.Deleted:
+                    return Resources.SubscriptionStatusTypeDeleted;
+                case SubscriptionStatus.None:
+                    return Resources.SubscriptionStatusTypeNone;
+                case SubscriptionStatus.Suspended:
+                    return Resources.SubscriptionStatusTypeSuspended;
+                default:
+                    return string.Empty;
+            }
         }
     }
 }

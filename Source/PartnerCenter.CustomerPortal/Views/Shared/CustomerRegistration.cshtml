@@ -16,11 +16,6 @@
         $.validator.addMethod("regx", function (value, element, regexpr) {
             return regexpr.test(value);
         }, "@Resources.DomainPrefixValidationMessage");
-
-        $.validator.addMethod("phoneregex", function (value, element, regexpr) {
-            return regexpr.test(value);
-        }, "@Resources.PhoneValidationMessage");
-
         $("#Form").validate({
             invalidHandler: function() {
                 $("#validation_summary").text("@Resources.InvalidInputInFormCaption");
@@ -34,10 +29,6 @@
                 }
             },
             rules: {
-                Phone: {
-                    required: true,
-                    phoneregex: /^[01]?[- .]?(\([2-9]\d{2}\)|[2-9]\d{2})[- .]?\d{3}[- .]?\d{4}$/
-                },
                 DomainPrefix: {
                     required: true,
                     regx: /^[a-z0-9]+$/i

@@ -35,8 +35,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Customers
         /// <returns>A task.</returns>
         public async Task RegisterAsync(string tenantId, string partnerCenterCustomerId)
         {
-            tenantId.AssertNotEmpty("tenantId can't be empty");
-            partnerCenterCustomerId.AssertNotEmpty("partnerCenterCustomerId can't be empty");
+            tenantId.AssertNotEmpty(nameof(tenantId));
+            partnerCenterCustomerId.AssertNotEmpty(nameof(partnerCenterCustomerId));
             
             // ensure there is no existing association for the given tenant
             var existingCustomerId = await this.RetrieveAsync(tenantId);
@@ -57,7 +57,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Customers
 
             addNewCustomerResult.HttpStatusCode.AssertHttpResponseSuccess(
                 ErrorCode.PersistenceFailure,
-                "Could not register new Partner Center customer",
+                Resources.CouldNotRegisterNewPartnerCenterCustomer,
                 addNewCustomerResult.Result);
         }
 
@@ -68,10 +68,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Customers
         /// <returns>The Partner Center customer ID. Empty string is no association was found.</returns>
         public async Task<string> RetrieveAsync(string tenantId)
         {
-            if (string.IsNullOrWhiteSpace(tenantId))
-            {
-                throw new ArgumentException("tenantId can't be empty");
-            }
+            tenantId.AssertNotEmpty(nameof(tenantId));
 
             var customersTable = await this.ApplicationDomain.AzureStorageService.GetPartnerCenterCustomersTableAsync();
             var customerQuery = new TableQuery<TableEntity>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, tenantId));

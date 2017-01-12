@@ -46,25 +46,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
         }
 
         /// <summary>
-        /// Ensures that a given string is a valid US phone number. Throws an exception otherwise. 
-        /// </summary>
-        /// <param name="phoneNumber">The phone number to validate.</param>
-        /// <param name="caption">The name to report in the exception.</param>
-        public static void AssertPhoneNumber(this string phoneNumber, string caption)
-        {
-            // https://msdn.microsoft.com/en-us/library/ff650303.aspx#paght000001_commonregularexpressions
-            string usaPhoneFormat = @"^[01]?[- .]?(\([2-9]\d{2}\)|[2-9]\d{2})[- .]?\d{3}[- .]?\d{4}$";                                      
-
-            Regex regexPhoneNumber = new Regex(usaPhoneFormat);
-            AssertNotNull(phoneNumber, nameof(phoneNumber));
-
-            if (!regexPhoneNumber.IsMatch(phoneNumber))
-            {
-                throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, Resources.AssertPhoneNumberInvalidError, caption ?? Resources.AssertPhoneNumberInvalidPrefix));
-            }
-        }
-
-        /// <summary>
         /// Ensures that a given number is greater than zero. Throws an exception otherwise.
         /// </summary>
         /// <param name="number">The number to validate.</param>

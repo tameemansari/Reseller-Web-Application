@@ -24,7 +24,7 @@
 <script id="partnerOfferListItem-template" type="text/html">
     <div class="PartnerOfferDetails">
         <label class="Title" data-bind="text: row.PartnerOffer.Title"></label><br />
-        @Resources.PriceHeader @ViewBag.CurrencySymbol <label class="SubTitle" data-bind="text: row.PartnerOffer.Price"></label><br />
+        @Resources.PriceHeader <label class="SubTitle" data-bind="text: row.FormattedPrice"></label><br />
 
         <table cellspacing="0">
             <tr>

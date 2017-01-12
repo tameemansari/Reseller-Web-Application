@@ -39,26 +39,8 @@ Microsoft.WebPortal.CustomerAccountPresenter.prototype.onRender = function () {
         self.webPortal.Session.fetchCustomerDetails(customerInfoProgress);
 
         customerInfoProgress.done(function (customerInformation) {
-            self.viewModel.ContactInformation = [
-                customerInformation.FirstName + " " + customerInformation.LastName,
-                customerInformation.Email,
-                customerInformation.Phone
-            ];
-            self.viewModel.Language = customerInformation.Language;
-            self.viewModel.CompanyName = customerInformation.CompanyName;
-
-            var addressLine = customerInformation.AddressLine1;
-
-            if (customerInformation.AddressLine2) {
-                addressLine += " " + customerInformation.AddressLine2;
-            }
-
-            self.viewModel.Address = [
-                addressLine,
-                customerInformation.City + ", " + customerInformation.State + " " + customerInformation.ZipCode,
-                customerInformation.Country
-            ];
-
+            self.viewModel.Licenses = customerInformation.Licenses;
+            self.viewModel.UsageSubscriptions = customerInformation.UsageSubscriptions;
             self.viewModel.IsSet(true);
         }).fail(function (result, status, error) {
             var notification = new Microsoft.WebPortal.Services.Notification(Microsoft.WebPortal.Services.Notification.NotificationType.Error,

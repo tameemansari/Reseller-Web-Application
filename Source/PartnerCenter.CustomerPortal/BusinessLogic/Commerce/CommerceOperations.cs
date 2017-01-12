@@ -191,8 +191,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             string partnerOfferId = orderSubscriptions.First().PartnerOfferId;
             decimal partnerOfferPrice = orderSubscriptions.First().SeatPrice;
             DateTime subscriptionExpiryDate = orderSubscriptions.First().SubscriptionExpiryDate;
-            int quantity = orderSubscriptions.First().Quantity;
-            decimal totalCharge = Math.Round(quantity * partnerOfferPrice, 2);            
+            int quantity = orderSubscriptions.First().Quantity;            
+            decimal totalCharge = Math.Round(quantity * partnerOfferPrice, Resources.Culture.NumberFormat.CurrencyDecimalDigits);            
 
             // retrieve the subscription from Partner Center
             var subscriptionOperations = this.ApplicationDomain.PartnerCenterClient.Customers.ById(this.CustomerId).Subscriptions.ById(subscriptionId);

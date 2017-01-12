@@ -139,18 +139,26 @@ Microsoft.WebPortal.UpdateSubscriptionsPresenter.prototype.onRender = function (
 
             // pricePerSeat - Manages the price per seat. Will either be normal offer price or pro rated price provided by server. 
             self.viewModel.pricePerSeat = 0;
-            if (self.viewModel.isUpdateSubscription) {
-                self.viewModel.pricePerSeat = self.viewModel.SubscriptionProRatedPrice.toFixed(2);
+            Globalize.culture(self.webPortal.Resources.Strings.CurrentLocale);
+
+            // globalize the price variables. 
+            if (self.viewModel.isUpdateSubscription) {                
+                self.viewModel.pricePerSeat = Globalize.format(self.viewModel.SubscriptionProRatedPrice, "c");
             }
             if (self.viewModel.isRenewSubscription) {
-                self.viewModel.pricePerSeat = self.viewModel.portalOffer.Price.toFixed(2);
+                self.viewModel.pricePerSeat = Globalize.format(self.viewModel.portalOffer.Price,"c");
             }
 
+            // Globalize the pricePerSeat using currency format.             
             // set up the total charge form field computed value. 
             self.viewModel.TotalCharge = ko.computed(function () {
-                var total = 0;
-                total = self.viewModel.Quantity() * self.viewModel.pricePerSeat;
-                return total.toFixed(2);
+                // globalize the total using currency format. 
+                Globalize.culture(self.webPortal.Resources.Strings.CurrentLocale);
+
+                var total = 0;                
+                total = self.viewModel.Quantity() * Globalize.parseFloat(self.viewModel.pricePerSeat);
+
+                return Globalize.format(total, "c");                
             });
             self.viewModel.IsSet(true);
         }).fail(function (result, status, error) {
