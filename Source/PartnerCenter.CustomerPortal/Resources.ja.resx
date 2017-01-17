@@ -228,9 +228,6 @@
   <data name="Confirmation" xml:space="preserve">
     <value>確認</value>
   </data>
-  <data name="ConfirmationMessage" xml:space="preserve">
-    <value>ありがとう！お客様の情報は、セットアップをされています。このページをご覧ください、ご注文送信] をクリックします。</value>
-  </data>
   <data name="ContactInformation" xml:space="preserve">
     <value>顧客情報</value>
   </data>
@@ -332,9 +329,6 @@
   </data>
   <data name="AddSummaryPointTooltip" xml:space="preserve">
     <value>この後キャンペーン概要を追加します。</value>
-  </data>
-  <data name="BrandingSectionTooltip" xml:space="preserve">
-    <value>あなたの会社のブランドを構成する] をクリックします。</value>
   </data>
   <data name="OfferFeaturePlaceHolder" xml:space="preserve">
     <value>このオファーを与える機能について説明します。</value>
@@ -600,9 +594,6 @@
   <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
     <value>連絡先情報</value>
   </data>
-  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
-    <value>ドメイン プレフィックスが表示されます後、@ あなたのドメインのメール アドレスで。一意である必要があり、任意の句読点を含めることはできません。例: ' 会社 '。</value>
-  </data>
   <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
     <value>ドメイン プレフィックス</value>
   </data>
@@ -617,9 +608,6 @@
   </data>
   <data name="CustomerProfileLastNameCaption" xml:space="preserve">
     <value>最後の名前</value>
-  </data>
-  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
-    <value>これは、Office 365 アカウントに使用するユーザー id になります。</value>
   </data>
   <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
     <value>ユーザー名</value>
@@ -791,9 +779,6 @@
   </data>
   <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
     <value>ここでホーム ページのフッターに表示されますあなたの顧客にプライバシー条件を示すリンクを指定できます。</value>
-  </data>
-  <data name="PrivacyAgreementToolTip" xml:space="preserve">
-    <value>このウェブサイトのプライバシー規約を表示します。</value>
   </data>
   <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
     <value>あなたのアカウントを取得できませんでした。後でもう一度試してください。</value>
@@ -1178,5 +1163,20 @@
   </data>
   <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
     <value>使用状況ベースのサブスクリプション</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>ありがとう。お客様の情報は、セットアップをされています。このページをご覧ください、ご注文送信] をクリックします。</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>あなたの会社のブランドを構成するをクリックします。</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>ドメイン プレフィックスが表示されます後、@ あなたのドメインのメール アドレスで。一意である必要があり、任意の句読点を含めることはできません。例: 貴社。</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>これは、Office 365 アカウントに使用するユーザー id になります。</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>このウェブサイトのプライバシー規約を表示します。</value>
   </data>
 </root>

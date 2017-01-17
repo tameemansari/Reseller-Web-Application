@@ -313,7 +313,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Click to configure your company&apos;s branding.
+        ///   Looks up a localized string similar to Click to configure your company branding..
         /// </summary>
         public static string BrandingSectionTooltip {
             get {
@@ -484,7 +484,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thank you! Customer information has been setup. Please review this page and click submit to place your order..
+        ///   Looks up a localized string similar to Thank you. Customer information has been setup. Please review this page and click submit to place your order..
         /// </summary>
         public static string ConfirmationMessage {
             get {
@@ -1078,7 +1078,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your domain prefix will appear after the @ in your domain email address. It has to be unique and it can&apos;t contain any punctuations. Example: &apos;yourcompany&apos;..
+        ///   Looks up a localized string similar to Your domain prefix will appear after the @ in your domain email address. It has to be unique and it cannot contain any punctuations. Example: yourcompany..
         /// </summary>
         public static string CustomerProfileDomainInfoCaption {
             get {
@@ -1168,7 +1168,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This will be the user id you&apos;ll use with your Office 365 account..
+        ///   Looks up a localized string similar to This will be the user id you will use with your Office 365 account..
         /// </summary>
         public static string CustomerProfileOffice365EmailCaption {
             get {
@@ -2626,7 +2626,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to View this website&apos;s privacy terms.
+        ///   Looks up a localized string similar to View this website privacy terms.
         /// </summary>
         public static string PrivacyAgreementToolTip {
             get {
@@ -3148,7 +3148,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Usage based subscriptions.
         /// </summary>
         public static string UsageBasedSubscriptionsCaption {
             get {

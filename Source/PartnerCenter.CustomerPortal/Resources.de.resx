@@ -228,9 +228,6 @@
   <data name="Confirmation" xml:space="preserve">
     <value>Bestätigung</value>
   </data>
-  <data name="ConfirmationMessage" xml:space="preserve">
-    <value>Danke! Kundeninformationen wurde eingerichtet. Bitte lesen Sie diese Seite, und klicken Sie auf senden, um Ihre Bestellung aufzugeben.</value>
-  </data>
   <data name="ContactInformation" xml:space="preserve">
     <value>Kundeninformationen</value>
   </data>
@@ -332,9 +329,6 @@
   </data>
   <data name="AddSummaryPointTooltip" xml:space="preserve">
     <value>Nach diesem Angebot Zusammenfassung hinzufügen</value>
-  </data>
-  <data name="BrandingSectionTooltip" xml:space="preserve">
-    <value>Klicken Sie, um das branding Ihres Unternehmens konfigurieren</value>
   </data>
   <data name="OfferFeaturePlaceHolder" xml:space="preserve">
     <value>Beschreiben Sie eine Funktion, die dieses Angebot gibt</value>
@@ -461,9 +455,6 @@
   </data>
   <data name="DefaultOrganizationName" xml:space="preserve">
     <value>Den Namen Ihrer Organisation</value>
-  </data>
-  <data name="Undo" xml:space="preserve">
-    <value>"Rückgängig"</value>
   </data>
   <data name="BrandingRetrievalErrorMessage" xml:space="preserve">
     <value>Branding-Partner konnte nicht abgerufen werden.</value>
@@ -600,9 +591,6 @@
   <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
     <value>Kontakt-Informationen</value>
   </data>
-  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
-    <value>Ihre Domain-Präfix wird angezeigt, nachdem die @ Ihre Domain e-Mail-Adresse. Es muss eindeutig sein und darf Satzzeichen enthalten. Beispiel: "Jobs".</value>
-  </data>
   <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
     <value>Domain-Präfix</value>
   </data>
@@ -617,9 +605,6 @@
   </data>
   <data name="CustomerProfileLastNameCaption" xml:space="preserve">
     <value>Nachname</value>
-  </data>
-  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
-    <value>Dadurch werden die Benutzer-Id, die Sie mit Ihrem Office 365-Konto verwenden.</value>
   </data>
   <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
     <value>Benutzername</value>
@@ -791,9 +776,6 @@
   </data>
   <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
     <value>Sie können einen Link angeben, der Datenschutzbestimmungen für Ihre Kunden hier zeigt die in der Fußzeile der Startseite angezeigt werden</value>
-  </data>
-  <data name="PrivacyAgreementToolTip" xml:space="preserve">
-    <value>Anzeigen dieser Website Datenschutz</value>
   </data>
   <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
     <value>Ihr Konto konnte nicht abgerufen werden. Bitte versuchen Sie es später erneut.</value>
@@ -1178,5 +1160,23 @@
   </data>
   <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
     <value>Nutzung-Abonnements</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>Danke. Kundeninformationen wurde eingerichtet. Bitte lesen Sie diese Seite, und klicken Sie auf senden, um Ihre Bestellung aufzugeben.</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>Klicken Sie, um Ihr Unternehmensbranding konfigurieren.</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Rückgängig</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>Ihre Domain-Präfix wird angezeigt, nachdem die @ Ihre Domain e-Mail-Adresse. Es muss eindeutig sein und darf Satzzeichen enthalten. Beispiel: Jobs.</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>Dies werden die Benutzer-Id, die Sie mit Ihrem Office 365-Konto verwenden möchten.</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>Ansicht dieser Webseite-Datenschutzbestimmungen</value>
   </data>
 </root>
