@@ -228,9 +228,6 @@
   <data name="Confirmation" xml:space="preserve">
     <value>Confirmación</value>
   </data>
-  <data name="ConfirmationMessage" xml:space="preserve">
-    <value>¡Gracias! Información de los clientes ha sido configurado. Por favor revise esta página y haga clic en enviar para colocar su orden.</value>
-  </data>
   <data name="ContactInformation" xml:space="preserve">
     <value>Información del cliente</value>
   </data>
@@ -332,9 +329,6 @@
   </data>
   <data name="AddSummaryPointTooltip" xml:space="preserve">
     <value>Añadir Extracto de oferta después de esto</value>
-  </data>
-  <data name="BrandingSectionTooltip" xml:space="preserve">
-    <value>Haga clic para configurar la marca de su empresa</value>
   </data>
   <data name="OfferFeaturePlaceHolder" xml:space="preserve">
     <value>Describir una característica que da a esta oferta</value>
@@ -600,9 +594,6 @@
   <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
     <value>Información de contacto</value>
   </data>
-  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
-    <value>El prefijo de su dominio aparecerá después de la @ en su dirección de correo electrónico de dominio. Tiene que ser único y no puede contener cualquier signos de puntuación. Ejemplo: 'yourcompany'.</value>
-  </data>
   <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
     <value>Prefijo de número de dominio</value>
   </data>
@@ -617,9 +608,6 @@
   </data>
   <data name="CustomerProfileLastNameCaption" xml:space="preserve">
     <value>Apellido</value>
-  </data>
-  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
-    <value>Se trata de la identificación de usuario que usará con su cuenta de Office 365.</value>
   </data>
   <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
     <value>Nombre de usuario</value>
@@ -791,9 +779,6 @@
   </data>
   <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
     <value>Puede especificar un enlace que muestra los términos de privacidad a sus clientes aquí que se mostrarán en el pie de página de inicio</value>
-  </data>
-  <data name="PrivacyAgreementToolTip" xml:space="preserve">
-    <value>Ver condiciones de privacidad de este sitio web</value>
   </data>
   <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
     <value>No se pudo recuperar su cuenta. Por favor Inténtalo más tarde.</value>
@@ -1178,5 +1163,20 @@
   </data>
   <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
     <value>Suscripciones de uso basado en</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>Gracias. Información de los clientes ha sido configurado. Por favor revise esta página y haga clic en enviar para colocar su orden.</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>Haga clic para configurar la marca de su empresa.</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>El prefijo de su dominio aparecerá después de la @ en su dirección de correo electrónico de dominio. Tiene que ser único y no puede contener cualquier signos de puntuación. Ejemplo: yourcompany.</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>Se trata de la identificación de usuario que utilizará con su cuenta de Office 365.</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>Vista esta términos de privacidad del sitio web</value>
   </data>
 </root>

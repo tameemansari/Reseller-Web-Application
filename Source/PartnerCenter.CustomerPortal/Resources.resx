@@ -229,7 +229,7 @@
     <value>Confirmation</value>
   </data>
   <data name="ConfirmationMessage" xml:space="preserve">
-    <value>Thank you! Customer information has been setup. Please review this page and click submit to place your order.</value>
+    <value>Thank you. Customer information has been setup. Please review this page and click submit to place your order.</value>
   </data>
   <data name="ContactInformation" xml:space="preserve">
     <value>Customer information</value>
@@ -334,7 +334,7 @@
     <value>Add offer summary after this</value>
   </data>
   <data name="BrandingSectionTooltip" xml:space="preserve">
-    <value>Click to configure your company's branding</value>
+    <value>Click to configure your company branding.</value>
   </data>
   <data name="OfferFeaturePlaceHolder" xml:space="preserve">
     <value>Describe a feature this offer gives</value>
@@ -601,7 +601,7 @@
     <value>Contact Information</value>
   </data>
   <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
-    <value>Your domain prefix will appear after the @ in your domain email address. It has to be unique and it can't contain any punctuations. Example: 'yourcompany'.</value>
+    <value>Your domain prefix will appear after the @ in your domain email address. It has to be unique and it cannot contain any punctuations. Example: yourcompany.</value>
   </data>
   <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
     <value>Domain prefix</value>
@@ -619,7 +619,7 @@
     <value>Last name</value>
   </data>
   <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
-    <value>This will be the user id you'll use with your Office 365 account.</value>
+    <value>This will be the user id you will use with your Office 365 account.</value>
   </data>
   <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
     <value>Username</value>
@@ -793,7 +793,7 @@
     <value>You can specify a link that shows privacy terms to your customers here which will show up in the home page footer</value>
   </data>
   <data name="PrivacyAgreementToolTip" xml:space="preserve">
-    <value>View this website's privacy terms</value>
+    <value>View this website privacy terms</value>
   </data>
   <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
     <value>Could not retrieve your account. Please try again later.</value>

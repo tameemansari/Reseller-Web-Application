@@ -228,9 +228,6 @@
   <data name="Confirmation" xml:space="preserve">
     <value>Confirmation</value>
   </data>
-  <data name="ConfirmationMessage" xml:space="preserve">
-    <value>Merci ! Renseignements sur les clients a été mis en place. S’il vous plaît lisez cette page et cliquez sur "Envoyer" pour passer votre commande.</value>
-  </data>
   <data name="ContactInformation" xml:space="preserve">
     <value>Renseignements sur les clients</value>
   </data>
@@ -332,9 +329,6 @@
   </data>
   <data name="AddSummaryPointTooltip" xml:space="preserve">
     <value>Ajouter Résumé de l’offre après cela</value>
-  </data>
-  <data name="BrandingSectionTooltip" xml:space="preserve">
-    <value>Cliquez ici pour configurer l’image de marque de votre entreprise</value>
   </data>
   <data name="OfferFeaturePlaceHolder" xml:space="preserve">
     <value>Décrire une fonction, que cette offre donne</value>
@@ -600,9 +594,6 @@
   <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
     <value>Informations de contact</value>
   </data>
-  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
-    <value>Le préfixe de votre domaine s’affiche après le @ dans votre adresse de courrier électronique de domaine. Il doit être unique et ne peut contenir aucune ponctuation. Exemple : « yourcompany ».</value>
-  </data>
   <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
     <value>Préfixe de domaine</value>
   </data>
@@ -617,9 +608,6 @@
   </data>
   <data name="CustomerProfileLastNameCaption" xml:space="preserve">
     <value>Nom de famille</value>
-  </data>
-  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
-    <value>Il s’agit de l’id utilisateur que vous utilisez avec votre compte Office 365.</value>
   </data>
   <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
     <value>Nom d’utilisateur</value>
@@ -791,9 +779,6 @@
   </data>
   <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
     <value>Vous pouvez spécifier un lien qui montre les conditions de la vie privée à vos clients ici qui seront affiché dans le pied de page d’accueil</value>
-  </data>
-  <data name="PrivacyAgreementToolTip" xml:space="preserve">
-    <value>Découvre les conditions de la vie privée du site Internet</value>
   </data>
   <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
     <value>Pas pu récupérer votre compte. Veuillez réessayer ultérieurement.</value>
@@ -1178,5 +1163,20 @@
   </data>
   <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
     <value>Abonnements d’utilisation en fonction</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>Merci. Renseignements sur les clients a été mis en place. S’il vous plaît lisez cette page et cliquez sur "Envoyer" pour passer votre commande.</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>Cliquez ici pour configurer votre marque de la société.</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>Le préfixe de votre domaine s’affiche après le @ dans votre adresse de courrier électronique de domaine. Il doit être unique et ne peut contenir aucune ponctuation. Exemple : yourcompany.</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>Il s’agit de l’identifiant que vous utiliserez avec votre compte Office 365.</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>Découvre ce conditions de confidentialité du site Internet</value>
   </data>
 </root>

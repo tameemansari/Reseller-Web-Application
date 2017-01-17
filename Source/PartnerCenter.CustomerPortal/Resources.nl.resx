@@ -228,9 +228,6 @@
   <data name="Confirmation" xml:space="preserve">
     <value>Bevestiging</value>
   </data>
-  <data name="ConfirmationMessage" xml:space="preserve">
-    <value>Dank u! Klantgegevens is opstelling geweest. Controleer deze pagina en klik op verzenden om uw bestelling te plaatsen.</value>
-  </data>
   <data name="ContactInformation" xml:space="preserve">
     <value>Klantgegevens</value>
   </data>
@@ -332,9 +329,6 @@
   </data>
   <data name="AddSummaryPointTooltip" xml:space="preserve">
     <value>Samenvatting van de offerte na dit toevoegen</value>
-  </data>
-  <data name="BrandingSectionTooltip" xml:space="preserve">
-    <value>Klik hierop als u uw bedrijf branding</value>
   </data>
   <data name="OfferFeaturePlaceHolder" xml:space="preserve">
     <value>Beschrijven van een functie die deze aanbieding geeft</value>
@@ -600,9 +594,6 @@
   <data name="CustomerProfileContactInfoSectionCaption" xml:space="preserve">
     <value>Contact informatie</value>
   </data>
-  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
-    <value>Uw Domeinvoorvoegsel verschijnt na de @ in uw domein e-mailadres. Moet uniek zijn en mag leestekens bevatten. Voorbeeld: 'uwbedrijf'.</value>
-  </data>
   <data name="CustomerProfileDomainPrefixCaption" xml:space="preserve">
     <value>Domeinvoorvoegsel</value>
   </data>
@@ -617,9 +608,6 @@
   </data>
   <data name="CustomerProfileLastNameCaption" xml:space="preserve">
     <value>Achternaam</value>
-  </data>
-  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
-    <value>Dit is de gebruikersnaam die u gebruikt in combinatie met uw Office 365-account.</value>
   </data>
   <data name="CustomerProfileOffice365UserNameCaption" xml:space="preserve">
     <value>Gebruikersnaam</value>
@@ -791,9 +779,6 @@
   </data>
   <data name="PrivacyAgreementFieldSubText" xml:space="preserve">
     <value>U kunt een koppeling waarin privacybepalingen aan uw klanten hier die in de voettekst van de home pagina verschijnen zal</value>
-  </data>
-  <data name="PrivacyAgreementToolTip" xml:space="preserve">
-    <value>Teruglezen van deze website-privacy</value>
   </data>
   <data name="CouldNotRetrieveCustomerAccount" xml:space="preserve">
     <value>Uw rekening kon niet worden opgehaald. Probeer het later nog eens.</value>
@@ -1178,5 +1163,20 @@
   </data>
   <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
     <value>Gebruik op basis abonnementen</value>
+  </data>
+  <data name="ConfirmationMessage" xml:space="preserve">
+    <value>Dank u. Klantgegevens is opstelling geweest. Controleer deze pagina en klik op verzenden om uw bestelling te plaatsen.</value>
+  </data>
+  <data name="BrandingSectionTooltip" xml:space="preserve">
+    <value>Klik hierop als u uw bedrijf branding.</value>
+  </data>
+  <data name="CustomerProfileDomainInfoCaption" xml:space="preserve">
+    <value>Uw Domeinvoorvoegsel verschijnt na de @ in uw domein e-mailadres. Moet uniek zijn en mag leestekens bevatten. Voorbeeld: uwbedrijf.</value>
+  </data>
+  <data name="CustomerProfileOffice365EmailCaption" xml:space="preserve">
+    <value>Dit is de gebruikers-id die u met uw Office 365-account gebruiken zal.</value>
+  </data>
+  <data name="PrivacyAgreementToolTip" xml:space="preserve">
+    <value>De bepalingen van de privacy van deze website weergeven</value>
   </data>
 </root>
