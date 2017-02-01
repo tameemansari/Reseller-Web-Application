@@ -138,12 +138,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             };
 
             newCustomer = await ApplicationDomain.Instance.PartnerCenterClient.Customers.CreateAsync(newCustomer);
-
-            if (HttpContext.Current.Request.IsAuthenticated)
-                {
-                    // there is a signed in user, add the user to the customers repository
-                    await ApplicationDomain.Instance.CustomersRepository.RegisterAsync(this.Principal.TenantId, newCustomer.Id);
-                }
             
             return new CustomerViewModel()
             {

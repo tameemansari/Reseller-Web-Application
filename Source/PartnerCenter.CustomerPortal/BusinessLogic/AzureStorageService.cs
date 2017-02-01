@@ -46,6 +46,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         private const string CustomerPurchasesTableName = "CustomerPurchases";
 
         /// <summary>
+        /// The name of the customer orders Azure table.
+        /// </summary>
+        private const string CustomerOrdersTableName = "PreApprovedCustomerOrders";
+
+        /// <summary>
         /// The Azure cloud storage account.
         /// </summary>
         private CloudStorageAccount storageAccount;
@@ -76,6 +81,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         private CloudTable customerPurchasesTable;
 
         /// <summary>
+        /// The Azure customer orders table.
+        /// </summary>
+        private CloudTable customerOrdersTable;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="AzureStorageService"/> class.
         /// </summary>
         /// <param name="azureStorageConnectionString">The Azure storage connection string required to access the customer portal assets.</param>
@@ -85,10 +95,22 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             azureStorageConnectionString.AssertNotEmpty(nameof(azureStorageConnectionString));
             azureStorageConnectionEndpointSuffix.AssertNotEmpty(nameof(azureStorageConnectionEndpointSuffix));
 
-            CloudStorageAccount cloudStorageAccount;           
+            CloudStorageAccount cloudStorageAccount;                                    
             if (CloudStorageAccount.TryParse(azureStorageConnectionString, out cloudStorageAccount))
-            {
-                this.storageAccount = new CloudStorageAccount(cloudStorageAccount.Credentials, endpointSuffix: azureStorageConnectionEndpointSuffix, useHttps: true);
+            {                
+                if (azureStorageConnectionString.Equals("UseDevelopmentStorage=true", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    this.storageAccount = new CloudStorageAccount(
+                                                cloudStorageAccount.Credentials,
+                                                cloudStorageAccount.BlobStorageUri,
+                                                cloudStorageAccount.QueueStorageUri,
+                                                cloudStorageAccount.TableStorageUri,
+                                                cloudStorageAccount.FileStorageUri);
+                }
+                else
+                {
+                    this.storageAccount = new CloudStorageAccount(cloudStorageAccount.Credentials, endpointSuffix: azureStorageConnectionEndpointSuffix, useHttps: true);
+                }                
             }
             else
             {
@@ -213,6 +235,23 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
             // someone can delete the table externally
             await this.customerPurchasesTable.CreateIfNotExistsAsync();
             return this.customerPurchasesTable;
+        }
+
+        /// <summary>
+        /// Gets the customer orders table.
+        /// </summary>
+        /// <returns>The customer purchases table.</returns>
+        public async Task<CloudTable> GetCustomerOrdersTableAsync()
+        {
+            if (this.customerOrdersTable == null)
+            {
+                CloudTableClient tableClient = this.storageAccount.CreateCloudTableClient();
+                this.customerOrdersTable = tableClient.GetTableReference(AzureStorageService.CustomerOrdersTableName);
+            }
+
+            // someone can delete the table externally
+            await this.customerOrdersTable.CreateIfNotExistsAsync();
+            return this.customerOrdersTable;
         }
     }
 }

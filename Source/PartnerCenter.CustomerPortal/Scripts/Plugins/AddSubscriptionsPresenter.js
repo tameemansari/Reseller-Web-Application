@@ -59,10 +59,35 @@ Microsoft.WebPortal.AddSubscriptionsPresenter = function (webPortal, feature, co
             }, Microsoft.WebPortal.ContentType.Json, 120000),
                 "AddSubscriptions", []).execute()
                 .done(function (result) {
+                    // if result is a Uri for PreApproved transaction then build context and advance the journey in the portal to ProcessOrder feature. 
+                    var pairs = result.slice(1).split('&');
+                    var resultPairs = {};
+                    pairs.forEach(function (pair) {
+                        pair = pair.split('=');
+                        resultPairs[pair[0]] = decodeURIComponent(pair[1] || '');
+                    });
+
+                    var queryStringParams = JSON.parse(JSON.stringify(resultPairs));
+                    var orderContext = {
+                        paymentId: queryStringParams["paymentId"],
+                        PayerID: queryStringParams["PayerID"],
+                        customerId: queryStringParams["customerId"],
+                        orderId: queryStringParams["oid"],
+                        oid: queryStringParams["oid"],
+                        payment: queryStringParams["payment"],
+                        txStatus: queryStringParams["payment"]
+                    };
+
                     // hand it off to the subscriptions page.        
                     notification.dismiss();
-                    // we need to now redirect to paypal based on the response from the API.             
-                    window.location = result;
+
+                    if (queryStringParams["paymentId"] != null && queryStringParams["paymentId"].toLowerCase() === "preapproved") {
+                        // hand it off to the order processing presenter
+                        self.webPortal.Journey.advance(Microsoft.WebPortal.Feature.ProcessOrder, orderContext);
+                    } else {
+                        // we need to now redirect to paypal based on the response from the API.             
+                        window.location = result;
+                    }
                 })
                 .fail(function (result, status, error) {                    
                     notification.type(Microsoft.WebPortal.Services.Notification.NotificationType.Error);

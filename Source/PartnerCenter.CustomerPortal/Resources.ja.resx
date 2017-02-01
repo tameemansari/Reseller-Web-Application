@@ -1179,4 +1179,43 @@
   <data name="PrivacyAgreementToolTip" xml:space="preserve">
     <value>このウェブサイトのプライバシー規約を表示します。</value>
   </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>事前承認済みのお客様</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>事前に承認されたトランザクションのための顧客を管理します。</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>事前承認のためのすべての現在および将来の顧客をマークまたは事前承認の特定の顧客を選択することができます。</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>ストア フロントで事前に承認されたトランザクションのすべての現在および将来の顧客を許可します。</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>事前承認</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>顧客名</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>プライマリ ドメイン名</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>マイクロソフトの ID</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>事前に承認された顧客の詳細を取得できませんでした。</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>事前に承認された顧客情報の更新</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>事前に承認された顧客情報の更新</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>事前に承認された顧客の情報を保存できませんでした。</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>このトランザクションは、事前承認済みです。処理順序.</value>
+  </data>
 </root>

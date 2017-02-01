@@ -1179,4 +1179,43 @@
   <data name="PrivacyAgreementToolTip" xml:space="preserve">
     <value>Ansicht dieser Webseite-Datenschutzbestimmungen</value>
   </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>Freigeschaltete Kunden</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>Verwalten Sie Kunden für vorab genehmigte Transaktionen.</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>Sie können entweder markieren Sie alle aktuelle und zukünftige Kunden zur Genehmigung vor oder wählen Sie bestimmte Kunden für Pre-Approval.</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>Ermöglichen Sie alle aktuelle und zukünftige Kunden vorab genehmigte Transaktionen in der Ladenfront.</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>Vorab genehmigte</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>Kundenname</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>Primären Domainname</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>Microsoft-ID</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Vorab genehmigte Kundendetails konnte nicht abgerufen werden.</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>Freigeschaltete Kundeninformationen aktualisieren</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>Vorab genehmigte Kundeninformationen aktualisiert</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Konnte nicht freigeschaltete Kunden Informationen gespeichert werden</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>Diese Transaktion ist bereits genehmigten. Verarbeitungsreihenfolge...</value>
+  </data>
 </root>

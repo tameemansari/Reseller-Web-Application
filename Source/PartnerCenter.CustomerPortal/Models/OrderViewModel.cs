@@ -15,15 +15,20 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Models
     public class OrderViewModel
     {
         /// <summary>
-        /// Gets or sets the subscriptions the customer ordered.
+        /// Gets or sets the Order Id. 
         /// </summary>
-        [Required]
-        public IEnumerable<OrderSubscriptionItemViewModel> Subscriptions { get; set; }
+        public string OrderId { get; set; }
 
         /// <summary>
         /// Gets or sets the Customer Id. 
         /// </summary>
         public string CustomerId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the subscriptions the customer ordered.
+        /// </summary>
+        [Required]
+        public IEnumerable<OrderSubscriptionItemViewModel> Subscriptions { get; set; }
 
         /// <summary>
         /// Gets or sets the Operation Type for the order. 

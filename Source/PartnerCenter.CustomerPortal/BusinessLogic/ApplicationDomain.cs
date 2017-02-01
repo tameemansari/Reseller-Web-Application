@@ -37,11 +37,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         public IAggregatePartner PartnerCenterClient { get; private set; }
 
         /// <summary>
-        /// Gets a Partner Center customer repository.
-        /// </summary>
-        public PartnerCenterCustomersRepository CustomersRepository { get; private set; }
-
-        /// <summary>
         /// Gets the partner offers repository.
         /// </summary>
         public PartnerOffersRepository OffersRepository { get; private set; }
@@ -77,6 +72,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         public PaymentConfigurationRepository PaymentConfigurationRepository { get; private set; }
 
         /// <summary>
+        /// Gets the portal PreApprovedCustomers configuration repository.
+        /// </summary>
+        public PreApprovedCustomersRepository PreApprovedCustomersRepository { get; private set; }
+
+        /// <summary>
         /// Gets the customer subscriptions repository.
         /// </summary>
         public CustomerSubscriptionsRepository CustomerSubscriptionsRepository { get; private set; }
@@ -85,6 +85,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         /// Gets the customer purchases repository.
         /// </summary>
         public CustomerPurchasesRepository CustomerPurchasesRepository { get; private set; }
+
+        /// <summary>
+        /// Gets the customer orders repository.
+        /// </summary>
+        public OrdersRepository CustomerOrdersRepository { get; private set; }
 
         /// <summary>
         /// Gets the portal telemetry service.
@@ -104,14 +109,15 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 Instance.AzureStorageService = new AzureStorageService(ApplicationConfiguration.AzureStorageConnectionString, ApplicationConfiguration.AzureStorageConnectionEndpointSuffix);
                 Instance.CachingService = new CachingService(Instance, ApplicationConfiguration.CacheConnectionString);
                 Instance.PartnerCenterClient = await AcquirePartnerCenterAccessAsync();
-                Instance.PortalLocalization = new PortalLocalization(Instance);
-                Instance.CustomersRepository = new PartnerCenterCustomersRepository(Instance);
+                Instance.PortalLocalization = new PortalLocalization(Instance);                
                 Instance.OffersRepository = new PartnerOffersRepository(Instance);
                 Instance.MicrosoftOfferLogoIndexer = new MicrosoftOfferLogoIndexer(Instance);
                 Instance.PortalBranding = new PortalBranding(Instance);
                 Instance.PaymentConfigurationRepository = new PaymentConfigurationRepository(Instance);
+                Instance.PreApprovedCustomersRepository = new PreApprovedCustomersRepository(Instance);
                 Instance.CustomerSubscriptionsRepository = new CustomerSubscriptionsRepository(Instance);
                 Instance.CustomerPurchasesRepository = new CustomerPurchasesRepository(ApplicationDomain.Instance);
+                Instance.CustomerOrdersRepository = new OrdersRepository(ApplicationDomain.Instance);
                 Instance.TelemetryService = new TelemetryService(Instance);
 
                 await Instance.PortalLocalization.InitializeAsync();
@@ -126,7 +132,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         private static async Task<IAggregatePartner> AcquirePartnerCenterAccessAsync()
         {
             PartnerService.Instance.ApiRootUrl = ConfigurationManager.AppSettings["partnerCenter.apiEndPoint"];
-            PartnerService.Instance.ApplicationName = "Web Store Front V1.1";
+            PartnerService.Instance.ApplicationName = "Web Store Front V1.3";
 
             var credentials = await PartnerCredentials.Instance.GenerateByApplicationCredentialsAsync(
                 ConfigurationManager.AppSettings["partnercenter.applicationId"],

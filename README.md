@@ -21,6 +21,9 @@ Customers can <ol>
 </ol>
 </p>
 
+This project has adopted the [Microsoft Open Source Code of Conduct] (https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ] (https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com] (mailto:opencode@microsoft.com) with any additional questions or comments.
+
+
 <h2>Deployment</h2>
 The portal can be deployed from within Partner Center at: <a href="https://partnercenter.microsoft.com/en-us/pcv/webstore/preparedeployment">https://partnercenter.microsoft.com/en-us/pcv/webstore/preparedeployment</a>.
 There is also a deployment project included in the solution through which, deployment can be started with the specified inputs.
@@ -77,4 +80,3 @@ Optionally, specify a REDIS cache connection string to improve performance.<br/>
 </div>
 </li>
 </ol>
-

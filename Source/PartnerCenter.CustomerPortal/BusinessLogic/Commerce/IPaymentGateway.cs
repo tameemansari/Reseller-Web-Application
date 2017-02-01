@@ -5,8 +5,9 @@
 // -----------------------------------------------------------------------
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
-{
+{    
     using System.Threading.Tasks;
+    using Models;
 
     /// <summary>
     /// The payment gateway contract. Implement this interface to provide payment capabilities.
@@ -32,5 +33,23 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
         /// <param name="authorizationCode">The authorization code for the payment to void.</param>
         /// <returns>a Task</returns>
         Task VoidAsync(string authorizationCode);
+
+        /// <summary>
+        /// Generates the Payment gateway Url where actual payment collection is done.
+        /// </summary>
+        /// <param name="returnUrl">Application return Url.</param>
+        /// <param name="order">Order information.</param>
+        /// <returns>The payment gateway url.</returns>
+        Task<string> GeneratePaymentUriAsync(string returnUrl, OrderViewModel order);
+
+        /// <summary>
+        /// Retrieves the order details maintained for the payment gateway.  
+        /// </summary>
+        /// <param name="payerId">The Payer Id.</param>
+        /// <param name="paymentId">The Payment Id.</param>
+        /// <param name="orderId">The Order Id.</param>
+        /// <param name="customerId">The Customer Id.</param>
+        /// <returns>The order associated with this payment transaction.</returns>
+        Task<OrderViewModel> GetOrderDetailsFromPaymentAsync(string payerId, string paymentId, string orderId, string customerId);
     }
 }

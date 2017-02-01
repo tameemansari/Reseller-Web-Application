@@ -1179,4 +1179,43 @@
   <data name="PrivacyAgreementToolTip" xml:space="preserve">
     <value>Vista esta términos de privacidad del sitio web</value>
   </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>Clientes pre aprobados</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>Gestión de clientes para las transacciones previamente aprobados.</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>Puede marcar a todos los clientes actuales y futuros para la pre aprobación o seleccionar a clientes específicos para aprobación previa.</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>Permitir que a todos los clientes actuales y futuros aprobados de transacciones en la parte delantera de la tienda.</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>Aprobación previa</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>Nombre del cliente</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>Nombre de dominio principal</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>ID de Microsoft</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>No se pudo recuperar datos de clientes pre-aprobados.</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>Actualización información clientes aprobados</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>Información de los clientes aprobados actualizado</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>No se pueden guardar a los clientes aprobados información</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>Esta transacción es aprobada previamente. Orden de procesamiento...</value>
+  </data>
 </root>

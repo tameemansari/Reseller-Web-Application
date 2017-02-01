@@ -255,5 +255,31 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
             return paymentConfig;
         }
+
+        /// <summary>
+        /// Retrieves the portal's pre approved customers.
+        /// </summary>
+        /// <returns>The portal's pre approved customers list.</returns>
+        [HttpGet]
+        [Route("PreApprovedCustomers")]
+        public async Task<PreApprovedCustomersViewModel> GetPreApprovedCustomers()
+        {
+            return await ApplicationDomain.Instance.PreApprovedCustomersRepository.RetrieveCustomerDetailsAsync();
+        }
+
+        /// <summary>
+        /// Updates the the portal's pre approved list of customers. 
+        /// </summary>
+        /// <param name="preApprovedCustomers">The pre approved list of customers.</param>
+        /// <returns>The updated pre approved customers list.</returns>
+        [Route("PreApprovedCustomers")]
+        [HttpPut]
+        public async Task<PreApprovedCustomersViewModel> UpdatePreApprovedCustomersConfiguration(PreApprovedCustomersViewModel preApprovedCustomers)
+        {
+            // Save to repository.
+            PreApprovedCustomersViewModel updatedCustomers = await ApplicationDomain.Instance.PreApprovedCustomersRepository.UpdateAsync(preApprovedCustomers);
+
+            return updatedCustomers;
+        }
     }
 }

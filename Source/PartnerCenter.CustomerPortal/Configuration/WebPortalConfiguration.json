@@ -537,6 +537,31 @@
         ]
       },
       {
+        "Name": "CustomerManagementSetup",
+        "DisplayName": "CustomerManagementDisplayName",
+        "Tile": "/Content/Images/Plugins/Tiles/account-tile.png",
+        "Color": "#34634C",
+        "AlternateColor": "#44735C",
+        "DefaultFeature": "CustomerManagementSetup",
+        "Features": [
+          {
+            "Name": "CustomerManagementSetup",
+            "DefaultAssetVersion": "1.0",
+            "Assets": [
+              {
+                "Version": "1.0",
+                "JavaScript": [
+                  "~/Scripts/Plugins/CustomerManagementSetupPresenter.js"
+                ],
+                "Css": [
+                  "~/Content/Styles/Plugins/CustomerManagementSetup.css"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
         "Name": "CustomerSubscriptions",
         "DisplayName": "MySubscriptionsDisplayName",
         "Tile": "/Content/Images/Plugins/Tiles/subscriptions-tile.png",

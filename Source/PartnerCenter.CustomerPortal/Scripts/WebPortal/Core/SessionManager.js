@@ -50,6 +50,7 @@ Microsoft.WebPortal.Core.SessionManager.prototype.initialize = function (eventId
     this.webPortal.registerFeaturePresenter(Microsoft.WebPortal.Feature.OfferList, Microsoft.WebPortal.OfferListPresenter);
     this.webPortal.registerFeaturePresenter(Microsoft.WebPortal.Feature.BrandingSetup, Microsoft.WebPortal.BrandingSetupPresenter);
     this.webPortal.registerFeaturePresenter(Microsoft.WebPortal.Feature.PaymentSetup, Microsoft.WebPortal.PaymentSetupPresenter);
+    this.webPortal.registerFeaturePresenter(Microsoft.WebPortal.Feature.CustomerManagementSetup, Microsoft.WebPortal.CustomerManagementSetupPresenter);
 }
 
 Microsoft.WebPortal.Core.SessionManager.prototype.onFeatureDeactivated = function () {
