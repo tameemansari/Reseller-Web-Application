@@ -658,7 +658,7 @@
     <value>Added seats</value>
   </data>
   <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
-    <value>Purchase</value>
+    <value>Purchased</value>
   </data>
   <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
     <value>Renewal</value>

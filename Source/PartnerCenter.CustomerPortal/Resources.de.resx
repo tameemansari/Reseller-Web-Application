@@ -642,9 +642,6 @@
   <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
     <value>Zusätzliche Sitzplätze</value>
   </data>
-  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
-    <value>Kauf</value>
-  </data>
   <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
     <value>Erneuerung</value>
   </data>
@@ -1217,5 +1214,8 @@
   </data>
   <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
     <value>Diese Transaktion ist bereits genehmigten. Verarbeitungsreihenfolge...</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>Gekauft</value>
   </data>
 </root>

@@ -645,9 +645,6 @@
   <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
     <value>Ajout de sièges</value>
   </data>
-  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
-    <value>Achat</value>
-  </data>
   <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
     <value>Renouvellement</value>
   </data>
@@ -1217,5 +1214,8 @@
   </data>
   <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
     <value>Cette transaction est pré-approuvé. Ordre de traitement...</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>Acheté</value>
   </data>
 </root>

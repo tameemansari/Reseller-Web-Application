@@ -439,7 +439,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Purchase.
+        ///   Looks up a localized string similar to Purchased.
         /// </summary>
         public static string CommerceOperationTypeAddSubscription {
             get {

@@ -645,9 +645,6 @@
   <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
     <value>Extra zitplaatsen</value>
   </data>
-  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
-    <value>Aankoop</value>
-  </data>
   <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
     <value>Vernieuwing</value>
   </data>
@@ -1217,5 +1214,8 @@
   </data>
   <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
     <value>Deze transactie is vooraf geselecteerde bieders. Verwerkingsvolgorde...</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>Gekocht</value>
   </data>
 </root>
