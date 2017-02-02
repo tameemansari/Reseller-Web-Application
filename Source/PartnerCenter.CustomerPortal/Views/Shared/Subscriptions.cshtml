@@ -63,9 +63,8 @@
                 </tr>
                 <!-- ko foreach: SubscriptionOrderHistory -->
                 <tr class="SubscriptionHistoryRow">
-                    <td>
-                        <label>@Resources.SubscriptionSummaryAmountPaidOnPrefixCaption </label>
-                        <label data-bind="text: $data.OrderDate + ' - ' + $data.OperationType"></label>
+                    <td>                        
+                        <label data-bind="text: $data.OperationType + ' - ' + $data.OrderDate"></label>
                     </td>
                     <td class="left-aligned">
                         <label data-bind="text: $data.SeatsBought"></label>

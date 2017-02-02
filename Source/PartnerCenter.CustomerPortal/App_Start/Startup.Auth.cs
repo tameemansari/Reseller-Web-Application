@@ -94,26 +94,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal
                             {
                                 string partnerCenterCustomerId = string.Empty;
 
-                                try
-                                {
-                                    // Check to see if this login came from the tenant of a customer of the partner
-                                    var customerDetails = ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(userTenantId).Get();
+                                // Check to see if this login came from the tenant of a customer of the partner
+                                var customerDetails = await ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(userTenantId).GetAsync();
 
-                                    // indeed a customer
-                                    partnerCenterCustomerId = customerDetails.Id;
-                                }
-                                catch (PartnerException readCustomerProblem)
-                                {
-                                    if (readCustomerProblem.ErrorCategory == PartnerErrorCategory.NotFound)
-                                    {
-                                        // this is not an exiting customer tenant, try to locate the user in the customers repository
-                                        partnerCenterCustomerId = await ApplicationDomain.Instance.CustomersRepository.RetrieveAsync(userTenantId);
-                                    }
-                                    else
-                                    {
-                                        throw;
-                                    }
-                                }
+                                // indeed a customer
+                                partnerCenterCustomerId = customerDetails.Id;
 
                                 if (!string.IsNullOrWhiteSpace(partnerCenterCustomerId))
                                 {

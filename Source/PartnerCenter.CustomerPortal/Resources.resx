@@ -658,7 +658,7 @@
     <value>Added seats</value>
   </data>
   <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
-    <value>Purchase</value>
+    <value>Purchased</value>
   </data>
   <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
     <value>Renewal</value>
@@ -1178,5 +1178,44 @@
   </data>
   <data name="UsageBasedSubscriptionsCaption" xml:space="preserve">
     <value>Usage based subscriptions</value>
+  </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>Pre-approved Customers</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>Manage customers for pre-approved transactions.</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>You can either mark all current and future customers for pre approval or select specific customers for pre-approval.</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>Allow all current and future customers for pre-approved transactions in the store front.</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>Pre-approved</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>Customer name</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>Primary domain name</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Could not retrieve pre-approved customer details.</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>Updating pre-approved customers information</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>Pre-approved customer information updated</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Could not save pre-approved customers information</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>This transaction is pre-approved. Processing order...</value>
   </data>
 </root>

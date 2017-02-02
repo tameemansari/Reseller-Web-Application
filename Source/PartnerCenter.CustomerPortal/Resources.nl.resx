@@ -645,9 +645,6 @@
   <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
     <value>Extra zitplaatsen</value>
   </data>
-  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
-    <value>Aankoop</value>
-  </data>
   <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
     <value>Vernieuwing</value>
   </data>
@@ -1178,5 +1175,47 @@
   </data>
   <data name="PrivacyAgreementToolTip" xml:space="preserve">
     <value>De bepalingen van de privacy van deze website weergeven</value>
+  </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>Vooraf geselecteerde bieders klanten</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>Het beheren van klanten voor vooraf geselecteerde transacties.</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>U kunt het markeren van alle huidige en toekomstige klanten voor pre-goedkeuring of selecteer specifieke klanten voor pre-goedkeuring.</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>Alle huidige en toekomstige klanten voorzien in vooraf goedgekeurde transacties aan de voorkant van de winkel.</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>Vooraf</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>Klantnaam</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>Primaire domeinnaam</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Kan de vooraf goedgekeurde klantgegevens niet ophalen.</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>Vooraf geselecteerde bieders klanteninformatie bijwerken</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>Vooraf geselecteerde bieders klantgegevens bijgewerkt</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Kan niet opslaan vooraf goedgekeurde klanten informatie</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>Deze transactie is vooraf geselecteerde bieders. Verwerkingsvolgorde...</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>Gekocht</value>
   </data>
 </root>

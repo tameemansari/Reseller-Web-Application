@@ -21,13 +21,21 @@ Microsoft.WebPortal.ProcessOrderPresenter = function (webPortal, feature, proces
 
         return JSON.parse(JSON.stringify(result));
     }
-    var queryStringParams = QueryStringToJSON();
+
+    var queryStringParams; 
+    if (processOrderViewModel !=null && processOrderViewModel.paymentId.toLowerCase() === "preapproved") {
+        queryStringParams = processOrderViewModel;
+    }
+    else {
+        queryStringParams = QueryStringToJSON();
+    }    
 
     self.viewModel = {
         paymentId: queryStringParams["paymentId"],
         PayerID: queryStringParams["PayerID"],
         customerId: queryStringParams["customerId"],
-        txStatus: queryStringParams["payment"],
+        orderId: queryStringParams["oid"],
+        txStatus: queryStringParams["payment"],        
         PageTitle: ko.observable(""),
         Subscriptions: ko.observable(""),
         TotalPrice: ko.observable(""),
@@ -37,7 +45,7 @@ Microsoft.WebPortal.ProcessOrderPresenter = function (webPortal, feature, proces
     }
 
     self.apiUrl = "";
-    var existingCustomerOrderUrl = "api/Order/Process" + "?paymentId=" + self.viewModel.paymentId + "&payerId=" + self.viewModel.PayerID;
+    var existingCustomerOrderUrl = "api/Order/Process" + "?paymentId=" + self.viewModel.paymentId + "&payerId=" + self.viewModel.PayerID + "&orderId=" + self.viewModel.orderId;
     var newCustomerOrderUrl = "api/Order/NewCustomerProcessOrder" + "?customerId=" + self.viewModel.customerId + "&paymentId=" + self.viewModel.paymentId + "&payerId=" + self.viewModel.PayerID;
 
     if (self.viewModel.customerId != null) {
@@ -47,7 +55,6 @@ Microsoft.WebPortal.ProcessOrderPresenter = function (webPortal, feature, proces
         self.apiUrl = existingCustomerOrderUrl;
         self.viewModel.nextJourney = Microsoft.WebPortal.Feature.Subscriptions;
     }
-
 
     this.onDoneClicked = function () {
         self.webPortal.Journey.start(self.viewModel.nextJourney);
@@ -75,8 +82,15 @@ Microsoft.WebPortal.ProcessOrderPresenter.prototype.onRender = function () {
                 self.viewModel.PageTitle(self.webPortal.Resources.Strings.Plugins.ProcessOrderPage.PaymentReceiptFailureNotification);
             }            
         }
-        else { // success from paypal.
-            self.viewModel.PageTitle(self.webPortal.Resources.Strings.Plugins.ProcessOrderPage.ProcessingOrderNotification);
+        else { // success from payment gateway.            
+            var pageTitleText;
+            if (self.viewModel.paymentId.toLowerCase() === "preapproved") {
+                pageTitleText = self.webPortal.Resources.Strings.Plugins.ProcessOrderPage.ProcessingPreApprovedTxNotification;
+            }
+            else {
+                pageTitleText = self.webPortal.Resources.Strings.Plugins.ProcessOrderPage.ProcessingOrderNotification;
+            }
+            self.viewModel.PageTitle(pageTitleText);
             var thisNotification = new Microsoft.WebPortal.Services.Notification(Microsoft.WebPortal.Services.Notification.NotificationType.Progress, self.webPortal.Resources.Strings.Plugins.ProcessOrderPage.ProcessingOrderMessage);
             self.webPortal.Services.Notifications.add(thisNotification);
 

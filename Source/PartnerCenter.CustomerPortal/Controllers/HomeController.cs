@@ -43,6 +43,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                 clientVisiblePlugins.Plugins.Where(x => x.Name == "PartnerOffersSetup").First().Hidden = !principal.IsPortalAdmin;
                 clientVisiblePlugins.Plugins.Where(x => x.Name == "BrandingSetup").First().Hidden = !principal.IsPortalAdmin;
                 clientVisiblePlugins.Plugins.Where(x => x.Name == "PaymentSetup").First().Hidden = !principal.IsPortalAdmin;
+                clientVisiblePlugins.Plugins.Where(x => x.Name == "CustomerManagementSetup").First().Hidden = !principal.IsPortalAdmin;
 
                 if (principal.IsPortalAdmin)
                 {

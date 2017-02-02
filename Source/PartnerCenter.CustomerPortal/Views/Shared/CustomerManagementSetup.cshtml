@@ -1,0 +1,70 @@
+﻿<div id="CustomerPreApprovalForm">
+    <!-- ko if: viewModel.IsSet() -->
+    <table class="FullSize" cellpadding="5" data-bind="fadeVisible: viewModel.IsSet">
+        <tr>
+            <td colspan="2" class="Header">
+                <!-- @Resources.CustomerManagementHeader -->
+                Pre-approved customers
+            </td>
+        </tr>
+        <tr>
+            <td class="Subtext BottomPadded" colspan="2">
+                @Resources.CustomerManagementSubText
+            </td>
+        </tr>
+        <tr>
+            <td class="abovemedium-text">
+                <input type="checkbox" id="toggleAllCustomers" data-bind="checked: viewModel.IsEveryonePreApproved" />
+                @Resources.CustomerManagementAllCustomersToggleCaption
+            </td>
+        </tr>
+        <tr><td colspan="2" class="section-divider"></td></tr>
+    </table>
+    <!-- ko if: !viewModel.IsEveryonePreApproved() -->
+    <table width="100%" cellpadding="1" data-bind="fadeVisible: viewModel.IsSet">
+        <tbody>
+            <tr>
+                <td>
+                    @Resources.CustomerManagementPreApprovedColumnCaption
+                </td>
+                <td>
+                    @Resources.CustomerManagementCustomerNameColumnCaption
+                </td>
+                <td>
+                    @Resources.CustomerManagementPrimaryDomainNameColumnCaption
+                </td>
+                <td>
+                    @Resources.CustomerManagementMicrosoftIDColumnCaption
+                </td>
+                <td width="2%"></td>
+            </tr>
+            <tr>
+                <td colspan="5" class="section-divider"></td>
+            </tr>
+            <!-- ko foreach: viewModel.preApprovedCustomersList -->
+            <tr>
+                <td class="center">
+                    <input type="checkbox" data-bind="checked: $parent.viewModel.preApprovedCustomerIds, value: $data.TenantId, attr: {id: 'cb' + $data.TenantId}" />
+                </td>
+                <td>
+                    <label data-bind="text: $data.CompanyName"></label>
+                </td>
+                <td>
+                    <label data-bind="text: $data.Domain"></label>
+                </td>
+                <td>
+                    <label data-bind="text: $data.TenantId"></label>
+                </td>
+                <td width="2%"></td>
+            </tr>
+            <!-- /ko -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" class="section-divider"></td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- /ko -->
+    <!-- /ko -->
+    </div>

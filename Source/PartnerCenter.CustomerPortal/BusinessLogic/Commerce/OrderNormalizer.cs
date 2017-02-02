@@ -52,6 +52,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             OrderViewModel orderResult = new OrderViewModel()
             {
                 CustomerId = order.CustomerId,
+                OrderId = order.OrderId,
                 OperationType = order.OperationType
             };
 
@@ -114,6 +115,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             OrderViewModel orderResult = new OrderViewModel()
             {
                 CustomerId = order.CustomerId,
+                OrderId = order.OrderId,
                 OperationType = order.OperationType
             };
 
@@ -175,6 +177,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce
             OrderViewModel orderResult = new OrderViewModel()
             {
                 CustomerId = order.CustomerId,
+                OrderId = order.OrderId,
                 OperationType = order.OperationType
             };
 

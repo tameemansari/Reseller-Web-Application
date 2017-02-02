@@ -23,19 +23,19 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
     public class PayPalGateway : DomainObject, IPaymentGateway
     {
         /// <summary>
+        /// Maintains the description for this payment. 
+        /// </summary>
+        private readonly string paymentDescription;
+
+        /// <summary>
         /// Maintains the payer id for the payment gateway. 
         /// </summary>
-        private readonly string payerId;
+        private string payerId;
 
         /// <summary>
         /// Maintains the payment id for the payment gateway.
         /// </summary>
-        private readonly string paymentId;
-
-        /// <summary>
-        /// Maintains the description for this payment. 
-        /// </summary>
-        private readonly string paymentDescription;
+        private string paymentId;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PayPalGateway" /> class. 
@@ -49,22 +49,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
 
             this.payerId = string.Empty;
             this.paymentId = string.Empty;            
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PayPalGateway" /> class.
-        /// </summary>
-        /// <param name="applicationDomain">The ApplicationDomain</param>        
-        /// <param name="payerId">The Payer Id.</param>
-        /// <param name="paymentId">The Payment Id.</param>
-        public PayPalGateway(ApplicationDomain applicationDomain, string payerId, string paymentId) : base(applicationDomain)
-        {
-            payerId.AssertNotEmpty(nameof(payerId));
-            paymentId.AssertNotEmpty(nameof(paymentId));            
-
-            this.payerId = payerId;
-            this.paymentId = paymentId;
-            this.paymentDescription = string.Empty;            
         }
 
         /// <summary>
@@ -197,14 +181,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         /// <summary>
         /// Creates a payment transaction and returns the PayPal generated payment URL. 
         /// </summary>
-        /// <param name="redirectUrl">The redirect url for PayPal callback to web store portal.</param>                
+        /// <param name="returnUrl">The redirect url for PayPal callback to web store portal.</param>                
         /// <param name="order">The order details for which payment needs to be made.</param>        
         /// <returns>Payment URL from PayPal.</returns>
-        public async Task<string> GeneratePaymentUriAsync(string redirectUrl, OrderViewModel order)
+        public async Task<string> GeneratePaymentUriAsync(string returnUrl, OrderViewModel order)
         {
             string paypalRedirectUrl = string.Empty;
 
-            redirectUrl.AssertNotEmpty(nameof(redirectUrl));
+            returnUrl.AssertNotEmpty(nameof(returnUrl));
             order.AssertNotNull(nameof(order));
 
             APIContext apiContext = await this.GetAPIContextAsync();
@@ -253,8 +237,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
                 },
                 redirect_urls = new RedirectUrls()
                 {
-                    return_url = redirectUrl + "&payment=success",
-                    cancel_url = redirectUrl + "&payment=failure"
+                    return_url = returnUrl + "&payment=success",
+                    cancel_url = returnUrl + "&payment=failure"
                 }
             };
             System.Diagnostics.Debug.WriteLine("Total Amount:" + paymentTotal.ToString("F", Resources.Culture));
@@ -379,10 +363,30 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Commerce.Pa
         }
 
         /// <summary>
+        /// Retrieves the order details maintained for the payment gateway.  
+        /// </summary>
+        /// <param name="payerId">The Payer Id.</param>
+        /// <param name="paymentId">The Payment Id.</param>
+        /// <param name="orderId">The Order Id.</param>
+        /// <param name="customerId">The Customer Id.</param>
+        /// <returns>The order associated with this payment transaction.</returns>
+        public async Task<OrderViewModel> GetOrderDetailsFromPaymentAsync(string payerId, string paymentId, string orderId, string customerId)
+        {
+            // this payment gateway ignores orderId & customerId. 
+            payerId.AssertNotEmpty(nameof(payerId));
+            paymentId.AssertNotEmpty(nameof(paymentId));
+
+            this.payerId = payerId;
+            this.paymentId = paymentId;
+
+            return await this.GetOrderDetails();
+        }
+
+        /// <summary>
         /// Retrieves the Order from a payment transaction.
         /// </summary>
         /// <returns>The Order for which payment was made.</returns>
-        public async Task<OrderViewModel> GetOrderDetailsFromPaymentAsync()
+        private async Task<OrderViewModel> GetOrderDetails()
         {
             OrderViewModel orderFromPayment = null;   
             APIContext apiContext = await this.GetAPIContextAsync();

@@ -439,7 +439,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Purchase.
+        ///   Looks up a localized string similar to Purchased.
         /// </summary>
         public static string CommerceOperationTypeAddSubscription {
             get {
@@ -966,6 +966,78 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         public static string CountryNameUS {
             get {
                 return ResourceManager.GetString("CountryNameUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Allow all current and future customers for pre-approved transactions in the store front..
+        /// </summary>
+        public static string CustomerManagementAllCustomersToggleCaption {
+            get {
+                return ResourceManager.GetString("CustomerManagementAllCustomersToggleCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer name.
+        /// </summary>
+        public static string CustomerManagementCustomerNameColumnCaption {
+            get {
+                return ResourceManager.GetString("CustomerManagementCustomerNameColumnCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pre-approved Customers.
+        /// </summary>
+        public static string CustomerManagementDisplayName {
+            get {
+                return ResourceManager.GetString("CustomerManagementDisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage customers for pre-approved transactions..
+        /// </summary>
+        public static string CustomerManagementHeader {
+            get {
+                return ResourceManager.GetString("CustomerManagementHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Microsoft ID.
+        /// </summary>
+        public static string CustomerManagementMicrosoftIDColumnCaption {
+            get {
+                return ResourceManager.GetString("CustomerManagementMicrosoftIDColumnCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pre-approved.
+        /// </summary>
+        public static string CustomerManagementPreApprovedColumnCaption {
+            get {
+                return ResourceManager.GetString("CustomerManagementPreApprovedColumnCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Primary domain name.
+        /// </summary>
+        public static string CustomerManagementPrimaryDomainNameColumnCaption {
+            get {
+                return ResourceManager.GetString("CustomerManagementPrimaryDomainNameColumnCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can either mark all current and future customers for pre approval or select specific customers for pre-approval..
+        /// </summary>
+        public static string CustomerManagementSubText {
+            get {
+                return ResourceManager.GetString("CustomerManagementSubText", resourceCulture);
             }
         }
         
@@ -1515,6 +1587,15 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         public static string FetchPaymentConfigurationProgressMessage {
             get {
                 return ResourceManager.GetString("FetchPaymentConfigurationProgressMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not retrieve pre-approved customer details..
+        /// </summary>
+        public static string FetchPreApprovedCustomersErrorMessage {
+            get {
+                return ResourceManager.GetString("FetchPreApprovedCustomersErrorMessage", resourceCulture);
             }
         }
         
@@ -2653,6 +2734,15 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This transaction is pre-approved. Processing order....
+        /// </summary>
+        public static string ProcessingPreApprovedTxNotification {
+            get {
+                return ResourceManager.GetString("ProcessingPreApprovedTxNotification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Order Processing Page..
         /// </summary>
         public static string ProcessOrderPageCaption {
@@ -3135,6 +3225,33 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         public static string UpdatePaymentSuccessMessage {
             get {
                 return ResourceManager.GetString("UpdatePaymentSuccessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not save pre-approved customers information.
+        /// </summary>
+        public static string UpdatePreApprovedCustomersErrorMessage {
+            get {
+                return ResourceManager.GetString("UpdatePreApprovedCustomersErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating pre-approved customers information.
+        /// </summary>
+        public static string UpdatePreApprovedCustomersProgressMessage {
+            get {
+                return ResourceManager.GetString("UpdatePreApprovedCustomersProgressMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pre-approved customer information updated.
+        /// </summary>
+        public static string UpdatePreApprovedCustomersSuccessMessage {
+            get {
+                return ResourceManager.GetString("UpdatePreApprovedCustomersSuccessMessage", resourceCulture);
             }
         }
         

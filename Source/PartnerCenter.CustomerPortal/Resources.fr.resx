@@ -645,9 +645,6 @@
   <data name="CommerceOperationTypeAddSeats" xml:space="preserve">
     <value>Ajout de sièges</value>
   </data>
-  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
-    <value>Achat</value>
-  </data>
   <data name="CommerceOperationTypeRenewSubscription" xml:space="preserve">
     <value>Renouvellement</value>
   </data>
@@ -1178,5 +1175,47 @@
   </data>
   <data name="PrivacyAgreementToolTip" xml:space="preserve">
     <value>Découvre ce conditions de confidentialité du site Internet</value>
+  </data>
+  <data name="CustomerManagementDisplayName" xml:space="preserve">
+    <value>Clients préapprouvés</value>
+  </data>
+  <data name="CustomerManagementHeader" xml:space="preserve">
+    <value>Gérer des clients pour les transactions pré-approuvé.</value>
+  </data>
+  <data name="CustomerManagementSubText" xml:space="preserve">
+    <value>Vous pouvez marquer tous les clients actuels et futurs pour approbation préalable ou sélectionner des clients spécifiques pour une approbation préalable.</value>
+  </data>
+  <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
+    <value>Permettre à tous les clients actuels et futurs transactions préapprouvés dans la devanture de magasin.</value>
+  </data>
+  <data name="CustomerManagementPreApprovedColumnCaption" xml:space="preserve">
+    <value>Pré-approuvés</value>
+  </data>
+  <data name="CustomerManagementCustomerNameColumnCaption" xml:space="preserve">
+    <value>Nom du client</value>
+  </data>
+  <data name="CustomerManagementPrimaryDomainNameColumnCaption" xml:space="preserve">
+    <value>Nom de domaine principal</value>
+  </data>
+  <data name="CustomerManagementMicrosoftIDColumnCaption" xml:space="preserve">
+    <value>Microsoft ID</value>
+  </data>
+  <data name="FetchPreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Pas pu récupérer des détails du client préalablement approuvés.</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersProgressMessage" xml:space="preserve">
+    <value>Mise à jour des informations clients préapprouvés</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersSuccessMessage" xml:space="preserve">
+    <value>Information client pré-approuvée mise à jour</value>
+  </data>
+  <data name="UpdatePreApprovedCustomersErrorMessage" xml:space="preserve">
+    <value>Ne peut pas enregistrer d’informations clients préapprouvés</value>
+  </data>
+  <data name="ProcessingPreApprovedTxNotification" xml:space="preserve">
+    <value>Cette transaction est pré-approuvé. Ordre de traitement...</value>
+  </data>
+  <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
+    <value>Acheté</value>
   </data>
 </root>

@@ -31,7 +31,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         /// Updates a customer's subscriptions.
         /// </summary>
         /// <param name="orderDetails">A list of subscriptions to update.</param>
-        /// <returns>The payment url from PayPal.</returns>
+        /// <returns>The payment url from payment gateway.</returns>
         [@Authorize(UserRole = UserRole.Customer)]
         [HttpPost]
         [Route("Prepare")]
@@ -49,6 +49,7 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
             }
 
             orderDetails.CustomerId = this.Principal.PartnerCenterCustomerId;
+            orderDetails.OrderId = Guid.NewGuid().ToString();
             string operationDescription = string.Empty;
 
             // Validate & Normalize the order information.
@@ -69,12 +70,14 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                     break;
             }
 
-            // prepare the redirect url so that client can redirect to PayPal.             
+            // prepare the redirect url so that client can redirect to payment gateway.             
             string redirectUrl = string.Format(CultureInfo.InvariantCulture, "{0}/#ProcessOrder?ret=true", Request.RequestUri.GetLeftPart(UriPartial.Authority));
 
-            // execute to paypal and get paypal action URI. 
-            PayPalGateway paymentGateway = new PayPalGateway(ApplicationDomain.Instance, operationDescription);
-            string generatedUri = await paymentGateway.GeneratePaymentUriAsync(redirectUrl, orderDetails);
+            // Create the right payment gateway to use for customer oriented payment transactions. 
+            IPaymentGateway paymentGateway = await this.CreatePaymentGateway(operationDescription, orderDetails.CustomerId);
+
+            // execute and get payment gateway action URI.           
+            string generatedUri = await paymentGateway.GeneratePaymentUriAsync(redirectUrl, orderDetails);            
 
             // Capture the request for the customer summary for analysis.
             var eventProperties = new Dictionary<string, string> { { "CustomerId", orderDetails.CustomerId }, { "OperationType", orderDetails.OperationType.ToString() } };
@@ -92,23 +95,28 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         /// </summary>
         /// <param name="paymentId">Payment Id.</param>
         /// <param name="payerId">Payer Id.</param>
+        /// <param name="orderId">Order Id.</param>
         /// <returns>Commerce transaction result.</returns>        
         [@Authorize(UserRole = UserRole.Customer)]
         [HttpGet]
         [Route("Process")]
-        public async Task<TransactionResult> ProcessOrderForAuthenticatedCustomer(string paymentId, string payerId)
+        public async Task<TransactionResult> ProcessOrderForAuthenticatedCustomer(string paymentId, string payerId, string orderId)
         {
             var startTime = DateTime.Now;
 
-            // extract order information and create paypal payload.
+            // extract order information and create payment payload.
             string clientCustomerId = this.Principal.PartnerCenterCustomerId;
 
             paymentId.AssertNotEmpty(nameof(paymentId));
             payerId.AssertNotEmpty(nameof(payerId));
-            PayPalGateway paymentGateway = new PayPalGateway(ApplicationDomain.Instance, payerId, paymentId);
+            orderId.AssertNotEmpty(nameof(orderId));
 
-            // use payment gateway to extract order information. 
-            OrderViewModel orderToProcess = await paymentGateway.GetOrderDetailsFromPaymentAsync();
+            // Create the right payment gateway to use for customer oriented payment transactions. 
+            IPaymentGateway paymentGateway = await this.CreatePaymentGateway("ProcessingOrder", clientCustomerId);            
+
+            // use payment gateway to extract order information.             
+            OrderViewModel orderToProcess = await paymentGateway.GetOrderDetailsFromPaymentAsync(payerId, paymentId, orderId, clientCustomerId);
+
             CommerceOperations commerceOperation = new CommerceOperations(ApplicationDomain.Instance, clientCustomerId, paymentGateway);
 
             TransactionResult transactionResult = null;
@@ -194,10 +202,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
 
             paymentId.AssertNotEmpty(nameof(paymentId));
             payerId.AssertNotEmpty(nameof(payerId));
-            PayPalGateway paymentGateway = new PayPalGateway(ApplicationDomain.Instance, payerId, paymentId);
+            PayPalGateway paymentGateway = new PayPalGateway(ApplicationDomain.Instance, "ProcessingOrder");            
 
             // use payment gateway to extract order information. 
-            OrderViewModel orderToProcess = await paymentGateway.GetOrderDetailsFromPaymentAsync();
+            OrderViewModel orderToProcess = await paymentGateway.GetOrderDetailsFromPaymentAsync(payerId, paymentId, string.Empty, string.Empty);
             CommerceOperations commerceOperation = new CommerceOperations(ApplicationDomain.Instance, customerId, paymentGateway);
             await commerceOperation.PurchaseAsync(orderToProcess);
             SubscriptionsSummary summaryResult = await this.GetSubscriptionSummaryAsync(customerId);
@@ -370,6 +378,31 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
                     return Resources.CommerceOperationTypeRenewSubscription;
                 default:
                     return string.Empty;
+            }
+        }
+
+        /// <summary>
+        /// Factory method to create the right payment gateway for this customer. 
+        /// </summary>
+        /// <param name="operationDescription">The payment operation description.</param>
+        /// <param name="customerId">The customer who is transacting.</param>
+        /// <returns>The payment gateway instance.</returns>
+        private async Task<IPaymentGateway> CreatePaymentGateway(string operationDescription, string customerId)
+        {
+            operationDescription.AssertNotEmpty(nameof(operationDescription));
+            customerId.AssertNotEmpty(nameof(customerId));
+
+            bool isCustomerPreApproved = false;
+            isCustomerPreApproved = await ApplicationDomain.Instance.PreApprovedCustomersRepository.IsCustomerPreApprovedAsync(customerId);
+
+            // if customer is preapproved then use PreApprovedGateway else use PayPalGateway. 
+            if (isCustomerPreApproved)
+            {
+                return new PreApprovalGateway(ApplicationDomain.Instance, operationDescription);
+            }
+            else
+            {
+                return new PayPalGateway(ApplicationDomain.Instance, operationDescription);
             }
         }
     }

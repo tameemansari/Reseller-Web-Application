@@ -224,6 +224,17 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         }
 
         /// <summary>
+        /// Serves the HTML templates for the customer management setup page.
+        /// </summary>
+        /// <returns>The HTML templates for the customer management setup page.</returns>
+        [@Authorize(UserRole = UserRole.Partner)]
+        [OutputCache(NoStore = true, Duration = 0)]
+        public ActionResult CustomerManagementSetup()
+        {
+            return this.PartialView();
+        }
+
+        /// <summary>
         /// Serves the HTML templates for the framework controls and services.
         /// </summary>
         /// <returns>The HTML template for the framework controls and services.</returns>
