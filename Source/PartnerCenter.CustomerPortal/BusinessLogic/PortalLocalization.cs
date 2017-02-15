@@ -6,6 +6,7 @@
 
 namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
 {
+    using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
     using System.Threading.Tasks;
@@ -44,6 +45,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
         public string CurrencySymbol { get; private set; }
 
         /// <summary>
+        /// Gets the portal's locale which is applied for offer API calls to partner center. 
+        /// </summary>
+        public string OfferLocale { get; private set;  }
+
+        /// <summary>
         /// Initializes state and ensures the object is ready to be consumed.
         /// </summary>
         /// <returns>A task.</returns>
@@ -68,6 +74,8 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
                 this.Locale = "en-US";
                 partnerRegion = new RegionInfo(new CultureInfo(this.Locale, false).LCID);                
             }
+
+            this.OfferLocale = this.ResolveOfferLocale(this.Locale);
             
             // figure out the currency             
             this.CurrencyCode = partnerRegion.ISOCurrencySymbol;
@@ -75,6 +83,52 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic
 
             // set culture to partner locale.
             Resources.Culture = new CultureInfo(this.Locale);
+        }
+
+        /// <summary>
+        /// Resolver to identify the right locale settings which can be used for calling offer APIs. 
+        /// </summary>
+        /// <param name="locale">Partner Locale</param>
+        /// <returns>Offer Locale</returns>
+        private string ResolveOfferLocale(string locale)
+        {
+            List<string> portalSupportedLocales = new List<string>
+            { 
+                "de",
+                "en",
+                "es",
+                "nl",
+                "fr",
+                "ja"
+            };
+
+            List<string> portalOfferLocaleDefaults = new List<string>
+            {
+                "de-DE",
+                "en-US",
+                "es-ES",
+                "nl-NL",
+                "fr-FR",
+                "ja-JP"
+            };
+                        
+            //// Examples [en-US, en-GB, en-CA] -> en-US ==> en ==> (en-US), en-GB ==> en ==> (en-US), en-CA ==> en ==> (en-US).            
+            //// Examples [fr-CH, de-CH, it-CH] -> fr-CH ==> fr ==> (fr-FR), de-CH ==> de ==> (de-DE), it-CH ==> it ==> (en-US).
+
+            // if language is not supported by Portal then default it to en-US since the portal runs on english. 
+            string offerSpecificLocale = "en-US";
+
+            // if language is supported by Portal then default it to the portalOfferLocaleDefault 
+            string languageInLocale = new CultureInfo(locale).TwoLetterISOLanguageName;
+
+            // check the language part and see if we can default to one of the top locales. 
+            int localeIndex = portalSupportedLocales.IndexOf(languageInLocale);
+            if (localeIndex > -1)
+            {
+                offerSpecificLocale = portalOfferLocaleDefaults.ElementAt(localeIndex);
+            }
+                        
+            return offerSpecificLocale;
         }
     }
 }
