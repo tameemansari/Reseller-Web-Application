@@ -109,9 +109,9 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
         private async Task IndexOffersAsync()
         {
             // Need to manage this based on the partner's country locale to retrieve localized offers for the store front.             
-            var localeSpecificPartnerCenterClient = this.ApplicationDomain.PartnerCenterClient.With(RequestContextFactory.Instance.Create(this.ApplicationDomain.PortalLocalization.Locale));
+            var localeSpecificPartnerCenterClient = this.ApplicationDomain.PartnerCenterClient.With(RequestContextFactory.Instance.Create(this.ApplicationDomain.PortalLocalization.OfferLocale));
 
-            // retrieve the offers in english 
+            // retrieve the offers for this country
             var localizedOffers = await localeSpecificPartnerCenterClient.Offers.ByCountry(this.ApplicationDomain.PortalLocalization.CountryIso2Code).GetAsync();
 
             foreach (var offer in localizedOffers.Items)

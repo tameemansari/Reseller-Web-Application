@@ -65,9 +65,10 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.BusinessLogic.Offers
 
             if (microsoftOffers == null)
             {
-                // Need to manage this based on the partner's country locale to retrieve localized offers for the store front.             
-                var localeSpecificPartnerCenterClient = this.ApplicationDomain.PartnerCenterClient.With(RequestContextFactory.Instance.Create(this.ApplicationDomain.PortalLocalization.Locale));
+                // Need to manage this based on the offer locale supported by the Offer API. Either its english or using one of the supported offer locale to retrieve localized offers for the store front.
+                var localeSpecificPartnerCenterClient = this.ApplicationDomain.PartnerCenterClient.With(RequestContextFactory.Instance.Create(this.ApplicationDomain.PortalLocalization.OfferLocale));
 
+                // Offers.ByCountry is required to pull country / region specific offers. 
                 var partnerCenterOffers = await localeSpecificPartnerCenterClient.Offers.ByCountry(this.ApplicationDomain.PortalLocalization.CountryIso2Code).GetAsync();
 
                 var eligibleOffers = partnerCenterOffers?.Items.Where(offer =>

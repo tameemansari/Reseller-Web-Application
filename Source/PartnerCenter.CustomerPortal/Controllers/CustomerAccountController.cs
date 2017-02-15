@@ -41,8 +41,11 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         {
             string clientCustomerId = this.Principal.PartnerCenterCustomerId;
 
+            // responseCulture determines decimals, currency and such
             CultureInfo responseCulture = new CultureInfo(ApplicationDomain.Instance.PortalLocalization.Locale);
-            var localeSpecificPartnerCenterClient = ApplicationDomain.Instance.PartnerCenterClient.With(RequestContextFactory.Instance.Create(responseCulture.Name));
+
+            // localeSpecificApiClient allows pulling offer names localized to supported portal locales compatible with Offer API supported locales. 
+            var localeSpecificPartnerCenterClient = ApplicationDomain.Instance.PartnerCenterClient.With(RequestContextFactory.Instance.Create(ApplicationDomain.Instance.PortalLocalization.OfferLocale));
             var customerAllSubscriptions = await localeSpecificPartnerCenterClient.Customers.ById(clientCustomerId).Subscriptions.GetAsync();
 
             List<CustomerLicensesModel> allSubscriptionsOfCustomer = (from item in customerAllSubscriptions.Items
