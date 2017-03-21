@@ -1,5 +1,7 @@
-# Partner Web Storefront
+# Partner Web Storefront 
 ![BuildStatus](https://ci.appveyor.com/api/projects/status/github/PartnerCenterSamples/Reseller-Web-Application?branch=master&svg=true)
+
+
 <h2>Overview</h2>
 
 <p>

@@ -274,10 +274,10 @@
     <value>Bauen Ihr dashboard</value>
   </data>
   <data name="OffersConfigurationCaption" xml:space="preserve">
-    <value>Wählen Sie die zum Kauf anbietet</value>
+    <value>Wählen Sie die Produkte aus, die Sie zum Kauf anbieten möchten</value>
   </data>
   <data name="PaymentConfigurationCaption" xml:space="preserve">
-    <value>Fügen Sie eine Zahlungsmethode</value>
+    <value>Fügen Sie eine Zahlungsmethode hinzu</value>
   </data>
   <data name="WelcomeCaptionPrefix" xml:space="preserve">
     <value>Herzlich Willkommen</value>
@@ -532,31 +532,28 @@
     <value>PayPal-live-Konto</value>
   </data>
   <data name="PaymentConfigurationHeader" xml:space="preserve">
-    <value>Bieten Sie Ihr PayPal Pro Account-Einstellungen</value>
+    <value>Geben Sie hier Ihre PayPal Kontoeinstellungen an</value>
   </data>
   <data name="PaymentConfigurationSubTextPostfix" xml:space="preserve">
-    <value>ein neue pro-Konto erstellen, wenn Sie nicht besitzen.</value>
-  </data>
-  <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
-    <value>Um Zahlungen von Ihren Kunden erhalten, sollten Sie ein PayPal-Konto pro verwenden, besuchen Sie bitte:</value>
+    <value>und erstellen Sie erst ein Kundenkonto und besuchen Sie anschließend das PayPal-Entwicklungsportal, um die unten aufgeführten Angaben zu erhalten.</value>
   </data>
   <data name="PayPalAccountTypeCaption" xml:space="preserve">
-    <value>PayPal-Account-Typ:</value>
+    <value>PayPal Konto-Art:</value>
   </data>
   <data name="PayPalAccountTypeSubText" xml:space="preserve">
-    <value>Sie können ein Test-Konto um Ihre Transaktionen zu testen auswählen. Sobald funktioniert, wechseln Sie zu einem live-Konto-Typ zu Transaktionen</value>
+    <value>Sie können zum Testen Ihrer Transaktionen ein Sandbox-Konto verwenden. Anschlie¬ßend können Sie auf ein Live-Konto umstellen.</value>
   </data>
   <data name="PayPalClientIdCaption" xml:space="preserve">
-    <value>PayPal-Kundennummer:</value>
+    <value>PayPal Client ID:</value>
   </data>
   <data name="PayPalClientIdSubText" xml:space="preserve">
-    <value>Geben Sie Ihre PayPal-Kundennummer</value>
+    <value>Geben Sie hier Ihre PayPal Client ID an. Sie besteht aus 80 Zeichen.</value>
   </data>
   <data name="PayPalClientSecretCaption" xml:space="preserve">
-    <value>PayPal Clientschlüssel:</value>
+    <value>PayPal Secret:</value>
   </data>
   <data name="PayPalClientSecretSubText" xml:space="preserve">
-    <value>Geben Sie Ihre PayPal-Clientschlüssel</value>
+    <value>Geben Sie hier das Paypal Secret an, das Sie sich anzeigen lassen können.</value>
   </data>
   <data name="SandboxAccountTypeCaption" xml:space="preserve">
     <value>PayPal-Sandbox-Konto</value>
@@ -955,16 +952,16 @@
     <value>Haus</value>
   </data>
   <data name="AdminConsoleDisplayName" xml:space="preserve">
-    <value>Web Shop-Designer</value>
+    <value>Webshop-Designer</value>
   </data>
   <data name="BrandingDisplayName" xml:space="preserve">
     <value>Branding-Setup</value>
   </data>
   <data name="OffersDisplayName" xml:space="preserve">
-    <value>Angebote-Setup</value>
+    <value>Angebotserstellung</value>
   </data>
   <data name="PaymentDisplayName" xml:space="preserve">
-    <value>Zahlung-Setup</value>
+    <value>Einrichtung der Zahlungsmethode</value>
   </data>
   <data name="GoToHomePageCaption" xml:space="preserve">
     <value>Gehe zur Startseite</value>
@@ -1177,13 +1174,13 @@
     <value>Ansicht dieser Webseite-Datenschutzbestimmungen</value>
   </data>
   <data name="CustomerManagementDisplayName" xml:space="preserve">
-    <value>Freigeschaltete Kunden</value>
+    <value>Freigeschaltene Kunden</value>
   </data>
   <data name="CustomerManagementHeader" xml:space="preserve">
     <value>Verwalten Sie Kunden für vorab genehmigte Transaktionen.</value>
   </data>
   <data name="CustomerManagementSubText" xml:space="preserve">
-    <value>Sie können entweder markieren Sie alle aktuelle und zukünftige Kunden zur Genehmigung vor oder wählen Sie bestimmte Kunden für Pre-Approval.</value>
+    <value>Sie können die Berechtigung zum Kauf von Produkten für alle oder nur für bestimmte Kunden vorab genehmigen. Sie werden nicht auf das PayPal Zahlungsportal geleitet.</value>
   </data>
   <data name="CustomerManagementAllCustomersToggleCaption" xml:space="preserve">
     <value>Ermöglichen Sie alle aktuelle und zukünftige Kunden vorab genehmigte Transaktionen in der Ladenfront.</value>
@@ -1217,5 +1214,8 @@
   </data>
   <data name="CommerceOperationTypeAddSubscription" xml:space="preserve">
     <value>Gekauft</value>
+  </data>
+  <data name="PaymentConfigurationSubTextPrefix" xml:space="preserve">
+    <value>Um Zahlungen von Ihren Kunden annehmen zu können, müssen Sie ein PayPal-Konto benutzen. Wenn Sie über keines verfügen, besuchen Sie bitte </value>
   </data>
 </root>
