@@ -107,28 +107,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal.Controllers
         }
 
         /// <summary>
-        /// Retrieves the localized status type string. 
-        /// </summary>
-        /// <param name="statusType">The subscription status type.</param>
-        /// <returns>Localized Operation Type string.</returns>
-        private string GetStatusType(SubscriptionStatus statusType)
-        {
-            switch (statusType)
-            {
-                case SubscriptionStatus.Active:
-                    return Resources.SubscriptionStatusTypeActive;
-                case SubscriptionStatus.Deleted:
-                    return Resources.SubscriptionStatusTypeDeleted;
-                case SubscriptionStatus.None:
-                    return Resources.SubscriptionStatusTypeNone;
-                case SubscriptionStatus.Suspended:
-                    return Resources.SubscriptionStatusTypeSuspended;
-                default:
-                    return string.Empty;
-            }
-        }
-
-        /// <summary>
         /// Gets the subscriptions managed by customers and partners
         /// </summary>
         /// <returns>returns managed subscriptions view model</returns>

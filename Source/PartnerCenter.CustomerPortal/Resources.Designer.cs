@@ -1789,24 +1789,6 @@ namespace Microsoft.Store.PartnerCenter.CustomerPortal {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Provide an image file type for the header image.
-        /// </summary>
-        public static string InvalidHeaderImageMessage {
-            get {
-                return ResourceManager.GetString("InvalidHeaderImageMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid header image Uri. Please make sure the Uri is valid..
-        /// </summary>
-        public static string InvalidHeaderImageUriMessage {
-            get {
-                return ResourceManager.GetString("InvalidHeaderImageUriMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Invalid header image URI uploaded.
         /// </summary>
         public static string InvalidHeaderImageUriMessage {
