@@ -6,22 +6,22 @@
     "value": "Free"
   },
   "partnerCenterApplicationId": {
-    "value": ""
+    "value": "631751d2-ad9e-44a6-bd5a-7fd396e62174"
   },
   "partnerCenterApplicationSecret": {
-    "value": ""
+    "value": "4BCN9XnDI8lNcPGWGAWMpgc/vH/fHCmXcSGlc8FAnL4="
   },
   "partnerCenterAadTenantId": {
-    "value": ""
+    "value": "testtestbugbash1.onmicrosoft.com"
   },
   "webPortalClientId": {
-    "value": ""
+    "value": "8fb98dd9-4f0c-4a2f-af86-0dc0473f4b2d"
   },
   "webPortalClientSecret": {
-    "value": ""
+    "value": "c4qUXsGM2I0mBEXK1i48KhtjnOtmM6VxaVNvFP/N8G0="
   },
   "webPortalAadTenantId": {
-    "value": ""
+    "value": "3b33e682-00c3-41ee-9dd2-a548adf56438"
   },
   "siteName": {
     "value": ""
@@ -42,9 +42,12 @@
     "value": "https://api.partnercenter.microsoft.com"
   },
   "skuName": {
-    "value": "F1"
+    "value": "B2"
   },
   "skuCapacity": {
-    "value": 1
+    "value": 2
+  },
+  "webSiteName": {
+    "value": "protonteam"
   }
 }
