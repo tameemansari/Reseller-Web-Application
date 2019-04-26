@@ -18,6 +18,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
     using BusinessLogic.Exceptions;
     using Filters;
     using Microsoft.Store.PartnerCenter.Models.Agreements;
+    using Microsoft.Store.PartnerCenter.Models.Licenses;
+    using Microsoft.Store.PartnerCenter.Models.Users;
     using Models;
     using Newtonsoft.Json;
     using PartnerCenter.Models;
@@ -293,6 +295,10 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
             await commerceOperation.PurchaseAsync(orderToProcess).ConfigureAwait(false);
             SubscriptionsSummary summaryResult = await GetSubscriptionSummaryAsync(newCustomerId).ConfigureAwait(false);
 
+            // Proto TODO 
+            // 1. Create user and Assign license which requires user+app auth from pc.
+            // await CreateFirstUserWithLicense(customerViewModel, newCustomerId);            
+
             // Remove the persisted customer registration info.
             await ApplicationDomain.Instance.CustomerRegistrationRepository.DeleteAsync(customerId).ConfigureAwait(false);
 
@@ -307,6 +313,40 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
             summaryResult.CustomerViewModel = customerViewModel;
 
             return summaryResult;
+        }
+
+        private async Task CreateFirstUserWithLicense(CustomerViewModel customerInfo, string customerId)
+        {
+            var newCustomer = await ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(customerId).GetAsync().ConfigureAwait(false);
+
+            var customerUserToCreate = new CustomerUser()
+            {
+                PasswordProfile = new PasswordProfile() { ForceChangePassword = false, Password = "Password!1" },
+                DisplayName = customerInfo.FirstName + "1123",
+                FirstName = customerInfo.FirstName + "1",
+                LastName = customerInfo.LastName + "1",
+                UsageLocation = "US",
+                UserPrincipalName = customerInfo.FirstName + "@" + newCustomer.CompanyProfile.Domain
+            };
+
+            var createdUser = await ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(customerId).Users.CreateAsync(customerUserToCreate).ConfigureAwait(false);
+            Console.WriteLine("Created user - " + createdUser.Id);
+
+            var partnerOperations = ApplicationDomain.Instance.PartnerCenterClient;
+
+            // Prepare license request.
+            LicenseUpdate updateLicense = new LicenseUpdate()
+            {
+                LicensesToAssign = new List<LicenseAssignment>()
+                {
+                    new LicenseAssignment() { SkuId = "cbdc14ab-d96c-4c30-b9f4-6ada7cdc1d46" }
+                }
+            };
+
+            // Assign licenses to the user.
+            var assignLicense = partnerOperations.Customers.ById(customerId).Users.ById(createdUser.Id).LicenseUpdates.Create(updateLicense);
+
+            return;
         }
 
         /// <summary>

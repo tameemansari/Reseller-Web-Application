@@ -605,6 +605,7 @@
     <Content Include="Views\Shared\PayUPaymentSetup.cshtml" />
     <None Include="Properties\PublishProfiles\pcsfdbg01 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\protonteam - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\protonteam - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\psfdb05 - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup>
