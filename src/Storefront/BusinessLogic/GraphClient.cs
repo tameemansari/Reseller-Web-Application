@@ -10,8 +10,10 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
     using System.Collections.Generic;
     using System.Linq;
     using System.Net.Http;
+    using System.Net.Http.Headers;
     using System.Threading.Tasks;
     using Graph;
+    using Microsoft.IdentityModel.Clients.ActiveDirectory;
     using Models;
     using Security;
 
@@ -25,6 +27,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
         /// Static instance of the <see cref="HttpProvider" /> class.
         /// </summary>
         private static HttpProvider httpProvider = new HttpProvider(new HttpClientHandler(), false);
+
+        private static string accessToken; 
 
         /// <summary>
         /// Provides access to the Microsoft Graph.
@@ -59,6 +63,14 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
 
             AuthenticationProvider authProvider = new AuthenticationProvider(customerId, authorizationCode, redirectUri);
             client = new GraphServiceClient(authProvider, httpProvider);
+        }
+
+        public GraphClient(AuthenticationResult ar)
+        {
+            accessToken = ar.AccessToken;
+            client = new GraphServiceClient(new DelegateAuthenticationProvider(
+                    async (requestMessage) => requestMessage.Headers.Authorization =
+                            new AuthenticationHeaderValue("Bearer", accessToken)));
         }
 
 
@@ -127,7 +139,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
 
                 ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent(nameof(GetDirectoryRolesAsync), eventProperties, eventMeasurements);
 
-                // await VerifyTeamsLicenseAssignment(objectId).ConfigureAwait(false);
+                await VerifyTeamsLicenseAssignment(objectId).ConfigureAwait(false);
+                /*
 
                 try
                 {
@@ -163,6 +176,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
                 {
                     // do nothing 
                 }
+                */
 
                 return roles;
             }

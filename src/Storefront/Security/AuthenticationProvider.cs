@@ -48,9 +48,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Security
         /// <summary>
         /// The customer identifier utilized to scope the Microsoft Graph requests.
         /// </summary>
-        private readonly string customerId;
-
-        private readonly UserAssertion userCredAssertion;
+        private readonly string customerId;        
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationProvider"/> class.
@@ -77,36 +75,6 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Security
             this.redirectUri = redirectUri;
 
             tokenProvider = new AccessTokenProvider();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AuthenticationProvider"/> class.
-        /// </summary>
-        /// <param name="tokenProvider">Provides the ability to request access tokens.</param>
-        /// <param name="customerId">Identifier for customer whose resources are being accessed.</param>
-        /// <param name="authorizationCode">The authorization code received from service authorization endpoint.</param>
-        /// <param name="redirectUri">Address to return to upon receiving a response from the authority.</param>
-        /// <exception cref="ArgumentException">
-        /// <paramref name="customerId"/> is empty or null.
-        /// or 
-        /// <paramref name="authorizationCode"/> is empty or null.
-        /// </exception>
-        /// <exception cref="ArgumentNullException">
-        /// <paramref name="tokenProvider"/> is null.
-        /// or
-        /// <paramref name="redirectUri"/> is null.
-        /// </exception>
-        public AuthenticationProvider(IAccessTokenProvider tokenProvider, string customerId, string authorizationCode, Uri redirectUri)
-        {
-            tokenProvider.AssertNotNull(nameof(tokenProvider));
-            customerId.AssertNotEmpty(nameof(customerId));
-            authorizationCode.AssertNotEmpty(nameof(authorizationCode));
-            redirectUri.AssertNotNull(nameof(redirectUri));
-
-            this.customerId = customerId;
-            this.authorizationCode = authorizationCode;
-            this.redirectUri = redirectUri;
-            this.tokenProvider = tokenProvider;
         }
 
         /// <summary>

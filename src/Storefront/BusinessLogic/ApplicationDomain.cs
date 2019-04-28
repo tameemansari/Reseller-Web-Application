@@ -96,6 +96,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
         /// </summary>
         public TelemetryService TelemetryService { get; private set; }
 
+        public GraphClient GraphApiClient { get; set; }
+
         /// <summary>
         /// Gets the customer registration repository.
         /// </summary>

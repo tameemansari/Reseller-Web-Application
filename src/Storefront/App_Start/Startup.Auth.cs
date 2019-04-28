@@ -19,6 +19,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront
     using Exceptions;
     using global::Owin;
     using IdentityModel.Tokens;
+    using Microsoft.IdentityModel.Clients.ActiveDirectory;
     using Models;
     using Owin.Security;
     using Owin.Security.Cookies;
@@ -70,14 +71,22 @@ namespace Microsoft.Store.PartnerCenter.Storefront
                         AuthorizationCodeReceived = async (context) =>
                         {
                             string userTenantId = context.AuthenticationTicket.Identity.FindFirst("http://schemas.microsoft.com/identity/claims/tenantid").Value;
-                            string signedInUserObjectId = context.AuthenticationTicket.Identity.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier").Value;
+                            string signedInUserObjectId = context.AuthenticationTicket.Identity.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier").Value;                            
 
-                            IGraphClient graphClient = new GraphClient(
-                                userTenantId,
-                                context.Code,
-                                 new Uri(HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path)));
+                            // Obtain access token for the current application using the authorization code
+                            ClientCredential credential = new ClientCredential(ApplicationConfiguration.ActiveDirectoryClientID, ApplicationConfiguration.ActiveDirectoryClientSecret);
 
-                            List<RoleModel> roles = await graphClient.GetDirectoryRolesAsync(signedInUserObjectId).ConfigureAwait(false);
+                        AuthenticationContext authContext = new AuthenticationContext(context.Options.Authority); //, new SessionCache(signedInUserObjectId, context.OwinContext.Environment["System.Web.HttpContextBase"] as HttpContextBase));
+                            AuthenticationResult result = authContext.AcquireTokenByAuthorizationCodeAsync(context.ProtocolMessage.Code, new Uri(HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Path)), credential, context.Options.ClientId).Result;
+
+                            // Obtain and cache access tokens for additional resources using the access token
+                            // from the application as an assertion
+                            UserAssertion userAssertion = new UserAssertion(result.AccessToken);                            
+                            AuthenticationResult graphResult = authContext.AcquireTokenAsync("https://graph.microsoft.com", credential, userAssertion).Result;
+                            
+                            IGraphClient graphClient2 = new GraphClient(graphResult);
+
+                            List<RoleModel> roles = await graphClient2.GetDirectoryRolesAsync(signedInUserObjectId).ConfigureAwait(false);
 
                             foreach (RoleModel role in roles)
                             {
