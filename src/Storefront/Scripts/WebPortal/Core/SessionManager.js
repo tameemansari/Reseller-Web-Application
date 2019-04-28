@@ -142,6 +142,30 @@ Microsoft.WebPortal.Core.SessionManager.prototype.fetchCustomerSubscriptionDetai
     });
 }
 
+Microsoft.WebPortal.Core.SessionManager.prototype.bootstrapCustomerAdminLogin = function (resolver) {
+    /// <summary>
+    /// bootstraps the customer user on first run.
+    /// </summary>
+    /// <param name="resolver">A JQuery deferred object which will be notified with the customer details once they
+    /// are available or get a rejection if there was a failure retrieving them.</param>
+
+    var getCustomerServerCall =
+        new Microsoft.WebPortal.Utilities.RetryableServerCall(this.webPortal.Helpers.ajaxCall("api/CustomerAccounts/BootstrapTeamsTenant", Microsoft.WebPortal.HttpMethod.Get))
+
+    var self = this;
+
+    getCustomerServerCall.execute()
+        .done(function (customerInfo) {
+            self.webPortal.Diagnostics.information("Acquired Customer Information.");
+            resolver.resolve(customerInfo);
+        })
+        .fail(function (result, status, error) {
+            self.webPortal.Diagnostics.error("Failed to acquire Customer Information: " + error);
+            resolver.reject();
+        });
+}
+
+
 Microsoft.WebPortal.Core.SessionManager.prototype.fetchBrandingConfiguration = function (resolver) {
     /// <summary>
     /// Retrieves and the partner's branding configuration.

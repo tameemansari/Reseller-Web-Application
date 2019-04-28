@@ -21,5 +21,7 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
         /// <param name="objectId">Object identifier for the object to be checked.</param>
         /// <returns>A list of roles that that are associated with the specified object identifier.</returns>
         Task<List<RoleModel>> GetDirectoryRolesAsync(string objectId);
+
+        Task<bool> VerifyTeamsLicenseAssignment(string objectId);
     }
 }

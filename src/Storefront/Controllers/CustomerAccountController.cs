@@ -41,6 +41,18 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
         }
 
         /// <summary>
+        /// BootstrapTeamsTenant.
+        /// </summary>
+        /// <returns>The Subscriptions details from PC Customer Profile.</returns>
+        [Route("BootstrapTeamsTenant")]
+        [Filters.WebApi.PortalAuthorize(UserRole = UserRole.Customer)]
+        [HttpGet]
+        public async Task<ManagedSubscriptionsViewModel> GetBootstrapTeamsTenant()
+        {
+            return await GetManagedSubscriptions().ConfigureAwait(false);
+        }
+
+        /// <summary>
         /// Persists a new customer information and returns customer temporary guid.
         /// </summary>
         /// <param name="customerViewModel">The customer's registration information.</param>
@@ -250,5 +262,43 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Controllers
                     return string.Empty;
             }
         }
+
+        private async Task CreateFirstUserWithLicense(CustomerViewModel customerInfo, string customerId)
+        {
+            return;
+            /*
+            var newCustomer = await ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(customerId).GetAsync().ConfigureAwait(false);
+
+            var customerUserToCreate = new CustomerUser()
+            {
+                PasswordProfile = new PasswordProfile() { ForceChangePassword = false, Password = "Password!1" },
+                DisplayName = customerInfo.FirstName + "1123",
+                FirstName = customerInfo.FirstName + "1",
+                LastName = customerInfo.LastName + "1",
+                UsageLocation = "US",
+                UserPrincipalName = customerInfo.FirstName + "@" + newCustomer.CompanyProfile.Domain
+            };
+
+            var createdUser = await ApplicationDomain.Instance.PartnerCenterClient.Customers.ById(customerId).Users.CreateAsync(customerUserToCreate).ConfigureAwait(false);
+            Console.WriteLine("Created user - " + createdUser.Id);
+
+            var partnerOperations = ApplicationDomain.Instance.PartnerCenterClient;
+
+            // Prepare license request.
+            LicenseUpdate updateLicense = new LicenseUpdate()
+            {
+                LicensesToAssign = new List<LicenseAssignment>()
+                {
+                    new LicenseAssignment() { SkuId = "cbdc14ab-d96c-4c30-b9f4-6ada7cdc1d46" }
+                }
+            };
+
+            // Assign licenses to the user.
+            var assignLicense = partnerOperations.Customers.ById(customerId).Users.ById(createdUser.Id).LicenseUpdates.Create(updateLicense);
+
+            return;
+            */
+        }
+
     }
 }

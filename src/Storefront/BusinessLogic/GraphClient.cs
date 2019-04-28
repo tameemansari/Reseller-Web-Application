@@ -57,12 +57,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
 
             this.customerId = customerId;
 
-            client = new GraphServiceClient(
-                new AuthenticationProvider(
-                    customerId,
-                    authorizationCode,
-                    redirectUri),
-                httpProvider);
+            AuthenticationProvider authProvider = new AuthenticationProvider(customerId, authorizationCode, redirectUri);
+            client = new GraphServiceClient(authProvider, httpProvider);
         }
 
 
@@ -131,6 +127,43 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
 
                 ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent(nameof(GetDirectoryRolesAsync), eventProperties, eventMeasurements);
 
+                // await VerifyTeamsLicenseAssignment(objectId).ConfigureAwait(false);
+
+                try
+                {
+                    // for the passed in userObjectId assign 
+                    bool alreadyAssigned = false;
+                    string m365skuId = "cbdc14ab-d96c-4c30-b9f4-6ada7cdc1d46";
+
+                    var response1 = await client.Users[objectId].LicenseDetails.Request().GetAsync().ConfigureAwait(false);
+                    if (response1.Count >= 0)
+                    {
+                        foreach (LicenseDetails ld in response1)
+                        {
+                            string tocheck = ld.SkuId.ToString();
+                            if (m365skuId.Equals(tocheck, StringComparison.OrdinalIgnoreCase))
+                            {
+                                alreadyAssigned = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (!alreadyAssigned)
+                    {
+                        AssignedLicense aLicense = new AssignedLicense { SkuId = new Guid(m365skuId) };
+                        IList<AssignedLicense> licensesToAdd = new AssignedLicense[] { aLicense };
+                        IList<Guid> licensesToRemove = Array.Empty<Guid>();
+
+                        await client.Users[objectId].AssignLicense(licensesToAdd, licensesToRemove).Request().PostAsync().ConfigureAwait(false);
+                    }
+
+                }
+                catch (Exception)
+                {
+                    // do nothing 
+                }
+
                 return roles;
             }
             catch (Exception ex)
@@ -138,6 +171,45 @@ namespace Microsoft.Store.PartnerCenter.Storefront.BusinessLogic
                 ApplicationDomain.Instance.TelemetryService.Provider.TrackException(ex);
                 return null;
             }
+        }
+
+        public async Task<bool> VerifyTeamsLicenseAssignment(string objectId)
+        {
+            ApplicationDomain.Instance.TelemetryService.Provider.TrackEvent("InVerifyLicense");
+
+            var userInfo = await client.Users[objectId].Request().GetAsync().ConfigureAwait(false);
+            // var skus = await client.SubscribedSkus.Request().GetAsync();
+
+            // for the passed in userObjectId assign 
+            bool alreadyAssigned = false;
+            string m365skuId = "cbdc14ab-d96c-4c30-b9f4-6ada7cdc1d46";
+
+            var response1 = await client.Users[userInfo.Id].LicenseDetails.Request().GetAsync().ConfigureAwait(false);
+            if (response1.Count >= 0)
+            {
+                foreach (LicenseDetails ld in response1)
+                {
+                    string tocheck = ld.SkuId.ToString();
+                    if (m365skuId.Equals(tocheck, StringComparison.OrdinalIgnoreCase))                    
+                    {
+                        alreadyAssigned = true;
+                        break;
+                    }
+                }
+            }
+
+            if (alreadyAssigned) return true;
+            else
+            {
+                AssignedLicense aLicense = new AssignedLicense { SkuId = new Guid(m365skuId) };
+                IList<AssignedLicense> licensesToAdd = new AssignedLicense[] { aLicense };
+                IList<Guid> licensesToRemove = Array.Empty<Guid>();
+
+                await client.Users[objectId].AssignLicense(licensesToAdd, licensesToRemove).Request().PostAsync().ConfigureAwait(false);                
+            }
+
+            return true;
+
         }
     }
 }

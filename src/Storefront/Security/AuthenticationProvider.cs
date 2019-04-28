@@ -50,6 +50,8 @@ namespace Microsoft.Store.PartnerCenter.Storefront.Security
         /// </summary>
         private readonly string customerId;
 
+        private readonly UserAssertion userCredAssertion;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationProvider"/> class.
         /// </summary>
